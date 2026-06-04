@@ -198,4 +198,174 @@
     });
   }
 
+  // ---------- Elevator Constructor / Calculator ----------
+  const calcWidth = document.getElementById('calc-width');
+  const calcLength = document.getElementById('calc-length');
+  const calcKg = document.getElementById('calc-kg');
+  const calcPersons = document.getElementById('calc-persons');
+  const calcArea = document.getElementById('calc-area');
+  const calcModel = document.getElementById('calc-model');
+  const calcSwap = document.getElementById('calc-swap');
+  
+  if (calcWidth && calcLength && calcKg && calcPersons) {
+    let mode = 'dimensions'; // 'dimensions' or 'capacity'
+    
+    // Formula: 1500x1500mm = 2.25m2 -> 400kg. Ratio = 400/2.25 = 177.77...
+    const KG_PER_M2 = 400 / 2.25;
+    const KG_PER_PERSON = 80;
+    
+    const calculate = () => {
+      if (mode === 'dimensions') {
+        const w = parseFloat(calcWidth.value) || 0;
+        const l = parseFloat(calcLength.value) || 0;
+        const areaM2 = (w * l) / 1000000;
+        const kg = Math.round(areaM2 * KG_PER_M2 / 10) * 10;
+        const persons = Math.floor(kg / KG_PER_PERSON);
+        
+        calcKg.value = kg;
+        calcPersons.value = persons;
+        calcArea.textContent = areaM2.toFixed(2) + ' м²';
+        updateModel(kg);
+      } else {
+        const kg = parseFloat(calcKg.value) || 0;
+        const areaM2 = kg / KG_PER_M2;
+        // Assume square cabin for reverse calculation
+        const side = Math.round(Math.sqrt(areaM2) * 1000 / 50) * 50;
+        
+        calcWidth.value = side;
+        calcLength.value = side;
+        const persons = Math.floor(kg / KG_PER_PERSON);
+        if (document.activeElement !== calcPersons) calcPersons.value = persons;
+        
+        calcArea.textContent = areaM2.toFixed(2) + ' м²';
+        updateModel(kg);
+      }
+    };
+    
+    const updateModel = (kg) => {
+      if (kg <= 450) calcModel.textContent = 'Schindler 1000 / 3300';
+      else if (kg <= 1150) calcModel.textContent = 'Schindler 5500';
+      else calcModel.textContent = 'Schindler 7000';
+    };
+
+    const handlePersonChange = () => {
+      if (mode === 'capacity') {
+        const p = parseFloat(calcPersons.value) || 0;
+        calcKg.value = p * KG_PER_PERSON;
+        calculate();
+      }
+    };
+    
+    calcWidth.addEventListener('input', calculate);
+    calcLength.addEventListener('input', calculate);
+    calcKg.addEventListener('input', calculate);
+    calcPersons.addEventListener('input', handlePersonChange);
+    
+    calcSwap.addEventListener('click', () => {
+      mode = mode === 'dimensions' ? 'capacity' : 'dimensions';
+      calcSwap.classList.toggle('swapped', mode === 'capacity');
+      
+      const inputsLeft = [calcWidth, calcLength];
+      const inputsRight = [calcKg, calcPersons];
+      
+      if (mode === 'capacity') {
+        inputsLeft.forEach(el => { el.readOnly = true; el.tabIndex = -1; });
+        inputsRight.forEach(el => { el.readOnly = false; el.tabIndex = 0; });
+        document.getElementById('label-left').textContent = 'РАЗМЕРЫ КАБИНЫ · РЕЗУЛЬТАТ';
+        document.getElementById('label-right').textContent = 'ХАРАКТЕРИСТИКИ · ВВОД';
+      } else {
+        inputsLeft.forEach(el => { el.readOnly = false; el.tabIndex = 0; });
+        inputsRight.forEach(el => { el.readOnly = true; el.tabIndex = -1; });
+        document.getElementById('label-left').textContent = 'РАЗМЕРЫ КАБИНЫ · ВВОД';
+        document.getElementById('label-right').textContent = 'ХАРАКТЕРИСТИКИ · РЕЗУЛЬТАТ';
+      }
+      calculate();
+    });
+    
+    calculate(); // init
+  }
+
+  // ---------- Floating Consultation CTA Visibility & Interaction ----------
+  const floatingCtaContainer = document.getElementById('floating-cta-container');
+  const floatingCta = document.getElementById('floating-cta');
+  const footer = document.querySelector('footer');
+  const floatingPanelForm = document.getElementById('floating-panel-form');
+  const floatingSuccess = document.getElementById('floating-panel-success');
+
+  if (floatingCtaContainer && footer) {
+    const checkCtaVisibility = () => {
+      const footerRect = footer.getBoundingClientRect();
+      // Show when scrolled > 50vh, and footer is not overlapping
+      if (window.scrollY > window.innerHeight * 0.5 && footerRect.top > window.innerHeight) {
+        floatingCtaContainer.classList.add('visible');
+      } else {
+        floatingCtaContainer.classList.remove('visible');
+        floatingCtaContainer.classList.remove('expanded'); // Auto collapse when hidden
+      }
+    };
+    window.addEventListener('scroll', checkCtaVisibility, { passive: true });
+    checkCtaVisibility();
+  }
+
+  if (floatingCta && floatingCtaContainer) {
+    floatingCta.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = floatingCtaContainer.classList.toggle('expanded');
+      if (isExpanded) {
+        // Reset success state if opened again
+        if (floatingSuccess) floatingSuccess.style.display = 'none';
+        if (floatingPanelForm) {
+          floatingPanelForm.style.display = 'flex';
+          floatingPanelForm.style.opacity = '1';
+        }
+        // Focus name input after transition
+        setTimeout(() => {
+          const nameInput = document.getElementById('float-name');
+          if (nameInput) nameInput.focus();
+        }, 400);
+      }
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!floatingCtaContainer.contains(e.target)) {
+        floatingCtaContainer.classList.remove('expanded');
+      }
+    });
+
+    // Close on Esc key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        floatingCtaContainer.classList.remove('expanded');
+      }
+    });
+  }
+
+  // Handle form submission
+  if (floatingPanelForm) {
+    floatingPanelForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Animate showing success
+      floatingPanelForm.style.opacity = '0';
+      setTimeout(() => {
+        floatingPanelForm.style.display = 'none';
+        floatingPanelForm.style.opacity = '1';
+        if (floatingSuccess) {
+          floatingSuccess.style.display = 'flex';
+          floatingSuccess.style.opacity = '0';
+          // Force layout
+          floatingSuccess.offsetHeight;
+          floatingSuccess.style.opacity = '1';
+        }
+      }, 300);
+
+      // Auto close after 3.5 seconds
+      setTimeout(() => {
+        if (floatingCtaContainer) {
+          floatingCtaContainer.classList.remove('expanded');
+        }
+      }, 3800);
+    });
+  }
+
 })();

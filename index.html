@@ -228,7 +228,7 @@
       </div>
 
       <div class="stats">
-        <div class="stat" data-counter="1000000000" data-suffix="+">
+        <div class="stat stat-featured" data-counter="1000000000" data-suffix="+">
           <div class="stat-num"><span>0</span></div>
           <div class="stat-label">людей перевозим ежедневно</div>
         </div>
@@ -287,6 +287,12 @@
             <div class="product-cables"></div>
           </div>
           <div class="product-tag-floating">3300</div>
+          <div class="product-hover-info">
+            <div class="hover-info-row"><span>Тип</span><b>Пассажирский</b></div>
+            <div class="hover-info-row"><span>Привод</span><b>Безредукторный</b></div>
+            <div class="hover-info-row"><span>Энергокласс</span><b>A</b></div>
+            <div class="hover-info-row"><span>Система</span><b>PORT Technology</b></div>
+          </div>
         </div>
       </article>
 
@@ -316,6 +322,12 @@
             <div class="product-cables"></div>
           </div>
           <div class="product-tag-floating">5500</div>
+          <div class="product-hover-info">
+            <div class="hover-info-row"><span>Тип</span><b>Пассажирский / Грузовой</b></div>
+            <div class="hover-info-row"><span>Привод</span><b>Безредукторный</b></div>
+            <div class="hover-info-row"><span>Энергокласс</span><b>A+</b></div>
+            <div class="hover-info-row"><span>Кастомизация</span><b>Безграничная</b></div>
+          </div>
         </div>
       </article>
 
@@ -347,8 +359,84 @@
             <div class="escalator-rail"></div>
           </div>
           <div class="product-tag-floating">9300</div>
+          <div class="product-hover-info">
+            <div class="hover-info-row"><span>Тип</span><b>Эскалатор</b></div>
+            <div class="hover-info-row"><span>Привод</span><b>Энергосберегающий</b></div>
+            <div class="hover-info-row"><span>Безопасность</span><b>Интеллектуальная</b></div>
+            <div class="hover-info-row"><span>Режим</span><b>Непрерывный</b></div>
+          </div>
         </div>
       </article>
+    </div>
+
+    <!-- =============== ELEVATOR CONSTRUCTOR =============== -->
+    <div class="constructor">
+      <div class="constructor-header">
+        <div class="section-num">Конструктор</div>
+        <h3 class="constructor-title">Подберите <em>параметры</em> лифта</h3>
+        <p class="constructor-sub">Введите габариты кабины — калькулятор рассчитает грузоподъёмность и&nbsp;вместимость. Нажмите ⇄ для обратного расчёта.</p>
+      </div>
+
+      <div class="constructor-body" id="constructor-body">
+        <div class="constructor-panel" id="panel-left">
+          <div class="constructor-panel-label" id="label-left">РАЗМЕРЫ КАБИНЫ · ВВОД</div>
+          <div class="constructor-panel-fields" id="fields-left">
+            <div class="constructor-field">
+              <label for="calc-width">Ширина</label>
+              <div class="constructor-input-group">
+                <input type="number" id="calc-width" value="1500" min="600" max="4000" step="50">
+                <span class="constructor-unit">мм</span>
+              </div>
+            </div>
+            <div class="constructor-field">
+              <label for="calc-length">Длина</label>
+              <div class="constructor-input-group">
+                <input type="number" id="calc-length" value="1500" min="600" max="4000" step="50">
+                <span class="constructor-unit">мм</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="constructor-swap" id="calc-swap" aria-label="Поменять местами">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M7 16l-4-4m0 0l4-4m-4 4h18"/>
+            <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </button>
+
+        <div class="constructor-panel" id="panel-right">
+          <div class="constructor-panel-label" id="label-right">ХАРАКТЕРИСТИКИ · РЕЗУЛЬТАТ</div>
+          <div class="constructor-panel-fields" id="fields-right">
+            <div class="constructor-field">
+              <label for="calc-kg">Грузоподъёмность</label>
+              <div class="constructor-input-group">
+                <input type="number" id="calc-kg" value="400" min="0" max="10000" step="10" readonly tabindex="-1">
+                <span class="constructor-unit">кг</span>
+              </div>
+            </div>
+            <div class="constructor-field">
+              <label for="calc-persons">Вместимость</label>
+              <div class="constructor-input-group">
+                <input type="number" id="calc-persons" value="5" min="0" max="100" step="1" readonly tabindex="-1">
+                <span class="constructor-unit">чел</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="constructor-results">
+        <div class="constructor-result-item">
+          <span class="constructor-result-label">Площадь кабины</span>
+          <span class="constructor-result-value" id="calc-area">2.25 м²</span>
+        </div>
+        <div class="constructor-result-divider"></div>
+        <div class="constructor-result-item">
+          <span class="constructor-result-label">Рекомендуемая модель</span>
+          <span class="constructor-result-value constructor-result-model" id="calc-model">Schindler 3300</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -780,6 +868,72 @@
     <div class="footer-mega">SCHINDLER</div>
   </div>
 </footer>
+
+<!-- Floating Consultation Widget -->
+<div class="floating-cta-container" id="floating-cta-container">
+  <!-- The popup panel -->
+  <div class="floating-cta-panel" id="floating-cta-panel">
+    <h3 class="floating-panel-title">Консультация</h3>
+    <p class="floating-panel-sub">Оставьте ваши контакты, и мы перезвоним вам в течение 15 минут.</p>
+    
+    <form class="floating-panel-form" id="floating-panel-form" onsubmit="event.preventDefault();">
+      <div class="form-field">
+        <label for="float-name">Имя</label>
+        <input type="text" id="float-name" placeholder="Ваше имя" required>
+      </div>
+      <div class="form-field">
+        <label for="float-phone">Телефон</label>
+        <input type="tel" id="float-phone" placeholder="+998 __ ___ __ __" required>
+      </div>
+      <div class="form-field-select-wrapper">
+        <label for="float-topic">Интересует</label>
+        <select id="float-topic">
+          <option value="lift">Лифты Schindler</option>
+          <option value="escalator">Эскалаторы</option>
+          <option value="service">Техническое обслуживание</option>
+          <option value="modernization">Модернизация</option>
+        </select>
+      </div>
+      <button class="btn btn-primary btn-large" type="submit" style="width: 100%; justify-content: center; margin-top: 10px;">
+        <span class="btn-label">
+          <span class="btn-text">Отправить запрос</span>
+          <span class="btn-text">Отправить запрос</span>
+        </span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </form>
+
+    <div class="floating-panel-success" id="floating-panel-success">
+      <div class="success-icon-wrapper">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9 12l2 2 4-4"></path>
+        </svg>
+      </div>
+      <h3>Заявка отправлена</h3>
+      <p>Спасибо! Мы свяжемся с вами в течение 15 минут.</p>
+    </div>
+  </div>
+
+  <!-- The toggle trigger button -->
+  <button class="floating-cta" id="floating-cta" aria-label="Консультация">
+    <span class="floating-cta-pulse"></span>
+    <span class="floating-cta-icon-wrapper">
+      <!-- Chat Icon -->
+      <svg class="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+      </svg>
+      <!-- Close Icon -->
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </span>
+    <span class="floating-cta-text">Consultation</span>
+  </button>
+</div>
 
 <script src="script.js"></script>
 </body>
