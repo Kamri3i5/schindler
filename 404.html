@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Страница не найдена | Schindler Uzbekistan</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(120px, 25vw, 240px);
+      font-weight: 300;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      color: var(--accent);
+      font-variation-settings: 'opsz' 144;
+      margin-bottom: 24px;
+    }
+    .error-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 48px);
+      font-weight: 300;
+      color: var(--ink);
+      margin-bottom: 16px;
+      font-variation-settings: 'opsz' 144;
+    }
+    .error-desc {
+      font-size: 17px;
+      color: var(--ink-2);
+      max-width: 45ch;
+      line-height: 1.55;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <main class="error-page">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Страница не найдена</h1>
+    <p class="error-desc">Возможно, ссылка устарела или страница была перемещена. Вернитесь на главную, чтобы продолжить.</p>
+    <a href="index.html" class="btn btn-primary btn-large">
+      <span class="btn-label">
+        <span class="btn-text">На главную</span>
+        <span class="btn-text">На главную</span>
+      </span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M5 12h14M13 5l7 7-7 7" />
+      </svg>
+    </a>
+  </main>
+</body>
+</html>

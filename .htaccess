@@ -1,0 +1,40 @@
+# Apache config for see.uz
+
+# Security headers
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "DENY"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Long cache for images & fonts
+  <FilesMatch "\.(webp|jpg|jpeg|png|svg|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Short cache for CSS/JS (cache-bust via query string)
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+
+  # No cache for HTML
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Gzip / Brotli compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# Rewrite www to non-www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Custom 404
+  ErrorDocument 404 /404.html
+</IfModule>

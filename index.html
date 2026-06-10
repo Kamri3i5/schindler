@@ -1,940 +1,1041 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Schindler Uzbekistan — Премиальные лифты и эскалаторы швейцарского качества</title>
-<meta name="description" content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Производство, продажа и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schindler Uzbekistan — Премиальные лифты и эскалаторы швейцарского качества</title>
+  <meta name="description"
+    content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Производство, продажа и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Schindler Uzbekistan — Премиальные лифты и эскалаторы швейцарского качества" />
+  <meta property="og:description" content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Производство, продажа и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://see.uz/" />
+  <meta property="og:image" content="https://see.uz/images/og-schindler.jpg" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Schindler Uzbekistan — Премиальные лифты и эскалаторы швейцарского качества" />
+  <meta name="twitter:description" content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Производство, продажа и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
+  <meta name="twitter:image" content="https://see.uz/images/og-schindler.jpg" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css?v=1002a3e">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260610">
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="theme-color" content="#0c0c0d" />
 </head>
+
 <body>
 
-<!-- Custom cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-dot" id="cursor-dot"></div>
 
-<!-- Page loader -->
-<div class="loader" id="loader">
-  <div class="loader-inner">
-    <div class="loader-mark">
-      <svg viewBox="0 0 60 60" fill="none">
-        <rect x="2" y="2" width="56" height="56" stroke="currentColor" stroke-width="1"/>
-        <path d="M18 22 L18 38 L30 30 Z M42 22 L42 38 L30 30 Z" fill="currentColor"/>
-      </svg>
-    </div>
-    <div class="loader-text">
-      <span data-text="S">S</span>
-      <span data-text="C">C</span>
-      <span data-text="H">H</span>
-      <span data-text="I">I</span>
-      <span data-text="N">N</span>
-      <span data-text="D">D</span>
-      <span data-text="L">L</span>
-      <span data-text="E">E</span>
-      <span data-text="R">R</span>
-    </div>
-    <div class="loader-bar"><div class="loader-fill"></div></div>
-  </div>
-</div>
-
-<!-- Navigation -->
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo" aria-label="Schindler Uzbekistan">
-      <svg viewBox="0 0 40 40" fill="none" class="nav-logo-mark">
-        <rect x="1" y="1" width="38" height="38" stroke="currentColor" stroke-width="1.2"/>
-        <path d="M12 15 L12 25 L20 20 Z M28 15 L28 25 L20 20 Z" fill="currentColor"/>
-      </svg>
-      <div class="nav-logo-text">
-        <span class="nav-logo-primary">SCHINDLER</span>
-        <span class="nav-logo-sub">UZBEKISTAN · с 1874</span>
-      </div>
-    </a>
-
-    <nav class="nav-links" aria-label="Главное меню">
-      <a href="#products" data-num="01">Продукты</a>
-      <a href="#projects" data-num="02">Проекты</a>
-      <a href="#services" data-num="03">Услуги</a>
-      <a href="#about" data-num="04">О компании</a>
-      <a href="#contact" data-num="05">Контакты</a>
-    </nav>
-
-    <div class="nav-cta">
-      <button class="nav-lang" aria-label="Переключить язык">
-        <span class="active">RU</span>
-        <span>UZ</span>
-        <span>EN</span>
-      </button>
-      <a href="#contact" class="btn btn-primary nav-btn">
-        <span>Связаться</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M5 12h14M13 5l7 7-7 7"/>
+  <!-- Page loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-mark">
+        <svg viewBox="0 0 60 60" fill="none">
+          <rect x="2" y="2" width="56" height="56" stroke="currentColor" stroke-width="1" />
+          <path d="M18 22 L18 38 L30 30 Z M42 22 L42 38 L30 30 Z" fill="currentColor" />
         </svg>
+      </div>
+      <div class="loader-text">
+        <span data-text="S">S</span>
+        <span data-text="C">C</span>
+        <span data-text="H">H</span>
+        <span data-text="I">I</span>
+        <span data-text="N">N</span>
+        <span data-text="D">D</span>
+        <span data-text="L">L</span>
+        <span data-text="E">E</span>
+        <span data-text="R">R</span>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-inner"></div>
+  </div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Schindler Uzbekistan">
+        <svg viewBox="0 0 40 40" fill="none" class="nav-logo-mark">
+          <rect x="1" y="1" width="38" height="38" stroke="currentColor" stroke-width="1.2" />
+          <path d="M12 15 L12 25 L20 20 Z M28 15 L28 25 L20 20 Z" fill="currentColor" />
+        </svg>
+        <div class="nav-logo-text">
+          <span class="nav-logo-primary">SCHINDLER</span>
+          <span class="nav-logo-sub">UZBEKISTAN · с 1874</span>
+        </div>
       </a>
-    </div>
 
-    <button class="nav-burger" aria-label="Открыть меню" id="burger">
-      <span></span><span></span>
-    </button>
-  </div>
-</header>
+      <nav class="nav-links" aria-label="Главное меню">
+        <a href="#products" data-num="01" data-i18n="nav.products">Продукты</a>
+        <a href="#projects" data-num="02" data-i18n="nav.projects">Проекты</a>
+        <a href="#services" data-num="03" data-i18n="nav.services">Услуги</a>
+        <a href="#about" data-num="04" data-i18n="nav.about">О компании</a>
+        <a href="#contact" data-num="05" data-i18n="nav.contacts">Контакты</a>
+      </nav>
 
-<!-- =============== HERO =============== -->
-<section class="hero">
-  <div class="hero-bg">
-    <div class="hero-grid"></div>
-    <div class="hero-noise"></div>
-    <div class="hero-glow"></div>
-  </div>
-
-  <!-- vertical text rail -->
-  <div class="hero-rail">
-    <span class="rail-tick"></span>
-    <span>EST. 1874 · SWITZERLAND</span>
-    <span class="rail-tick"></span>
-    <span>EXCLUSIVE DISTRIBUTOR · UZBEKISTAN</span>
-    <span class="rail-tick"></span>
-  </div>
-
-  <div class="hero-meta">
-    <div class="meta-row">
-      <span class="meta-label">Координаты</span>
-      <span class="meta-value">41.31°N · 69.28°E</span>
-    </div>
-    <div class="meta-row">
-      <span class="meta-label">Ташкент</span>
-      <span class="meta-value" id="local-time">—</span>
-    </div>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="dot"></span>
-      <span>Эксклюзивный дистрибьютор Schindler в Узбекистане</span>
-    </div>
-
-    <h1 class="hero-title">
-      <span class="line"><span class="word">Мы</span> <span class="word italic">перевозим</span></span>
-      <span class="line"><span class="word">1&nbsp;миллиард</span> <span class="word">людей</span></span>
-      <span class="line"><span class="word">каждый</span> <span class="word italic">день.</span></span>
-    </h1>
-
-    <div class="hero-meta-bottom">
-      <div class="hero-description">
-        <p>Швейцарская инженерия, безупречная безопасность и&nbsp;технологическое лидерство в&nbsp;вертикальной мобильности — теперь в&nbsp;каждом ключевом здании Узбекистана.</p>
-      </div>
-
-      <div class="hero-actions">
-        <a href="#products" class="btn btn-ghost btn-large">
-          <span class="btn-label">
-            <span class="btn-text">Изучить модели</span>
-            <span class="btn-text">Изучить модели</span>
-          </span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 5v14M5 12l7 7 7-7"/>
-          </svg>
-        </a>
-        <a href="#contact" class="btn btn-primary btn-large">
-          <span class="btn-label">
-            <span class="btn-text">Запросить расчёт</span>
-            <span class="btn-text">Запросить расчёт</span>
-          </span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M5 12h14M13 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Floor indicator visual - signature element -->
-  <div class="floor-indicator" aria-hidden="true">
-    <div class="floor-display">
-      <div class="floor-arrow">▲</div>
-      <div class="floor-number" id="floor-num">42</div>
-      <div class="floor-label">FLOOR</div>
-    </div>
-    <div class="floor-shaft">
-      <div class="floor-track"></div>
-      <div class="floor-cab"></div>
-      <div class="floor-marks">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-    <div class="floor-stats">
-      <div><b>180</b><i>m/min</i></div>
-      <div><b>1600</b><i>kg</i></div>
-      <div><b>21</b><i>persons</i></div>
-    </div>
-  </div>
-
-  <div class="hero-scroll">
-    <span>SCROLL</span>
-    <div class="scroll-line"><div class="scroll-line-fill"></div></div>
-  </div>
-</section>
-
-<!-- =============== MARQUEE =============== -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Hilton Tashkent City</span><span class="dot-sep">●</span>
-    <span>Tashkent City</span><span class="dot-sep">●</span>
-    <span>Dream City</span><span class="dot-sep">●</span>
-    <span>Murad Buildings</span><span class="dot-sep">●</span>
-    <span>Mirabad Avenue</span><span class="dot-sep">●</span>
-    <span>NEST ONE</span><span class="dot-sep">●</span>
-    <span>Boulevard</span><span class="dot-sep">●</span>
-    <span>Bunyodkor Plaza</span><span class="dot-sep">●</span>
-    <!-- duplicate -->
-    <span>Hilton Tashkent City</span><span class="dot-sep">●</span>
-    <span>Tashkent City</span><span class="dot-sep">●</span>
-    <span>Dream City</span><span class="dot-sep">●</span>
-    <span>Murad Buildings</span><span class="dot-sep">●</span>
-    <span>Mirabad Avenue</span><span class="dot-sep">●</span>
-    <span>NEST ONE</span><span class="dot-sep">●</span>
-    <span>Boulevard</span><span class="dot-sep">●</span>
-    <span>Bunyodkor Plaza</span><span class="dot-sep">●</span>
-  </div>
-</div>
-
-<!-- =============== INTRO / NUMBERS =============== -->
-<section class="intro" id="about">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-num">01 — Наследие</div>
-      <h2 class="section-title">
-        Сто пятьдесят&nbsp;лет инженерной&nbsp;<em>точности.</em>
-      </h2>
-    </div>
-
-    <div class="intro-grid">
-      <div class="intro-text">
-        <p class="lead">
-          Schindler — швейцарская группа, основанная Робертом Шиндлером в&nbsp;1874&nbsp;году в&nbsp;Люцерне. Сегодня&nbsp;— один из&nbsp;двух крупнейших производителей лифтов и&nbsp;эскалаторов в&nbsp;мире.
-        </p>
-        <p>
-          В&nbsp;Узбекистане наша компания «Safety Elevators&nbsp;and&nbsp;Escalators» является эксклюзивным дистрибьютором Schindler с&nbsp;правом производства, продажи, монтажа и&nbsp;технического обслуживания. Мы&nbsp;оборудовали лифтами и&nbsp;эскалаторами знаковые объекты страны — от&nbsp;Hilton Tashkent City до&nbsp;Tashkent City и&nbsp;Dream City.
-        </p>
-        <a href="#" class="link-arrow">
-          <span>Полная история компании</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-
-      <div class="stats">
-        <div class="stat stat-featured" data-counter="1000000000" data-suffix="+">
-          <div class="stat-num"><span>0</span></div>
-          <div class="stat-label">людей перевозим ежедневно</div>
-        </div>
-        <div class="stat" data-counter="150" data-suffix="">
-          <div class="stat-num"><span>0</span></div>
-          <div class="stat-label">лет инженерной истории</div>
-        </div>
-        <div class="stat" data-counter="100" data-suffix="+">
-          <div class="stat-num"><span>0</span></div>
-          <div class="stat-label">стран присутствия</div>
-        </div>
-        <div class="stat" data-counter="70000" data-suffix="+">
-          <div class="stat-num"><span>0</span></div>
-          <div class="stat-label">сотрудников в&nbsp;мире</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =============== PRODUCTS =============== -->
-<section class="products" id="products">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-num">02 — Продукты</div>
-      <h2 class="section-title">
-        Три модели для каждой&nbsp;<em>задачи.</em>
-      </h2>
-      <p class="section-sub">От&nbsp;квартирных жилых домов до&nbsp;высотных башен и&nbsp;коммерческих центров&nbsp;— Schindler предлагает решение для любой архитектурной концепции.</p>
-    </div>
-
-    <div class="product-list">
-      <!-- Product 1 -->
-      <article class="product" data-product="3300">
-        <div class="product-num">/01</div>
-        <div class="product-info">
-          <div class="product-tag">Жилой сегмент</div>
-          <h3 class="product-name">Schindler 3300</h3>
-          <p class="product-desc">Эталонный лифт для жилых зданий. Энергоэффективный, бесшумный и&nbsp;адаптируемый под любой интерьер. Технология PORT обеспечивает интуитивную навигацию.</p>
-          <ul class="product-specs">
-            <li><span>Грузоподъёмность</span><b>до 1&nbsp;000&nbsp;кг</b></li>
-            <li><span>Скорость</span><b>1.0–1.6 м/с</b></li>
-            <li><span>Этажей</span><b>до 25</b></li>
-          </ul>
-          <a href="#" class="link-arrow">
-            <span>Подробнее о модели</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="product-visual">
-          <div class="product-shaft">
-            <div class="product-cab">
-              <div class="product-cab-doors"></div>
-              <div class="product-cab-light"></div>
-            </div>
-            <div class="product-cables"></div>
-          </div>
-          <div class="product-tag-floating">3300</div>
-          <div class="product-hover-info">
-            <div class="hover-info-row"><span>Тип</span><b>Пассажирский</b></div>
-            <div class="hover-info-row"><span>Привод</span><b>Безредукторный</b></div>
-            <div class="hover-info-row"><span>Энергокласс</span><b>A</b></div>
-            <div class="hover-info-row"><span>Система</span><b>PORT Technology</b></div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Product 2 -->
-      <article class="product reverse" data-product="5500">
-        <div class="product-num">/02</div>
-        <div class="product-info">
-          <div class="product-tag">Премиальный сегмент</div>
-          <h3 class="product-name">Schindler 5500</h3>
-          <p class="product-desc">Гибкое модульное решение для коммерческих и&nbsp;премиальных жилых зданий. Безграничная кастомизация интерьера кабины&nbsp;— от&nbsp;стекла и&nbsp;нержавеющей стали до&nbsp;натурального камня.</p>
-          <ul class="product-specs">
-            <li><span>Грузоподъёмность</span><b>до 2&nbsp;500&nbsp;кг</b></li>
-            <li><span>Скорость</span><b>1.0–4.0 м/с</b></li>
-            <li><span>Этажей</span><b>до 60</b></li>
-          </ul>
-          <a href="#" class="link-arrow">
-            <span>Подробнее о модели</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="product-visual">
-          <div class="product-shaft tall">
-            <div class="product-cab premium">
-              <div class="product-cab-doors"></div>
-              <div class="product-cab-light"></div>
-            </div>
-            <div class="product-cables"></div>
-          </div>
-          <div class="product-tag-floating">5500</div>
-          <div class="product-hover-info">
-            <div class="hover-info-row"><span>Тип</span><b>Пассажирский / Грузовой</b></div>
-            <div class="hover-info-row"><span>Привод</span><b>Безредукторный</b></div>
-            <div class="hover-info-row"><span>Энергокласс</span><b>A+</b></div>
-            <div class="hover-info-row"><span>Кастомизация</span><b>Безграничная</b></div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Product 3 -->
-      <article class="product" data-product="9300">
-        <div class="product-num">/03</div>
-        <div class="product-info">
-          <div class="product-tag">Эскалаторы</div>
-          <h3 class="product-name">Schindler 9300AE</h3>
-          <p class="product-desc">Передовой эскалатор для торговых центров, аэропортов и&nbsp;транспортных узлов. Энергосберегающий привод и&nbsp;интеллектуальные системы безопасности для непрерывной эксплуатации.</p>
-          <ul class="product-specs">
-            <li><span>Угол наклона</span><b>30° / 35°</b></li>
-            <li><span>Скорость</span><b>0.5–0.65 м/с</b></li>
-            <li><span>Перепад</span><b>до 12 м</b></li>
-          </ul>
-          <a href="#" class="link-arrow">
-            <span>Подробнее о модели</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="product-visual">
-          <div class="escalator">
-            <div class="escalator-step"></div>
-            <div class="escalator-step"></div>
-            <div class="escalator-step"></div>
-            <div class="escalator-step"></div>
-            <div class="escalator-step"></div>
-            <div class="escalator-step"></div>
-            <div class="escalator-rail"></div>
-          </div>
-          <div class="product-tag-floating">9300</div>
-          <div class="product-hover-info">
-            <div class="hover-info-row"><span>Тип</span><b>Эскалатор</b></div>
-            <div class="hover-info-row"><span>Привод</span><b>Энергосберегающий</b></div>
-            <div class="hover-info-row"><span>Безопасность</span><b>Интеллектуальная</b></div>
-            <div class="hover-info-row"><span>Режим</span><b>Непрерывный</b></div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <!-- =============== ELEVATOR CONSTRUCTOR =============== -->
-    <div class="constructor">
-      <div class="constructor-header">
-        <div class="section-num">Конструктор</div>
-        <h3 class="constructor-title">Подберите <em>параметры</em> лифта</h3>
-        <p class="constructor-sub">Введите габариты кабины — калькулятор рассчитает грузоподъёмность и&nbsp;вместимость. Нажмите ⇄ для обратного расчёта.</p>
-      </div>
-
-      <div class="constructor-body" id="constructor-body">
-        <div class="constructor-panel" id="panel-left">
-          <div class="constructor-panel-label" id="label-left">РАЗМЕРЫ КАБИНЫ · ВВОД</div>
-          <div class="constructor-panel-fields" id="fields-left">
-            <div class="constructor-field">
-              <label for="calc-width">Ширина</label>
-              <div class="constructor-input-group">
-                <input type="number" id="calc-width" value="1500" min="600" max="4000" step="50">
-                <span class="constructor-unit">мм</span>
-              </div>
-            </div>
-            <div class="constructor-field">
-              <label for="calc-length">Длина</label>
-              <div class="constructor-input-group">
-                <input type="number" id="calc-length" value="1500" min="600" max="4000" step="50">
-                <span class="constructor-unit">мм</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button class="constructor-swap" id="calc-swap" aria-label="Поменять местами">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M7 16l-4-4m0 0l4-4m-4 4h18"/>
-            <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
+      <div class="nav-cta">
+        <button class="nav-lang" aria-label="Переключить язык" data-i18n-aria="nav.lang_aria">
+          <span class="active">RU</span>
+          <span>UZ</span>
+          <span>EN</span>
         </button>
-
-        <div class="constructor-panel" id="panel-right">
-          <div class="constructor-panel-label" id="label-right">ХАРАКТЕРИСТИКИ · РЕЗУЛЬТАТ</div>
-          <div class="constructor-panel-fields" id="fields-right">
-            <div class="constructor-field">
-              <label for="calc-kg">Грузоподъёмность</label>
-              <div class="constructor-input-group">
-                <input type="number" id="calc-kg" value="400" min="0" max="10000" step="10" readonly tabindex="-1">
-                <span class="constructor-unit">кг</span>
-              </div>
-            </div>
-            <div class="constructor-field">
-              <label for="calc-persons">Вместимость</label>
-              <div class="constructor-input-group">
-                <input type="number" id="calc-persons" value="5" min="0" max="100" step="1" readonly tabindex="-1">
-                <span class="constructor-unit">чел</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <a href="#contact" class="btn btn-primary nav-btn">
+          <span data-i18n="nav.cta">Связаться</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </a>
       </div>
 
-      <div class="constructor-results">
-        <div class="constructor-result-item">
-          <span class="constructor-result-label">Площадь кабины</span>
-          <span class="constructor-result-value" id="calc-area">2.25 м²</span>
+      <button class="nav-burger" aria-label="Открыть меню" id="burger">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =============== HERO =============== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-noise"></div>
+      <div class="hero-glow"></div>
+    </div>
+
+    <!-- vertical text rail -->
+    <div class="hero-rail">
+      <span class="rail-tick"></span>
+      <span>EST. 1874 · SWITZERLAND</span>
+      <span class="rail-tick"></span>
+      <span>EXCLUSIVE DISTRIBUTOR · UZBEKISTAN</span>
+      <span class="rail-tick"></span>
+    </div>
+
+    <div class="hero-meta">
+      <div class="meta-row">
+        <span class="meta-label" data-i18n="hero.coords">Координаты</span>
+        <span class="meta-value">41.31°N · 69.28°E</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label" data-i18n="hero.city">Ташкент</span>
+        <span class="meta-value" id="local-time">—</span>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span data-i18n="hero.eyebrow">Эксклюзивный дистрибьютор Schindler в Узбекистане</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line"><span class="word" data-i18n="hero.w1">Мы</span> <span class="word italic"
+            data-i18n="hero.w2">перевозим</span></span>
+        <span class="line"><span class="word" data-i18n="hero.w3">1&nbsp;миллиард</span> <span class="word"
+            data-i18n="hero.w4">людей</span></span>
+        <span class="line"><span class="word" data-i18n="hero.w5">каждый</span> <span class="word italic"
+            data-i18n="hero.w6">день.</span></span>
+      </h1>
+
+      <div class="hero-meta-bottom">
+        <div class="hero-description">
+          <p data-i18n="hero.desc">Швейцарская инженерия, безупречная безопасность и&nbsp;технологическое лидерство
+            в&nbsp;вертикальной мобильности — теперь в&nbsp;каждом ключевом здании Узбекистана.</p>
         </div>
-        <div class="constructor-result-divider"></div>
-        <div class="constructor-result-item">
-          <span class="constructor-result-label">Рекомендуемая модель</span>
-          <span class="constructor-result-value constructor-result-model" id="calc-model">Schindler 3300</span>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-ghost btn-large">
+            <span class="btn-label">
+              <span class="btn-text" data-i18n="hero.btn_explore">Изучить модели</span>
+              <span class="btn-text" data-i18n="hero.btn_explore">Изучить модели</span>
+            </span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-primary btn-large">
+            <span class="btn-label">
+              <span class="btn-text" data-i18n="hero.btn_quote">Запросить расчёт</span>
+              <span class="btn-text" data-i18n="hero.btn_quote">Запросить расчёт</span>
+            </span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </div>
+    </div>
+
+    <!-- Floor indicator visual - signature element -->
+    <div class="floor-indicator" aria-hidden="true">
+      <div class="floor-display">
+        <div class="floor-arrow">▲</div>
+        <div class="floor-number" id="floor-num">42</div>
+        <div class="floor-label">FLOOR</div>
+      </div>
+      <div class="floor-shaft">
+        <div class="floor-track"></div>
+        <div class="floor-cab"></div>
+        <div class="floor-marks">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="floor-stats">
+        <div><b>180</b><i>m/min</i></div>
+        <div><b>1600</b><i>kg</i></div>
+        <div><b>21</b><i>persons</i></div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line">
+        <div class="scroll-line-fill"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== MARQUEE =============== -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Hilton Tashkent City</span><span class="dot-sep">●</span>
+      <span>Tashkent City</span><span class="dot-sep">●</span>
+      <span>Dream City</span><span class="dot-sep">●</span>
+      <span>Murad Buildings</span><span class="dot-sep">●</span>
+      <span>Mirabad Avenue</span><span class="dot-sep">●</span>
+      <span>NEST ONE</span><span class="dot-sep">●</span>
+      <span>Boulevard</span><span class="dot-sep">●</span>
+      <span>Bunyodkor Plaza</span><span class="dot-sep">●</span>
+      <!-- duplicate -->
+      <span>Hilton Tashkent City</span><span class="dot-sep">●</span>
+      <span>Tashkent City</span><span class="dot-sep">●</span>
+      <span>Dream City</span><span class="dot-sep">●</span>
+      <span>Murad Buildings</span><span class="dot-sep">●</span>
+      <span>Mirabad Avenue</span><span class="dot-sep">●</span>
+      <span>NEST ONE</span><span class="dot-sep">●</span>
+      <span>Boulevard</span><span class="dot-sep">●</span>
+      <span>Bunyodkor Plaza</span><span class="dot-sep">●</span>
     </div>
   </div>
-</section>
 
-<!-- =============== PROJECTS =============== -->
-<section class="projects" id="projects">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-num">03 — Реализованные проекты</div>
-      <h2 class="section-title">
-        Здания, в&nbsp;которых работает&nbsp;<em>наша инженерия.</em>
-      </h2>
-    </div>
-
-    <div class="projects-grid">
-      <article class="project project-large">
-        <div class="project-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2118 50%, #c8423a 150%);">
-          <div class="project-overlay"></div>
-          <div class="project-pattern"></div>
-        </div>
-        <div class="project-meta">
-          <span class="project-year">2019</span>
-          <span class="project-tag">Гостиница · 5★</span>
-        </div>
-        <h3 class="project-name">Hilton Tashkent City</h3>
-        <p class="project-desc">Установка комплекса высокоскоростных лифтов Schindler 7000 для флагманской гостиницы Hilton в Узбекистане.</p>
-        <div class="project-stats">
-          <span><b>12</b> лифтов</span>
-          <span><b>23</b> этажа</span>
-          <span><b>4.0</b> м/с</span>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-image" style="background: linear-gradient(160deg, #0f0f0f 0%, #2a2520 100%);">
-          <div class="project-overlay"></div>
-          <div class="project-pattern"></div>
-        </div>
-        <div class="project-meta">
-          <span class="project-year">2020</span>
-          <span class="project-tag">Деловой центр</span>
-        </div>
-        <h3 class="project-name">Tashkent City</h3>
-        <p class="project-desc">Просторные премиальные лифты для бизнес-района нового поколения.</p>
-      </article>
-
-      <article class="project">
-        <div class="project-image" style="background: linear-gradient(140deg, #181410 0%, #3a2a1a 100%);">
-          <div class="project-overlay"></div>
-          <div class="project-pattern"></div>
-        </div>
-        <div class="project-meta">
-          <span class="project-year">2019</span>
-          <span class="project-tag">ЖК премиум</span>
-        </div>
-        <h3 class="project-name">Dream City</h3>
-        <p class="project-desc">Долгосрочное сотрудничество с одним из крупнейших застройщиков страны.</p>
-      </article>
-
-      <article class="project">
-        <div class="project-image" style="background: linear-gradient(120deg, #1a1612 0%, #44342a 100%);">
-          <div class="project-overlay"></div>
-          <div class="project-pattern"></div>
-        </div>
-        <div class="project-meta">
-          <span class="project-year">2018</span>
-          <span class="project-tag">Девелопмент</span>
-        </div>
-        <h3 class="project-name">Murad Buildings</h3>
-        <p class="project-desc">Стратегический контракт на оснащение жилых комплексов застройщика.</p>
-      </article>
-
-      <article class="project">
-        <div class="project-image" style="background: linear-gradient(180deg, #0d0d0d 0%, #2e2218 100%);">
-          <div class="project-overlay"></div>
-          <div class="project-pattern"></div>
-        </div>
-        <div class="project-meta">
-          <span class="project-year">2018</span>
-          <span class="project-tag">Жилой комплекс</span>
-        </div>
-        <h3 class="project-name">Mirabad Avenue</h3>
-        <p class="project-desc">Установка трёх лифтов Schindler в премиальный жилой комплекс центра Ташкента.</p>
-      </article>
-    </div>
-
-    <div class="projects-cta">
-      <a href="#" class="btn btn-ghost btn-large">
-        <span class="btn-label">
-          <span class="btn-text">Все проекты</span>
-          <span class="btn-text">Все проекты</span>
-        </span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- =============== SERVICES =============== -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-num">04 — Услуги</div>
-      <h2 class="section-title">
-        Полный жизненный&nbsp;цикл&nbsp;<em>обслуживания.</em>
-      </h2>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
-            <rect x="6" y="6" width="36" height="36" />
-            <path d="M16 16h16v16H16z M16 24h16 M24 16v16"/>
-          </svg>
-        </div>
-        <div class="service-num">01</div>
-        <h3 class="service-title">Проектирование</h3>
-        <p class="service-desc">Расчёт оптимальной конфигурации, подбор моделей под архитектурную задачу, BIM-интеграция.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M8 40 L40 40 L40 12 L24 4 L8 12 Z"/>
-            <path d="M16 40 L16 24 L32 24 L32 40"/>
-            <path d="M20 24 L20 32 M28 24 L28 32"/>
-          </svg>
-        </div>
-        <div class="service-num">02</div>
-        <h3 class="service-title">Производство</h3>
-        <p class="service-desc">Локализованное производство компонентов и&nbsp;кабин в&nbsp;Узбекистане по&nbsp;швейцарским стандартам качества.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M24 6 L24 42 M12 18 L24 6 L36 18 M14 30 L34 30 M16 36 L32 36"/>
-          </svg>
-        </div>
-        <div class="service-num">03</div>
-        <h3 class="service-title">Монтаж</h3>
-        <p class="service-desc">Профессиональная установка сертифицированными инженерами с&nbsp;соблюдением всех норм безопасности.</p>
-      </div>
-
-      <div class="service-card service-highlight">
-        <div class="service-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
-            <circle cx="24" cy="24" r="18"/>
-            <path d="M24 12 L24 24 L32 28"/>
-          </svg>
-        </div>
-        <div class="service-num">04</div>
-        <h3 class="service-title">Техническое обслуживание</h3>
-        <p class="service-desc">Регулярное ТО, аварийный выезд 24/7, плановая модернизация. Ваш лифт в&nbsp;надёжных руках.</p>
-        <div class="service-highlight-tag">24/7</div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M8 12 L40 12 L40 36 L8 36 Z"/>
-            <path d="M14 18 L34 18 M14 24 L26 24 M14 30 L20 30"/>
-          </svg>
-        </div>
-        <div class="service-num">05</div>
-        <h3 class="service-title">Модернизация</h3>
-        <p class="service-desc">Обновление существующих лифтов&nbsp;— замена кабин, систем управления, дверей и&nbsp;двигателей.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M24 8 L8 16 L24 24 L40 16 Z"/>
-            <path d="M8 24 L24 32 L40 24 M8 32 L24 40 L40 32"/>
-          </svg>
-        </div>
-        <div class="service-num">06</div>
-        <h3 class="service-title">Консультация</h3>
-        <p class="service-desc">Экспертная поддержка на&nbsp;всех стадиях&nbsp;— от&nbsp;концепции до&nbsp;ввода в&nbsp;эксплуатацию.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =============== TECHNOLOGY / FEATURE =============== -->
-<section class="tech">
-  <div class="container">
-    <div class="tech-grid">
-      <div class="tech-content">
-        <div class="section-num">05 — Технологии</div>
-        <h2 class="tech-title">
-          Лифты, которые думают&nbsp;<em>наперёд.</em>
+  <!-- =============== INTRO / NUMBERS =============== -->
+  <section class="intro" id="about">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-num" data-i18n="about.num">01 — Наследие</div>
+        <h2 class="section-title" data-i18n-html="about.title">
+          Сто пятьдесят&nbsp;лет инженерной&nbsp;<em>точности.</em>
         </h2>
-        <p class="tech-lead">
-          Schindler&nbsp;Ahead&nbsp;— первая в&nbsp;мире цифровая платформа для лифтов. Постоянный мониторинг, предиктивная диагностика и&nbsp;связь с&nbsp;сервисом в&nbsp;режиме реального времени.
-        </p>
-        <ul class="tech-features">
-          <li>
-            <span class="feat-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-            </span>
-            <div>
-              <b>Предиктивная аналитика</b>
-              <span>Алгоритмы предсказывают необходимость обслуживания до&nbsp;возникновения сбоя</span>
-            </div>
-          </li>
-          <li>
-            <span class="feat-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-            </span>
-            <div>
-              <b>PORT Technology</b>
-              <span>Персонализированный доступ и&nbsp;оптимизация трафика пассажиров</span>
-            </div>
-          </li>
-          <li>
-            <span class="feat-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-            </span>
-            <div>
-              <b>Энергоэффективность А++</b>
-              <span>Регенеративные приводы возвращают до&nbsp;30% энергии в&nbsp;сеть</span>
-            </div>
-          </li>
-        </ul>
       </div>
 
-      <!-- Tech visual: animated dashboard -->
-      <div class="tech-visual">
-        <div class="dashboard">
-          <div class="dash-header">
-            <div class="dash-dot"></div>
-            <div class="dash-dot"></div>
-            <div class="dash-dot"></div>
-            <div class="dash-title">SCHINDLER AHEAD · LIVE</div>
-            <div class="dash-status">● ACTIVE</div>
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p class="lead" data-i18n="about.lead">
+            Schindler — швейцарская группа, основанная Робертом Шиндлером в&nbsp;1874&nbsp;году в&nbsp;Люцерне.
+            Сегодня&nbsp;— один из&nbsp;двух крупнейших производителей лифтов и&nbsp;эскалаторов в&nbsp;мире.
+          </p>
+          <p data-i18n="about.p2">
+            В&nbsp;Узбекистане наша компания «Safety Elevators&nbsp;and&nbsp;Escalators» является эксклюзивным
+            дистрибьютором Schindler с&nbsp;правом производства, продажи, монтажа и&nbsp;технического обслуживания.
+            Мы&nbsp;оборудовали лифтами и&nbsp;эскалаторами знаковые объекты страны — от&nbsp;Hilton Tashkent City
+            до&nbsp;Tashkent City и&nbsp;Dream City.
+          </p>
+          <a href="#" class="link-arrow">
+            <span data-i18n="about.link">Полная история компании</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="stats">
+          <div class="stat stat-featured" data-counter="1000000000" data-suffix="+">
+            <div class="stat-num"><span>0</span></div>
+            <div class="stat-label" data-i18n="about.stat1">людей перевозим ежедневно</div>
           </div>
-          <div class="dash-body">
-            <div class="dash-metric">
-              <div class="dash-label">UPTIME</div>
-              <div class="dash-value">99.97<i>%</i></div>
-              <div class="dash-bar"><span style="width: 99.97%"></span></div>
-            </div>
-            <div class="dash-metric">
-              <div class="dash-label">EFFICIENCY</div>
-              <div class="dash-value">94.2<i>%</i></div>
-              <div class="dash-bar"><span style="width: 94.2%"></span></div>
-            </div>
-            <div class="dash-metric">
-              <div class="dash-label">RIDES TODAY</div>
-              <div class="dash-value">12,847</div>
-            </div>
-            <div class="dash-graph">
-              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="dashG" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.4"/>
-                    <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <path d="M0,70 L20,65 L40,55 L60,60 L80,45 L100,50 L120,30 L140,38 L160,25 L180,32 L200,18 L220,28 L240,15 L260,22 L280,10 L300,18 L300,100 L0,100 Z" fill="url(#dashG)"/>
-                <path d="M0,70 L20,65 L40,55 L60,60 L80,45 L100,50 L120,30 L140,38 L160,25 L180,32 L200,18 L220,28 L240,15 L260,22 L280,10 L300,18" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+          <div class="stat" data-counter="150" data-suffix="">
+            <div class="stat-num"><span>0</span></div>
+            <div class="stat-label" data-i18n="about.stat2">лет инженерной истории</div>
+          </div>
+          <div class="stat" data-counter="100" data-suffix="+">
+            <div class="stat-num"><span>0</span></div>
+            <div class="stat-label" data-i18n="about.stat3">стран присутствия</div>
+          </div>
+          <div class="stat" data-counter="70000" data-suffix="+">
+            <div class="stat-num"><span>0</span></div>
+            <div class="stat-label" data-i18n="about.stat4">сотрудников в&nbsp;мире</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== PRODUCTS =============== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-num" data-i18n="prod.num">02 — Продукты</div>
+        <h2 class="section-title" data-i18n-html="prod.title">
+          Три модели для каждой&nbsp;<em>задачи.</em>
+        </h2>
+        <p class="section-sub" data-i18n="prod.sub">От&nbsp;квартирных жилых домов до&nbsp;высотных башен
+          и&nbsp;коммерческих центров&nbsp;— Schindler предлагает решение для любой архитектурной концепции.</p>
+      </div>
+
+      <div class="product-list">
+        <!-- Product 1 -->
+        <article class="product" data-product="3300">
+          <div class="product-num">/01</div>
+          <div class="product-info">
+            <div class="product-tag" data-i18n="p33.tag">Жилой сегмент</div>
+            <h3 class="product-name">Schindler 3300</h3>
+            <p class="product-desc" data-i18n="p33.desc">Эталонный лифт для жилых зданий. Энергоэффективный, бесшумный
+              и&nbsp;адаптируемый под любой интерьер. Технология PORT обеспечивает интуитивную навигацию.</p>
+            <ul class="product-specs">
+              <li><span data-i18n="p33.s1l">Грузоподъёмность</span><b data-i18n="p33.s1v">до 1&nbsp;000&nbsp;кг</b></li>
+              <li><span data-i18n="p33.s2l">Скорость</span><b data-i18n="p33.s2v">1.0–1.6 м/с</b></li>
+              <li><span data-i18n="p33.s3l">Этажей</span><b data-i18n="p33.s3v">до 25</b></li>
+            </ul>
+            <a href="#" class="link-arrow">
+              <span data-i18n="p33.link">Подробнее о модели</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
+            </a>
+          </div>
+          <div class="product-visual">
+            <div class="product-shaft">
+              <div class="product-cab">
+                <div class="product-cab-doors"></div>
+                <div class="product-cab-light"></div>
+              </div>
+              <div class="product-cables"></div>
             </div>
-            <div class="dash-pulse">
-              <div class="dash-pulse-ring"></div>
-              <div class="dash-pulse-ring"></div>
-              <div class="dash-pulse-core"></div>
+            <div class="product-tag-floating">3300</div>
+            <div class="product-hover-info">
+              <div class="hover-info-row"><span data-i18n="p33.h1l">Тип</span><b data-i18n="p33.h1v">Пассажирский</b>
+              </div>
+              <div class="hover-info-row"><span data-i18n="p33.h2l">Привод</span><b
+                  data-i18n="p33.h2v">Безредукторный</b></div>
+              <div class="hover-info-row"><span data-i18n="p33.h3l">Энергокласс</span><b data-i18n="p33.h3v">A</b></div>
+              <div class="hover-info-row"><span data-i18n="p33.h4l">Система</span><b data-i18n="p33.h4v">PORT
+                  Technology</b></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product reverse" data-product="5500">
+          <div class="product-num">/02</div>
+          <div class="product-info">
+            <div class="product-tag" data-i18n="p55.tag">Премиальный сегмент</div>
+            <h3 class="product-name">Schindler 5500</h3>
+            <p class="product-desc" data-i18n="p55.desc">Гибкое модульное решение для коммерческих и&nbsp;премиальных
+              жилых зданий. Безграничная кастомизация интерьера кабины&nbsp;— от&nbsp;стекла и&nbsp;нержавеющей стали
+              до&nbsp;натурального камня.</p>
+            <ul class="product-specs">
+              <li><span data-i18n="p55.s1l">Грузоподъёмность</span><b data-i18n="p55.s1v">до 2&nbsp;500&nbsp;кг</b></li>
+              <li><span data-i18n="p55.s2l">Скорость</span><b data-i18n="p55.s2v">1.0–4.0 м/с</b></li>
+              <li><span data-i18n="p55.s3l">Этажей</span><b data-i18n="p55.s3v">до 60</b></li>
+            </ul>
+            <a href="#" class="link-arrow">
+              <span data-i18n="p55.link">Подробнее о модели</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="product-visual">
+            <div class="product-shaft tall">
+              <div class="product-cab premium">
+                <div class="product-cab-doors"></div>
+                <div class="product-cab-light"></div>
+              </div>
+              <div class="product-cables"></div>
+            </div>
+            <div class="product-tag-floating">5500</div>
+            <div class="product-hover-info">
+              <div class="hover-info-row"><span data-i18n="p55.h1l">Тип</span><b data-i18n="p55.h1v">Пассажирский /
+                  Грузовой</b></div>
+              <div class="hover-info-row"><span data-i18n="p55.h2l">Привод</span><b
+                  data-i18n="p55.h2v">Безредукторный</b></div>
+              <div class="hover-info-row"><span data-i18n="p55.h3l">Энергокласс</span><b data-i18n="p55.h3v">A+</b>
+              </div>
+              <div class="hover-info-row"><span data-i18n="p55.h4l">Кастомизация</span><b
+                  data-i18n="p55.h4v">Безграничная</b></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product" data-product="9300">
+          <div class="product-num">/03</div>
+          <div class="product-info">
+            <div class="product-tag" data-i18n="p93.tag">Эскалаторы</div>
+            <h3 class="product-name">Schindler 9300AE</h3>
+            <p class="product-desc" data-i18n="p93.desc">Передовой эскалатор для торговых центров, аэропортов
+              и&nbsp;транспортных узлов. Энергосберегающий привод и&nbsp;интеллектуальные системы безопасности для
+              непрерывной эксплуатации.</p>
+            <ul class="product-specs">
+              <li><span data-i18n="p93.s1l">Угол наклона</span><b data-i18n="p93.s1v">30° / 35°</b></li>
+              <li><span data-i18n="p93.s2l">Скорость</span><b data-i18n="p93.s2v">0.5–0.65 м/с</b></li>
+              <li><span data-i18n="p93.s3l">Перепад</span><b data-i18n="p93.s3v">до 12 м</b></li>
+            </ul>
+            <a href="#" class="link-arrow">
+              <span data-i18n="p93.link">Подробнее о модели</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="product-visual">
+            <div class="escalator">
+              <div class="escalator-step"></div>
+              <div class="escalator-step"></div>
+              <div class="escalator-step"></div>
+              <div class="escalator-step"></div>
+              <div class="escalator-step"></div>
+              <div class="escalator-step"></div>
+              <div class="escalator-rail"></div>
+            </div>
+            <div class="product-tag-floating">9300</div>
+            <div class="product-hover-info">
+              <div class="hover-info-row"><span data-i18n="p93.h1l">Тип</span><b data-i18n="p93.h1v">Эскалатор</b></div>
+              <div class="hover-info-row"><span data-i18n="p93.h2l">Привод</span><b
+                  data-i18n="p93.h2v">Энергосберегающий</b></div>
+              <div class="hover-info-row"><span data-i18n="p93.h3l">Безопасность</span><b
+                  data-i18n="p93.h3v">Интеллектуальная</b></div>
+              <div class="hover-info-row"><span data-i18n="p93.h4l">Режим</span><b data-i18n="p93.h4v">Непрерывный</b>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- =============== ELEVATOR CONSTRUCTOR =============== -->
+      <div class="constructor">
+        <div class="constructor-header">
+          <div class="section-num" data-i18n="calc.num">Конструктор</div>
+          <h3 class="constructor-title" data-i18n-html="calc.title">Подберите <em>параметры</em> лифта</h3>
+          <p class="constructor-sub" data-i18n="calc.sub">Введите габариты кабины — калькулятор рассчитает
+            грузоподъёмность и&nbsp;вместимость. Нажмите ⇄ для обратного расчёта.</p>
+        </div>
+
+        <div class="constructor-body" id="constructor-body">
+          <div class="constructor-panel" id="panel-left">
+            <div class="constructor-panel-label" id="label-left" data-i18n="calc.ll_in">РАЗМЕРЫ КАБИНЫ · ВВОД</div>
+            <div class="constructor-panel-fields" id="fields-left">
+              <div class="constructor-field">
+                <label for="calc-width" data-i18n="calc.width">Ширина</label>
+                <div class="constructor-input-group">
+                  <input type="number" id="calc-width" value="1500" min="600" max="4000" step="50">
+                  <span class="constructor-unit" data-i18n="calc.mm">мм</span>
+                </div>
+              </div>
+              <div class="constructor-field">
+                <label for="calc-length" data-i18n="calc.length">Длина</label>
+                <div class="constructor-input-group">
+                  <input type="number" id="calc-length" value="1500" min="600" max="4000" step="50">
+                  <span class="constructor-unit" data-i18n="calc.mm">мм</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="constructor-swap" id="calc-swap" aria-label="Поменять местами" data-i18n-aria="calc.swap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+              <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+
+          <div class="constructor-panel" id="panel-right">
+            <div class="constructor-panel-label" id="label-right" data-i18n="calc.lr_out">ХАРАКТЕРИСТИКИ · РЕЗУЛЬТАТ
+            </div>
+            <div class="constructor-panel-fields" id="fields-right">
+              <div class="constructor-field">
+                <label for="calc-kg" data-i18n="calc.kg">Грузоподъёмность</label>
+                <div class="constructor-input-group">
+                  <input type="number" id="calc-kg" value="400" min="0" max="10000" step="10" readonly tabindex="-1">
+                  <span class="constructor-unit" data-i18n="calc.kg_u">кг</span>
+                </div>
+              </div>
+              <div class="constructor-field">
+                <label for="calc-persons" data-i18n="calc.pers">Вместимость</label>
+                <div class="constructor-input-group">
+                  <input type="number" id="calc-persons" value="5" min="0" max="100" step="1" readonly tabindex="-1">
+                  <span class="constructor-unit" data-i18n="calc.ch">чел</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="constructor-results">
+          <div class="constructor-result-item">
+            <span class="constructor-result-label" data-i18n="calc.area">Площадь кабины</span>
+            <span class="constructor-result-value" id="calc-area">2.25 м²</span>
+          </div>
+          <div class="constructor-result-divider"></div>
+          <div class="constructor-result-item">
+            <span class="constructor-result-label" data-i18n="calc.model">Рекомендуемая модель</span>
+            <span class="constructor-result-value constructor-result-model" id="calc-model">Schindler 3300</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== PROJECTS =============== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-num" data-i18n="proj.num">03 — Реализованные проекты</div>
+        <h2 class="section-title" data-i18n-html="proj.title">
+          Здания, в&nbsp;которых работает&nbsp;<em>наша инженерия.</em>
+        </h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project project-large">
+          <div class="project-image"
+            style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2118 50%, #c8423a 150%);">
+            <div class="project-overlay"></div>
+            <div class="project-pattern"></div>
+          </div>
+          <div class="project-meta">
+            <span class="project-year">2019</span>
+            <span class="project-tag" data-i18n="pr.ht.tag">Гостиница · 5★</span>
+          </div>
+          <h3 class="project-name">Hilton Tashkent City</h3>
+          <p class="project-desc" data-i18n="pr.ht.desc">Установка комплекса высокоскоростных лифтов Schindler 7000 для
+            флагманской гостиницы Hilton в Узбекистане.</p>
+          <div class="project-stats">
+            <span><b>12</b> <span data-i18n="pr.ht.s1">лифтов</span></span>
+            <span><b>23</b> <span data-i18n="pr.ht.s2">этажа</span></span>
+            <span><b>4.0</b> м/с</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-image" style="background: linear-gradient(160deg, #0f0f0f 0%, #2a2520 100%);">
+            <div class="project-overlay"></div>
+            <div class="project-pattern"></div>
+          </div>
+          <div class="project-meta">
+            <span class="project-year">2020</span>
+            <span class="project-tag" data-i18n="pr.tc.tag">Деловой центр</span>
+          </div>
+          <h3 class="project-name">Tashkent City</h3>
+          <p class="project-desc" data-i18n="pr.tc.desc">Просторные премиальные лифты для бизнес-района нового
+            поколения.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-image" style="background: linear-gradient(140deg, #181410 0%, #3a2a1a 100%);">
+            <div class="project-overlay"></div>
+            <div class="project-pattern"></div>
+          </div>
+          <div class="project-meta">
+            <span class="project-year">2019</span>
+            <span class="project-tag" data-i18n="pr.dc.tag">ЖК премиум</span>
+          </div>
+          <h3 class="project-name">Dream City</h3>
+          <p class="project-desc" data-i18n="pr.dc.desc">Долгосрочное сотрудничество с одним из крупнейших застройщиков
+            страны.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-image" style="background: linear-gradient(120deg, #1a1612 0%, #44342a 100%);">
+            <div class="project-overlay"></div>
+            <div class="project-pattern"></div>
+          </div>
+          <div class="project-meta">
+            <span class="project-year">2018</span>
+            <span class="project-tag" data-i18n="pr.mb.tag">Девелопмент</span>
+          </div>
+          <h3 class="project-name">Murad Buildings</h3>
+          <p class="project-desc" data-i18n="pr.mb.desc">Стратегический контракт на оснащение жилых комплексов
+            застройщика.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-image" style="background: linear-gradient(180deg, #0d0d0d 0%, #2e2218 100%);">
+            <div class="project-overlay"></div>
+            <div class="project-pattern"></div>
+          </div>
+          <div class="project-meta">
+            <span class="project-year">2018</span>
+            <span class="project-tag" data-i18n="pr.ma.tag">Жилой комплекс</span>
+          </div>
+          <h3 class="project-name">Mirabad Avenue</h3>
+          <p class="project-desc" data-i18n="pr.ma.desc">Установка трёх лифтов Schindler в премиальный жилой комплекс
+            центра Ташкента.</p>
+        </article>
+      </div>
+
+      <div class="projects-cta">
+        <a href="#" class="btn btn-ghost btn-large">
+          <span class="btn-label">
+            <span class="btn-text" data-i18n="proj.cta">Все проекты</span>
+            <span class="btn-text" data-i18n="proj.cta">Все проекты</span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== SERVICES =============== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-num" data-i18n="svc.num">04 — Услуги</div>
+        <h2 class="section-title" data-i18n-html="svc.title">
+          Полный жизненный&nbsp;цикл&nbsp;<em>обслуживания.</em>
+        </h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="6" y="6" width="36" height="36" />
+              <path d="M16 16h16v16H16z M16 24h16 M24 16v16" />
+            </svg>
+          </div>
+          <div class="service-num">01</div>
+          <h3 class="service-title" data-i18n="s1.t">Проектирование</h3>
+          <p class="service-desc" data-i18n="s1.d">Расчёт оптимальной конфигурации, подбор моделей под архитектурную
+            задачу, BIM-интеграция.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M8 40 L40 40 L40 12 L24 4 L8 12 Z" />
+              <path d="M16 40 L16 24 L32 24 L32 40" />
+              <path d="M20 24 L20 32 M28 24 L28 32" />
+            </svg>
+          </div>
+          <div class="service-num">02</div>
+          <h3 class="service-title" data-i18n="s2.t">Производство</h3>
+          <p class="service-desc" data-i18n="s2.d">Локализованное производство компонентов и&nbsp;кабин
+            в&nbsp;Узбекистане по&nbsp;швейцарским стандартам качества.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M24 6 L24 42 M12 18 L24 6 L36 18 M14 30 L34 30 M16 36 L32 36" />
+            </svg>
+          </div>
+          <div class="service-num">03</div>
+          <h3 class="service-title" data-i18n="s3.t">Монтаж</h3>
+          <p class="service-desc" data-i18n="s3.d">Профессиональная установка сертифицированными инженерами
+            с&nbsp;соблюдением всех норм безопасности.</p>
+        </div>
+
+        <div class="service-card service-highlight">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
+              <circle cx="24" cy="24" r="18" />
+              <path d="M24 12 L24 24 L32 28" />
+            </svg>
+          </div>
+          <div class="service-num">04</div>
+          <h3 class="service-title" data-i18n="s4.t">Техническое обслуживание</h3>
+          <p class="service-desc" data-i18n="s4.d">Регулярное ТО, аварийный выезд 24/7, плановая модернизация. Ваш лифт
+            в&nbsp;надёжных руках.</p>
+          <div class="service-highlight-tag">24/7</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M8 12 L40 12 L40 36 L8 36 Z" />
+              <path d="M14 18 L34 18 M14 24 L26 24 M14 30 L20 30" />
+            </svg>
+          </div>
+          <div class="service-num">05</div>
+          <h3 class="service-title" data-i18n="s5.t">Модернизация</h3>
+          <p class="service-desc" data-i18n="s5.d">Обновление существующих лифтов&nbsp;— замена кабин, систем
+            управления, дверей и&nbsp;двигателей.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M24 8 L8 16 L24 24 L40 16 Z" />
+              <path d="M8 24 L24 32 L40 24 M8 32 L24 40 L40 32" />
+            </svg>
+          </div>
+          <div class="service-num">06</div>
+          <h3 class="service-title" data-i18n="s6.t">Консультация</h3>
+          <p class="service-desc" data-i18n="s6.d">Экспертная поддержка на&nbsp;всех стадиях&nbsp;— от&nbsp;концепции
+            до&nbsp;ввода в&nbsp;эксплуатацию.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== TECHNOLOGY / FEATURE =============== -->
+  <section class="tech">
+    <div class="container">
+      <div class="tech-grid">
+        <div class="tech-content">
+          <div class="section-num" data-i18n="tech.num">05 — Технологии</div>
+          <h2 class="tech-title" data-i18n-html="tech.title">
+            Лифты, которые думают&nbsp;<em>наперёд.</em>
+          </h2>
+          <p class="tech-lead" data-i18n="tech.lead">
+            Schindler&nbsp;Ahead&nbsp;— первая в&nbsp;мире цифровая платформа для лифтов. Постоянный мониторинг,
+            предиктивная диагностика и&nbsp;связь с&nbsp;сервисом в&nbsp;режиме реального времени.
+          </p>
+          <ul class="tech-features">
+            <li>
+              <span class="feat-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
+              </span>
+              <div>
+                <b data-i18n="tf1.t">Предиктивная аналитика</b>
+                <span data-i18n="tf1.d">Алгоритмы предсказывают необходимость обслуживания до&nbsp;возникновения
+                  сбоя</span>
+              </div>
+            </li>
+            <li>
+              <span class="feat-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
+              </span>
+              <div>
+                <b data-i18n="tf2.t">PORT Technology</b>
+                <span data-i18n="tf2.d">Персонализированный доступ и&nbsp;оптимизация трафика пассажиров</span>
+              </div>
+            </li>
+            <li>
+              <span class="feat-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
+              </span>
+              <div>
+                <b data-i18n="tf3.t">Энергоэффективность А++</b>
+                <span data-i18n="tf3.d">Регенеративные приводы возвращают до&nbsp;30% энергии в&nbsp;сеть</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tech visual: animated dashboard -->
+        <div class="tech-visual">
+          <div class="dashboard">
+            <div class="dash-header">
+              <div class="dash-dot"></div>
+              <div class="dash-dot"></div>
+              <div class="dash-dot"></div>
+              <div class="dash-title">SCHINDLER AHEAD · LIVE</div>
+              <div class="dash-status">● ACTIVE</div>
+            </div>
+            <div class="dash-body">
+              <div class="dash-metric">
+                <div class="dash-label">UPTIME</div>
+                <div class="dash-value">99.97<i>%</i></div>
+                <div class="dash-bar"><span style="width: 99.97%"></span></div>
+              </div>
+              <div class="dash-metric">
+                <div class="dash-label">EFFICIENCY</div>
+                <div class="dash-value">94.2<i>%</i></div>
+                <div class="dash-bar"><span style="width: 94.2%"></span></div>
+              </div>
+              <div class="dash-metric">
+                <div class="dash-label">RIDES TODAY</div>
+                <div class="dash-value">12,847</div>
+              </div>
+              <div class="dash-graph">
+                <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="dashG" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.4" />
+                      <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M0,70 L20,65 L40,55 L60,60 L80,45 L100,50 L120,30 L140,38 L160,25 L180,32 L200,18 L220,28 L240,15 L260,22 L280,10 L300,18 L300,100 L0,100 Z"
+                    fill="url(#dashG)" />
+                  <path
+                    d="M0,70 L20,65 L40,55 L60,60 L80,45 L100,50 L120,30 L140,38 L160,25 L180,32 L200,18 L220,28 L240,15 L260,22 L280,10 L300,18"
+                    stroke="var(--accent)" stroke-width="1.5" fill="none" />
+                </svg>
+              </div>
+              <div class="dash-pulse">
+                <div class="dash-pulse-ring"></div>
+                <div class="dash-pulse-ring"></div>
+                <div class="dash-pulse-core"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============== TESTIMONIAL =============== -->
-<section class="testimonial">
-  <div class="container">
-    <div class="quote-mark">
-      <svg viewBox="0 0 100 100" fill="currentColor">
-        <path d="M30 30 L30 70 L10 70 L10 50 C10 38 18 30 30 30 Z M70 30 L70 70 L50 70 L50 50 C50 38 58 30 70 30 Z"/>
-      </svg>
-    </div>
-    <blockquote class="quote">
-      Schindler — это&nbsp;по-настоящему просторные лифты. Точность работы, плавность хода и&nbsp;дизайн полностью соответствуют статусу Tashkent City.
-    </blockquote>
-    <div class="quote-author">
-      <div class="quote-avatar"></div>
-      <div>
-        <div class="quote-name">Tashkent City</div>
-        <div class="quote-role">Заказчик · 2019</div>
+  <!-- =============== TESTIMONIAL =============== -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="quote-mark">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M30 30 L30 70 L10 70 L10 50 C10 38 18 30 30 30 Z M70 30 L70 70 L50 70 L50 50 C50 38 58 30 70 30 Z" />
+        </svg>
+      </div>
+      <blockquote class="quote" data-i18n="test.quote">
+        Schindler — это&nbsp;по-настоящему просторные лифты. Точность работы, плавность хода и&nbsp;дизайн полностью
+        соответствуют статусу Tashkent City.
+      </blockquote>
+      <div class="quote-author">
+        <div class="quote-avatar"></div>
+        <div>
+          <div class="quote-name">Tashkent City</div>
+          <div class="quote-role" data-i18n="test.role">Заказчик · 2019</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============== CTA =============== -->
-<section class="cta" id="contact">
-  <div class="cta-bg">
-    <div class="cta-grid"></div>
-  </div>
-  <div class="container">
-    <div class="cta-inner">
-      <div class="section-num">06 — Контакты</div>
-      <h2 class="cta-title">
-        Начнём ваш&nbsp;<em>проект</em><br>
-        вместе.
-      </h2>
-      <p class="cta-sub">Расскажите о&nbsp;вашем здании&nbsp;— мы&nbsp;подберём оптимальную конфигурацию и&nbsp;подготовим коммерческое предложение в&nbsp;течение 48&nbsp;часов.</p>
+  <!-- =============== CTA =============== -->
+  <section class="cta" id="contact">
+    <div class="cta-bg">
+      <div class="cta-grid"></div>
+    </div>
+    <div class="container">
+      <div class="cta-inner">
+        <div class="section-num" data-i18n="cta.num">06 — Контакты</div>
+        <h2 class="cta-title" data-i18n-html="cta.title">
+          Начнём ваш&nbsp;<em>проект</em><br>
+          вместе.
+        </h2>
+        <p class="cta-sub" data-i18n="cta.sub">Расскажите о&nbsp;вашем здании&nbsp;— мы&nbsp;подберём оптимальную
+          конфигурацию и&nbsp;подготовим коммерческое предложение в&nbsp;течение 48&nbsp;часов.</p>
 
-      <form class="cta-form" onsubmit="event.preventDefault(); alert('Форма-демо. Здесь будет реальная отправка.');">
-        <div class="form-row">
-          <div class="form-field">
-            <label>Имя</label>
-            <input type="text" placeholder="Ваше имя" required>
+        <form class="cta-form" id="cta-form" action="https://formspree.io/f/xovqdvrb" method="POST">
+          <div class="form-row">
+            <div class="form-field">
+              <label data-i18n="cta.l_name">Имя</label>
+              <input type="text" name="name" placeholder="Ваше имя" data-i18n-ph="cta.ph_name" required>
+            </div>
+            <div class="form-field">
+              <label data-i18n="cta.l_co">Компания</label>
+              <input type="text" name="company" placeholder="Название компании" data-i18n-ph="cta.ph_co">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label data-i18n="cta.l_tel">Телефон</label>
+              <input type="tel" name="phone" placeholder="+998 __ ___ __ __" data-i18n-ph="cta.ph_tel" required>
+            </div>
+            <div class="form-field">
+              <label data-i18n="cta.l_mail">Email</label>
+              <input type="email" name="email" placeholder="email@company.uz" data-i18n-ph="cta.ph_mail" required>
+            </div>
           </div>
           <div class="form-field">
-            <label>Компания</label>
-            <input type="text" placeholder="Название компании">
+            <label data-i18n="cta.l_proj">О&nbsp;проекте</label>
+            <textarea rows="3" placeholder="Тип объекта, количество этажей, особенности..."
+              name="project" data-i18n-ph="cta.ph_proj"></textarea>
+          </div>
+          <div class="form-actions">
+            <span class="form-note" data-i18n="cta.note">Нажимая кнопку, вы соглашаетесь с&nbsp;обработкой персональных
+              данных</span>
+            <button class="btn btn-primary btn-large" type="submit">
+              <span class="btn-label">
+                <span class="btn-text" data-i18n="cta.submit">Отправить запрос</span>
+                <span class="btn-text" data-i18n="cta.submit">Отправить запрос</span>
+              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="cta-direct">
+          <a href="tel:+998712000000" class="cta-direct-item">
+            <span class="cta-direct-label" data-i18n="cta.ph_lbl">Прямой звонок</span>
+            <span class="cta-direct-value">+998 (71) 200-00-00</span>
+          </a>
+          <a href="mailto:info@see.uz" class="cta-direct-item">
+            <span class="cta-direct-label" data-i18n="cta.em_lbl">Email</span>
+            <span class="cta-direct-value">info@see.uz</span>
+          </a>
+          <div class="cta-direct-item">
+            <span class="cta-direct-label" data-i18n="cta.ad_lbl">Адрес</span>
+            <span class="cta-direct-value" data-i18n="cta.address">Ташкент · Узбекистан</span>
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-field">
-            <label>Телефон</label>
-            <input type="tel" placeholder="+998 __ ___ __ __" required>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 60 60" fill="none">
+              <rect x="2" y="2" width="56" height="56" stroke="currentColor" stroke-width="1" />
+              <path d="M18 22 L18 38 L30 30 Z M42 22 L42 38 L30 30 Z" fill="currentColor" />
+            </svg>
           </div>
-          <div class="form-field">
-            <label>Email</label>
-            <input type="email" placeholder="email@company.uz" required>
+          <div class="footer-tag">SCHINDLER UZBEKISTAN<br><span data-i18n="ft.tag">Эксклюзивный дистрибьютор</span>
           </div>
+        </div>
+        <div class="footer-marquee">
+          <span>SCHINDLER · SAFETY ELEVATORS AND ESCALATORS · SCHINDLER · SAFETY ELEVATORS AND ESCALATORS · SCHINDLER
+            ·</span>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="ft.c1">Продукты</h4>
+          <a href="#">Schindler 3300</a>
+          <a href="#">Schindler 5500</a>
+          <a href="#">Schindler 9300AE</a>
+          <a href="#" data-i18n="ft.c1l4">Все модели</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ft.c2">Услуги</h4>
+          <a href="#" data-i18n="ft.c2l1">Проектирование</a>
+          <a href="#" data-i18n="ft.c2l2">Монтаж</a>
+          <a href="#" data-i18n="ft.c2l3">Техобслуживание</a>
+          <a href="#" data-i18n="ft.c2l4">Модернизация</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ft.c3">Компания</h4>
+          <a href="#" data-i18n="ft.c3l1">О нас</a>
+          <a href="#" data-i18n="ft.c3l2">Проекты</a>
+          <a href="#" data-i18n="ft.c3l3">Партнёры</a>
+          <a href="#" data-i18n="ft.c3l4">Лицензии</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ft.c4">Контакты</h4>
+          <a href="tel:+998712000000">+998 (71) 200-00-00</a>
+          <a href="mailto:info@see.uz">info@see.uz</a>
+          <span data-i18n="ft.c4addr">Ташкент, Узбекистан</span>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/see.uz/" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/schindlerUzbekistan/" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2017–<span id="year">2026</span> Safety Elevators and Escalators. <span data-i18n="ft.rights">Все права
+            защищены.</span></div>
+        <div class="footer-legal">
+          <a href="privacy.html" data-i18n="ft.privacy">Политика конфиденциальности</a>
+          <a href="terms.html" data-i18n="ft.terms">Условия использования</a>
+        </div>
+      </div>
+
+      <div class="footer-mega">SCHINDLER</div>
+    </div>
+  </footer>
+
+  <!-- Floating Consultation Widget -->
+  <div class="floating-cta-container" id="floating-cta-container">
+    <!-- The popup panel -->
+    <div class="floating-cta-panel" id="floating-cta-panel">
+      <h3 class="floating-panel-title" data-i18n="fl.title">Консультация</h3>
+      <p class="floating-panel-sub" data-i18n="fl.sub">Оставьте ваши контакты, и мы перезвоним вам в течение 15 минут.
+      </p>
+
+      <form class="floating-panel-form" id="floating-panel-form" onsubmit="event.preventDefault();">
+        <div class="form-field">
+          <label for="float-name" data-i18n="fl.l_name">Имя</label>
+          <input type="text" id="float-name" placeholder="Ваше имя" data-i18n-ph="fl.ph_name" required>
         </div>
         <div class="form-field">
-          <label>О&nbsp;проекте</label>
-          <textarea rows="3" placeholder="Тип объекта, количество этажей, особенности..."></textarea>
+          <label for="float-phone" data-i18n="fl.l_tel">Телефон</label>
+          <input type="tel" id="float-phone" placeholder="+998 __ ___ __ __" data-i18n-ph="fl.ph_tel" required>
         </div>
-        <div class="form-actions">
-          <span class="form-note">Нажимая кнопку, вы соглашаетесь с&nbsp;обработкой персональных данных</span>
-          <button class="btn btn-primary btn-large" type="submit">
-            <span class="btn-label">
-              <span class="btn-text">Отправить запрос</span>
-              <span class="btn-text">Отправить запрос</span>
-            </span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
+        <div class="form-field-select-wrapper">
+          <label for="float-topic" data-i18n="fl.l_topic">Интересует</label>
+          <select id="float-topic">
+            <option value="lift" data-i18n="fl.o_lift">Лифты Schindler</option>
+            <option value="escalator" data-i18n="fl.o_esc">Эскалаторы</option>
+            <option value="service" data-i18n="fl.o_svc">Техническое обслуживание</option>
+            <option value="modernization" data-i18n="fl.o_mod">Модернизация</option>
+          </select>
         </div>
+        <button class="btn btn-primary btn-large" type="submit"
+          style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span class="btn-label">
+            <span class="btn-text" data-i18n="fl.submit">Отправить запрос</span>
+            <span class="btn-text" data-i18n="fl.submit">Отправить запрос</span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </button>
       </form>
 
-      <div class="cta-direct">
-        <a href="tel:+998712000000" class="cta-direct-item">
-          <span class="cta-direct-label">Прямой звонок</span>
-          <span class="cta-direct-value">+998 (71) 200-00-00</span>
-        </a>
-        <a href="mailto:info@see.uz" class="cta-direct-item">
-          <span class="cta-direct-label">Email</span>
-          <span class="cta-direct-value">info@see.uz</span>
-        </a>
-        <div class="cta-direct-item">
-          <span class="cta-direct-label">Адрес</span>
-          <span class="cta-direct-value">Ташкент · Узбекистан</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =============== FOOTER =============== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <svg viewBox="0 0 60 60" fill="none">
-            <rect x="2" y="2" width="56" height="56" stroke="currentColor" stroke-width="1"/>
-            <path d="M18 22 L18 38 L30 30 Z M42 22 L42 38 L30 30 Z" fill="currentColor"/>
+      <div class="floating-panel-success" id="floating-panel-success">
+        <div class="success-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9 12l2 2 4-4"></path>
           </svg>
         </div>
-        <div class="footer-tag">SCHINDLER UZBEKISTAN<br>Эксклюзивный дистрибьютор</div>
-      </div>
-      <div class="footer-marquee">
-        <span>SCHINDLER · SAFETY ELEVATORS AND ESCALATORS · SCHINDLER · SAFETY ELEVATORS AND ESCALATORS · SCHINDLER ·</span>
+        <h3 data-i18n="fl.ok_h">Заявка отправлена</h3>
+        <p data-i18n="fl.ok_p">Спасибо! Мы свяжемся с вами в течение 15 минут.</p>
       </div>
     </div>
 
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Продукты</h4>
-        <a href="#">Schindler 3300</a>
-        <a href="#">Schindler 5500</a>
-        <a href="#">Schindler 9300AE</a>
-        <a href="#">Все модели</a>
-      </div>
-      <div class="footer-col">
-        <h4>Услуги</h4>
-        <a href="#">Проектирование</a>
-        <a href="#">Монтаж</a>
-        <a href="#">Техобслуживание</a>
-        <a href="#">Модернизация</a>
-      </div>
-      <div class="footer-col">
-        <h4>Компания</h4>
-        <a href="#">О нас</a>
-        <a href="#">Проекты</a>
-        <a href="#">Партнёры</a>
-        <a href="#">Лицензии</a>
-      </div>
-      <div class="footer-col">
-        <h4>Контакты</h4>
-        <a href="tel:+998712000000">+998 (71) 200-00-00</a>
-        <a href="mailto:info@see.uz">info@see.uz</a>
-        <span>Ташкент, Узбекистан</span>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/see.uz/" aria-label="Instagram">IG</a>
-          <a href="https://www.facebook.com/schindlerUzbekistan/" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="LinkedIn">IN</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div>© 2017–<span id="year">2026</span> Safety Elevators and Escalators. Все права защищены.</div>
-      <div class="footer-legal">
-        <a href="#">Политика конфиденциальности</a>
-        <a href="#">Условия использования</a>
-      </div>
-    </div>
-
-    <div class="footer-mega">SCHINDLER</div>
-  </div>
-</footer>
-
-<!-- Floating Consultation Widget -->
-<div class="floating-cta-container" id="floating-cta-container">
-  <!-- The popup panel -->
-  <div class="floating-cta-panel" id="floating-cta-panel">
-    <h3 class="floating-panel-title">Консультация</h3>
-    <p class="floating-panel-sub">Оставьте ваши контакты, и мы перезвоним вам в течение 15 минут.</p>
-    
-    <form class="floating-panel-form" id="floating-panel-form" onsubmit="event.preventDefault();">
-      <div class="form-field">
-        <label for="float-name">Имя</label>
-        <input type="text" id="float-name" placeholder="Ваше имя" required>
-      </div>
-      <div class="form-field">
-        <label for="float-phone">Телефон</label>
-        <input type="tel" id="float-phone" placeholder="+998 __ ___ __ __" required>
-      </div>
-      <div class="form-field-select-wrapper">
-        <label for="float-topic">Интересует</label>
-        <select id="float-topic">
-          <option value="lift">Лифты Schindler</option>
-          <option value="escalator">Эскалаторы</option>
-          <option value="service">Техническое обслуживание</option>
-          <option value="modernization">Модернизация</option>
-        </select>
-      </div>
-      <button class="btn btn-primary btn-large" type="submit" style="width: 100%; justify-content: center; margin-top: 10px;">
-        <span class="btn-label">
-          <span class="btn-text">Отправить запрос</span>
-          <span class="btn-text">Отправить запрос</span>
-        </span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M5 12h14M13 5l7 7-7 7"/>
+    <!-- The toggle trigger button -->
+    <button class="floating-cta" id="floating-cta" aria-label="Консультация" data-i18n-aria="fl.btn_aria">
+      <span class="floating-cta-pulse"></span>
+      <span class="floating-cta-icon-wrapper">
+        <!-- Chat Icon -->
+        <svg class="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
         </svg>
-      </button>
-    </form>
-
-    <div class="floating-panel-success" id="floating-panel-success">
-      <div class="success-icon-wrapper">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M9 12l2 2 4-4"></path>
+        <!-- Close Icon -->
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
-      </div>
-      <h3>Заявка отправлена</h3>
-      <p>Спасибо! Мы свяжемся с вами в течение 15 минут.</p>
-    </div>
+      </span>
+      <span class="floating-cta-text" data-i18n="fl.btn_txt">Consultation</span>
+    </button>
   </div>
 
-  <!-- The toggle trigger button -->
-  <button class="floating-cta" id="floating-cta" aria-label="Консультация">
-    <span class="floating-cta-pulse"></span>
-    <span class="floating-cta-icon-wrapper">
-      <!-- Chat Icon -->
-      <svg class="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-      </svg>
-      <!-- Close Icon -->
-      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </span>
-    <span class="floating-cta-text">Consultation</span>
-  </button>
-</div>
-
-<script src="script.js?v=1002a3e"></script>
+  <script src="script.js?v=20260610"></script>
 </body>
+
 </html>
