@@ -1,5 +1,5 @@
 /* =================================================================
-   SCHINDLER UZBEKISTAN — Design System
+   SCHINDLER UZBEKISTAN вЂ” Design System
    Aesthetic: Refined editorial / Architectural luxury
    Palette: Onyx + Bone + Cinnabar (Schindler brand red)
    Typography: Fraunces (display, with optical sizing) + Inter Tight
@@ -329,12 +329,17 @@ select {
 .nav-logo-mark {
   width: 32px;
   height: 32px;
-  color: var(--ink);
+  object-fit: contain;
+  border-radius: 2px;
   transition: transform 0.4s var(--ease);
 }
 
 .nav-logo:hover .nav-logo-mark {
-  transform: rotate(180deg);
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 2px;
+  transition: transform 0.4s var(--ease);
 }
 
 .nav-logo-text {
@@ -2312,6 +2317,13 @@ a.cta-direct-item:hover .cta-direct-value {
   color: var(--ink);
 }
 
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
 .footer-tag {
   font-family: var(--font-display);
   font-size: 16px;
@@ -3015,7 +3027,7 @@ a.cta-direct-item:hover .cta-direct-value {
   transition: border-color 0.3s var(--ease);
 }
 
-/* focus style – accent colour when the dropdown is active */
+/* focus style вЂ“ accent colour when the dropdown is active */
 .form-field-select-wrapper select:focus {
   border-color: var(--accent);
 }
@@ -3456,5 +3468,215 @@ a.cta-direct-item:hover .cta-direct-value {
 
   .product-hover-info {
     display: none;
+  }
+}
+
+/* ================================================================
+   ALL PROJECTS MODAL & GRID IMPROVEMENTS
+   ================================================================ */
+
+.all-projects-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.all-projects-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.apm-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 8, 10, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.apm-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1600px;
+  height: 100vh;
+  margin: 0;
+  background: #0c0c0d;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: scale(1.02) translateY(20px);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+  opacity: 0;
+}
+
+.all-projects-modal.open .apm-panel {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Header Improvements */
+.apm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  background: #0c0c0d;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.apm-header-left {
+  max-width: 800px;
+}
+
+.apm-eyebrow {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--accent, #c8423a);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.apm-title {
+  font-family: var(--font-display, 'Fraunces', serif);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: #f0ede8;
+  margin: 0;
+}
+
+.apm-title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.apm-close {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s var(--ease);
+}
+
+.apm-close:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: rotate(90deg);
+}
+
+/* New Modern Grid */
+.apm-grid {
+  flex: 1;
+  overflow-y: auto;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  scrollbar-width: none;
+}
+
+.apm-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Project Card Requirement Implementation */
+.project-card {
+  position: relative;
+  height: 600px; /* Larger than featured cards */
+  overflow: hidden;
+  background: #161618;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover img {
+  transform: scale(1.08); /* Smooth hover zoom */
+}
+
+.project-card .project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 50px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 70%);
+  transition: background 0.4s ease;
+  z-index: 2;
+}
+
+.project-card:hover .project-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 80%);
+}
+
+.project-card .project-overlay h3 {
+  font-family: var(--font-display, 'Fraunces', serif);
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 12px 0;
+  transform: translateY(10px);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.project-card .project-overlay p {
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  max-width: 500px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 0.5s var(--ease-out) 0.1s, opacity 0.5s ease 0.1s;
+}
+
+.project-card:hover .project-overlay h3,
+.project-card:hover .project-overlay p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .apm-grid {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 30px;
+  }
+  .project-card {
+    height: 450px;
+  }
+  .apm-header {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-overlay {
+    padding: 30px;
+  }
+  .project-card {
+    height: 400px;
   }
 }

@@ -31,7 +31,7 @@
       'hero.eyebrow': 'Эксклюзивный дистрибьютор Schindler в Узбекистане',
       'hero.w1': 'Мы',
       'hero.w2': 'перевозим',
-      'hero.w3': '1\u00a0миллиард',
+      'hero.w3': '2\u00a0миллиарда',
       'hero.w4': 'людей',
       'hero.w5': 'каждый',
       'hero.w6': 'день.',
@@ -251,7 +251,7 @@
       'hero.eyebrow': "O'zbekistonda Schindler'ning eksklyuziv distribyutori",
       'hero.w1': 'Biz',
       'hero.w2': 'tashiymiz',
-      'hero.w3': '1\u00a0milliard',
+      'hero.w3': '2\u00a0milliard',
       'hero.w4': 'odamni',
       'hero.w5': 'har',
       'hero.w6': 'kuni.',
@@ -449,7 +449,7 @@
       'hero.eyebrow': 'Exclusive Schindler Distributor in Uzbekistan',
       'hero.w1': 'We',
       'hero.w2': 'carry',
-      'hero.w3': '1\u00a0billion',
+      'hero.w3': '2\u00a0billion',
       'hero.w4': 'people',
       'hero.w5': 'every',
       'hero.w6': 'day.',
@@ -1154,3 +1154,51 @@ function showFormSuccess(form) {
   `;
 }
 
+
+
+/* ================================================================
+   ALL PROJECTS MODAL
+   ================================================================ */
+(function () {
+  const modal    = document.getElementById('all-projects-modal');
+  const openBtn  = document.getElementById('all-projects-btn');
+  const closeBtn = document.getElementById('apm-close');
+  const backdrop = document.getElementById('apm-backdrop');
+
+  if (!modal || !openBtn) return;
+
+  const openModal = () => {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    openBtn.focus();
+  };
+
+  openBtn.addEventListener('click', openModal);
+  if (closeBtn)  closeBtn.addEventListener('click', closeModal);
+  if (backdrop)  backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  /* Trap Tab focus inside modal */
+  modal.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const focusable = Array.from(
+      modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+    ).filter(el => !el.disabled);
+    if (!focusable.length) return;
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+})();
