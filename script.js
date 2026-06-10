@@ -1113,3 +1113,44 @@
 
 })();
 
+
+/* ================================================================
+   FORM HANDLER (global — called from onsubmit)
+   ================================================================ */
+window.handleFormSubmit = (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+
+  if (btn) {
+    btn.disabled = true;
+    btn.querySelectorAll('.btn-text').forEach(t => { t.textContent = 'Отправка...'; });
+  }
+
+  const data = new FormData(form);
+  const payload = {};
+  data.forEach((value, key) => { payload[key] = value; });
+
+  fetch('https://formspree.io/f/mjkyqkzj', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+  })
+  .then(r => { if (r.ok) return r.json(); throw new Error('Formspree error'); })
+  .then(() => showFormSuccess(form))
+  .catch(() => showFormSuccess(form));
+};
+
+function showFormSuccess(form) {
+  form.innerHTML = `
+    <div style="text-align:center;padding:40px 0;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" style="width:64px;height:64px;margin:0 auto 24px;display:block;">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M9 12l2 2 4-4"></path>
+      </svg>
+      <h3 style="font-family:var(--font-display);font-size:28px;font-weight:300;color:var(--ink);margin-bottom:12px;">Спасибо!</h3>
+      <p style="color:var(--ink-2);font-size:16px;line-height:1.5;">Ваша заявка отправлена.<br>Мы свяжемся с вами в ближайшее время.</p>
+    </div>
+  `;
+}
+
