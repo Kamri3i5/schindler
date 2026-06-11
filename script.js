@@ -504,6 +504,18 @@
 
 })();
 
+// Notification helper
+function showToast(message) {
+  const container = document.getElementById('toast-container');
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
+
 // Form Handler (Global for simplicity with HTML onsubmit)
 window.handleFormSubmit = async (e) => {
   e.preventDefault();
@@ -526,13 +538,13 @@ window.handleFormSubmit = async (e) => {
     const result = await response.json();
     
     if (result.success) {
-        alert('Спасибо! Ваш запрос успешно отправлен.');
+        showToast('Спасибо! Ваш запрос успешно отправлен.');
         form.reset();
     } else {
-        alert('Ошибка при отправке: ' + result.message);
+        showToast('Ошибка при отправке: ' + result.message);
     }
   } catch (error) {
-      alert('Произошла ошибка, попробуйте позже.');
+      showToast('Произошла ошибка, попробуйте позже.');
   } finally {
     btn.disabled = false;
     btn.innerHTML = originalText;
