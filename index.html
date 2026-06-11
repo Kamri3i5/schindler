@@ -72,7 +72,7 @@
   <!-- Navigation -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo" aria-label="Schindler Uzbekistan">
+      <a href="#nav" class="nav-logo" aria-label="Schindler Uzbekistan">
         <img src="images/Schindler-Emblem-removebg-preview (1).png" alt="Schindler" class="nav-logo-mark">
 
         <div class="nav-logo-text">
@@ -87,6 +87,9 @@
         <a href="#services" data-num="03" data-i18n="nav.services">Услуги</a>
         <a href="#about" data-num="04" data-i18n="nav.about">О компании</a>
         <a href="#contact" data-num="05" data-i18n="nav.contacts">Контакты</a>
+        <a href="#contact" class="btn btn-primary nav-btn-mobile" style="display: none;">
+          <span data-i18n="nav.cta">Связаться</span>
+        </a>
       </nav>
 
       <div class="nav-cta">
@@ -109,12 +112,16 @@
     </div>
   </header>
 
+  <!-- Mobile Menu Backdrop -->
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
   <!-- =============== HERO =============== -->
   <section class="hero">
     <div class="hero-bg">
       <div class="hero-grid"></div>
       <div class="hero-noise"></div>
       <div class="hero-glow"></div>
+      <div class="hero-image"></div>
     </div>
 
     <!-- vertical text rail -->
@@ -146,7 +153,7 @@
       <h1 class="hero-title">
         <span class="line"><span class="word" data-i18n="hero.w1">Мы</span> <span class="word italic"
             data-i18n="hero.w2">перевозим</span></span>
-        <span class="line"><span class="word" data-i18n="hero.w3">1&nbsp;миллиард</span> <span class="word"
+        <span class="line"><span class="word" data-i18n="hero.w3">2&nbsp;миллиарда</span> <span class="word"
             data-i18n="hero.w4">людей</span></span>
         <span class="line"><span class="word" data-i18n="hero.w5">каждый</span> <span class="word italic"
             data-i18n="hero.w6">день.</span></span>
@@ -246,6 +253,7 @@
 
       <div class="intro-grid">
         <div class="intro-text">
+          <div class="section-bg-text">EST. 1874</div>
           <p class="lead" data-i18n="about.lead">
             Schindler — швейцарская группа, основанная Робертом Шиндлером в&nbsp;1874&nbsp;году в&nbsp;Люцерне.
             Сегодня&nbsp;— один из&nbsp;двух крупнейших производителей лифтов и&nbsp;эскалаторов в&nbsp;мире.
@@ -256,7 +264,7 @@
             Мы&nbsp;оборудовали лифтами и&nbsp;эскалаторами знаковые объекты страны — от&nbsp;Hilton Tashkent City
             до&nbsp;Tashkent City и&nbsp;Dream City.
           </p>
-          <a href="#" class="link-arrow">
+          <a href="#about" class="link-arrow">
             <span data-i18n="about.link">Полная история компании</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M5 12h14M13 5l7 7-7 7" />
@@ -312,7 +320,7 @@
               <li><span data-i18n="p33.s2l">Скорость</span><b data-i18n="p33.s2v">1.0–1.6 м/с</b></li>
               <li><span data-i18n="p33.s3l">Этажей</span><b data-i18n="p33.s3v">до 25</b></li>
             </ul>
-            <a href="#" class="link-arrow">
+            <a href="#contact" class="link-arrow">
               <span data-i18n="p33.link">Подробнее о модели</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M5 12h14M13 5l7 7-7 7" />
@@ -354,7 +362,7 @@
               <li><span data-i18n="p55.s2l">Скорость</span><b data-i18n="p55.s2v">1.0–4.0 м/с</b></li>
               <li><span data-i18n="p55.s3l">Этажей</span><b data-i18n="p55.s3v">до 60</b></li>
             </ul>
-            <a href="#" class="link-arrow">
+            <a href="#contact" class="link-arrow">
               <span data-i18n="p55.link">Подробнее о модели</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M5 12h14M13 5l7 7-7 7" />
@@ -397,7 +405,7 @@
               <li><span data-i18n="p93.s2l">Скорость</span><b data-i18n="p93.s2v">0.5–0.65 м/с</b></li>
               <li><span data-i18n="p93.s3l">Перепад</span><b data-i18n="p93.s3v">до 12 м</b></li>
             </ul>
-            <a href="#" class="link-arrow">
+            <a href="#contact" class="link-arrow">
               <span data-i18n="p93.link">Подробнее о модели</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M5 12h14M13 5l7 7-7 7" />
@@ -803,6 +811,7 @@
 
   <!-- =============== TESTIMONIAL =============== -->
   <section class="testimonial">
+    <div class="testimonial-bg-image"></div>
     <div class="container">
       <div class="quote-mark">
         <svg viewBox="0 0 100 100" fill="currentColor">
@@ -917,24 +926,24 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h4 data-i18n="ft.c1">Продукты</h4>
-          <a href="#">Schindler 3300</a>
-          <a href="#">Schindler 5500</a>
-          <a href="#">Schindler 9300AE</a>
-          <a href="#" data-i18n="ft.c1l4">Все модели</a>
+          <a href="#products">Schindler 3300</a>
+          <a href="#products">Schindler 5500</a>
+          <a href="#products">Schindler 9300AE</a>
+          <a href="#products" data-i18n="ft.c1l4">Все модели</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="ft.c2">Услуги</h4>
-          <a href="#" data-i18n="ft.c2l1">Проектирование</a>
-          <a href="#" data-i18n="ft.c2l2">Монтаж</a>
-          <a href="#" data-i18n="ft.c2l3">Техобслуживание</a>
-          <a href="#" data-i18n="ft.c2l4">Модернизация</a>
+          <a href="#services" data-i18n="ft.c2l1">Проектирование</a>
+          <a href="#services" data-i18n="ft.c2l2">Монтаж</a>
+          <a href="#services" data-i18n="ft.c2l3">Техобслуживание</a>
+          <a href="#services" data-i18n="ft.c2l4">Модернизация</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="ft.c3">Компания</h4>
-          <a href="#" data-i18n="ft.c3l1">О нас</a>
-          <a href="#" data-i18n="ft.c3l2">Проекты</a>
-          <a href="#" data-i18n="ft.c3l3">Партнёры</a>
-          <a href="#" data-i18n="ft.c3l4">Лицензии</a>
+          <a href="#about" data-i18n="ft.c3l1">О нас</a>
+          <a href="#projects" data-i18n="ft.c3l2">Проекты</a>
+          <button class="footer-link" id="open-partners-btn" data-i18n="ft.c3l3" style="background:none;border:none;padding:0;text-align:left;cursor:pointer;color:var(--ink-2);font-size:15px;transition:color 0.3s;">Партнёры</button>
+          <button class="footer-link" id="open-licenses-btn" data-i18n="ft.c3l4" style="background:none;border:none;padding:0;text-align:left;cursor:pointer;color:var(--ink-2);font-size:15px;transition:color 0.3s;">Лицензии</button>
         </div>
         <div class="footer-col">
           <h4 data-i18n="ft.c4">Контакты</h4>
@@ -944,7 +953,7 @@
           <div class="footer-social">
             <a href="https://www.instagram.com/see.uz/" aria-label="Instagram">IG</a>
             <a href="https://www.facebook.com/schindlerUzbekistan/" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="LinkedIn">IN</a>
+            <a href="https://www.linkedin.com/company/schindler/" aria-label="LinkedIn">IN</a>
           </div>
         </div>
       </div>
@@ -1153,10 +1162,113 @@
           <img src="images/Infinity-business-center.jpg" alt="Infinity Business Center">
           <div class="project-overlay">
             <h3>Infinity Business Center</h3>
-            <p>Комплексное оснащение делового центра высокоскоростными лифтами Schindler. Бизнес-центр.</p>
+            <p>Комплексное оснащение делового центра высокоскоростных лифтами Schindler. Бизнес-центр.</p>
           </div>
         </div>
 
+      </div>
+    </div>
+  </div>
+
+  <!-- =============== HISTORY MODAL =============== -->
+  <div class="all-projects-modal" id="history-modal" role="dialog" aria-modal="true" aria-label="История компании">
+    <div class="apm-backdrop" id="history-backdrop"></div>
+    <div class="apm-panel">
+      <div class="apm-header">
+        <div class="apm-header-left">
+          <div class="apm-eyebrow">01 — Наследие</div>
+          <h2 class="apm-title" data-i18n="about.link">Полная история компании</h2>
+        </div>
+        <button class="apm-close" id="history-close" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="apm-grid" style="display: block; padding: 60px; color: var(--ink-2); line-height: 1.8;">
+        <div style="max-width: 900px; margin: 0 auto;">
+          <h3 style="color: var(--ink); font-family: var(--font-display); font-size: 32px; margin-bottom: 24px;">История Schindler: С 1874 года</h3>
+          <p style="margin-bottom: 20px;">Компания Schindler была основана Робертом Шиндлером в 1874 году в городе Люцерн, Швейцария. То, что начиналось как небольшая мастерская по производству высокоточного оборудования, превратилось в мирового лидера в области вертикальной мобильности.</p>
+          <p style="margin-bottom: 20px;">В 1892 году Schindler устанавливает свой первый электрический лифт, открывая эру современных технологий. К началу XX века компания расширяет свое присутствие по всей Европе, устанавливая стандарты надежности и безопасности.</p>
+          <p style="margin-bottom: 20px;">Сегодня Schindler — это более 70 000 сотрудников в более чем 100 странах. Каждый день наше оборудование перевозит более 2 миллиардов человек. Мы являемся пионерами в области цифровых технологий (Schindler Ahead) и устойчивого развития (энергоэффективные приводы А++).</p>
+          <p>В Узбекистане наше представительство «Safety Elevators and Escalators» продолжает эти традиции, обеспечивая швейцарское качество на крупнейших строительных объектах страны.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============== PARTNERS MODAL =============== -->
+  <div class="all-projects-modal" id="partners-modal" role="dialog" aria-modal="true" aria-label="Партнёры">
+    <div class="apm-backdrop" id="partners-backdrop"></div>
+    <div class="apm-panel">
+      <div class="apm-header">
+        <div class="apm-header-left">
+          <div class="apm-eyebrow">Компания</div>
+          <h2 class="apm-title" data-i18n="ft.c3l3">Партнёры</h2>
+        </div>
+        <button class="apm-close" id="partners-close" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="apm-grid" style="display: block; padding: 60px; color: var(--ink-2); line-height: 1.8;">
+        <div style="max-width: 900px; margin: 0 auto;">
+          <h3 style="color: var(--ink); font-family: var(--font-display); font-size: 32px; margin-bottom: 24px;">Наши стратегические партнёры</h3>
+          <p style="margin-bottom: 20px;">«Safety Elevators and Escalators» сотрудничает с ведущими девелоперскими и государственными компаниями Узбекистана. Мы гордимся тем, что наше оборудование выбирают для знаковых проектов страны.</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 15px 0; border-bottom: 1px solid var(--line);"><b>Murad Buildings</b> — Крупнейший девелопер Узбекистана.</li>
+            <li style="padding: 15px 0; border-bottom: 1px solid var(--line);"><b>Dream City Development</b> — Масштабные жилые и коммерческие комплексы.</li>
+            <li style="padding: 15px 0; border-bottom: 1px solid var(--line);"><b>Tashkent City</b> — Главный деловой центр страны.</li>
+            <li style="padding: 15px 0; border-bottom: 1px solid var(--line);"><b>Cabinet of Ministers of the Republic of Uzbekistan</b> — Государственные объекты.</li>
+            <li style="padding: 15px 0;"><b>Schindler Group (Switzerland)</b> — Наш основной технологический партнёр и правообладатель бренда.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============== LICENSES MODAL =============== -->
+  <div class="all-projects-modal" id="licenses-modal" role="dialog" aria-modal="true" aria-label="Лицензии">
+    <div class="apm-backdrop" id="licenses-backdrop"></div>
+    <div class="apm-panel">
+      <div class="apm-header">
+        <div class="apm-header-left">
+          <div class="apm-eyebrow">Компания</div>
+          <h2 class="apm-title" data-i18n="ft.c3l4">Лицензии</h2>
+        </div>
+        <button class="apm-close" id="licenses-close" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="apm-grid" style="display: block; padding: 60px; color: var(--ink-2); line-height: 1.8;">
+        <div style="max-width: 900px; margin: 0 auto;">
+          <h3 style="color: var(--ink); font-family: var(--font-display); font-size: 32px; margin-bottom: 24px;">Сертификация и лицензии</h3>
+          <p style="margin-bottom: 20px;">Вся деятельность компании сертифицирована согласно законодательству Республики Узбекистан и международным стандартам Schindler Group.</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+            <div style="padding: 24px; background: var(--bg-2); border: 1px solid var(--line);">
+              <h4 style="color: var(--accent); margin-bottom: 10px;">ISO 9001:2015</h4>
+              <p>Система менеджмента качества в области проектирования и монтажа.</p>
+            </div>
+            <div style="padding: 24px; background: var(--bg-2); border: 1px solid var(--line);">
+              <h4 style="color: var(--accent); margin-bottom: 10px;">ISO 14001</h4>
+              <p>Соответствие международным экологическим стандартам.</p>
+            </div>
+            <div style="padding: 24px; background: var(--bg-2); border: 1px solid var(--line);">
+              <h4 style="color: var(--accent); margin-bottom: 10px;">Госгортехнадзор РУз</h4>
+              <p>Лицензия на монтаж и техническое обслуживание лифтового оборудования.</p>
+            </div>
+            <div style="padding: 24px; background: var(--bg-2); border: 1px solid var(--line);">
+              <h4 style="color: var(--accent); margin-bottom: 10px;">Schindler Certificate</h4>
+              <p>Авторизация на эксклюзивное представительство бренда в Узбекистане.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

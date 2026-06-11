@@ -1,5 +1,5 @@
-/* =================================================================
-   SCHINDLER UZBEKISTAN вЂ” Design System
+﻿/* =================================================================
+   SCHINDLER UZBEKISTAN РІР‚вЂќ Design System
    Aesthetic: Refined editorial / Architectural luxury
    Palette: Onyx + Bone + Cinnabar (Schindler brand red)
    Typography: Fraunces (display, with optical sizing) + Inter Tight
@@ -1455,6 +1455,21 @@ section {
   transform: rotate(-30deg);
 }
 
+@media (max-width: 480px) {
+  .escalator {
+    width: 220px;
+    height: 220px;
+    transform: rotate(-30deg) scale(0.7);
+    margin-left: -40px;
+  }
+}
+
+.product-visual {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .escalator-step {
   width: 100%;
   height: 36px;
@@ -2491,12 +2506,87 @@ a.cta-direct-item:hover .cta-direct-value {
 
 /* =============== Responsive =============== */
 @media (max-width: 1100px) {
+  .nav {
+    padding: 14px 0;
+  }
+  
+  .nav.scrolled {
+    padding: 10px 0;
+  }
+
   .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    background: var(--bg);
+    flex-direction: column;
+    padding: 120px 40px 60px;
+    gap: 10px;
+    transform: translateX(100%);
+    transition: transform 0.6s var(--ease);
+    border-left: 1px solid var(--line);
+    z-index: 1000;
+    display: flex; /* Ensure it's flex but transformed */
+  }
+
+  .nav.menu-open .nav-links {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 24px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    width: 100%;
+  }
+
+  .nav-links a::after {
     display: none;
   }
 
   .nav-burger {
     display: flex;
+    position: relative;
+    z-index: 1100;
+  }
+
+  .nav.menu-open .nav-burger span:nth-child(1) {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .nav.menu-open .nav-burger span:nth-child(2) {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  .nav-cta {
+    display: none; /* Hide on mobile to simplify, or move to links */
+  }
+  
+  /* Show mobile CTA inside nav-links or keep visible but adjusted */
+  .nav.menu-open .nav-btn-mobile {
+    margin-top: 20px;
+    display: inline-flex;
+  }
+
+  .nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s var(--ease), visibility 0.4s var(--ease);
+  }
+
+  .nav.menu-open + .nav-backdrop {
+    opacity: 1;
+    visibility: visible;
   }
 
   .floor-indicator {
@@ -2562,46 +2652,53 @@ a.cta-direct-item:hover .cta-direct-value {
 }
 
 @media (max-width: 720px) {
-  :root {
-    --gutter: 20px;
-  }
-
-  .hero {
-    padding: 120px 0 80px;
-    align-items: center;
-  }
-
-  .hero-meta {
-    display: none;
-  }
-
-  .hero-meta-bottom {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    align-items: stretch;
-  }
-
-  .hero-actions {
+  .section-head {
+    text-align: center;
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    margin-bottom: 40px;
   }
-
-  .btn {
+  
+  .section-num {
     justify-content: center;
   }
 
-  .stats {
-    grid-template-columns: 1fr 1fr;
+  .section-title {
+    font-size: 28px !important;
+    word-break: break-word;
+    hyphens: auto;
+    max-width: 90vw;
   }
 
-  .stat {
-    padding: 24px 18px;
+  body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    overflow: hidden;
+  }
+
+  .product-list {
+    overflow: hidden;
   }
 
   .product {
     grid-template-columns: 1fr;
     gap: 24px;
     padding: 60px 0;
+    text-align: center;
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .product-specs {
+    align-self: stretch;
   }
 
   .product.reverse {
@@ -2609,23 +2706,27 @@ a.cta-direct-item:hover .cta-direct-value {
   }
 
   .product-num {
-    writing-mode: horizontal-tb;
-    transform: none;
-  }
-
-  .product.reverse .product-info,
-  .product.reverse .product-visual {
-    order: initial;
+    display: none;
   }
 
   .product-visual {
     grid-column: 1;
-    height: 320px;
+    height: 360px;
   }
-
+  
+  .escalator {
+    width: 200px;
+    height: 200px;
+    transform: rotate(-30deg) scale(0.6);
+    margin-left: 0; /* Centered */
+  }
+  
   .product-tag-floating {
-    font-size: 120px;
+    font-size: 100px;
+    opacity: 0.3;
   }
+  
+  /* ... existing styles ... */
 
   .projects-grid {
     grid-template-columns: 1fr;
@@ -3027,7 +3128,7 @@ a.cta-direct-item:hover .cta-direct-value {
   transition: border-color 0.3s var(--ease);
 }
 
-/* focus style вЂ“ accent colour when the dropdown is active */
+/* focus style РІР‚вЂњ accent colour when the dropdown is active */
 .form-field-select-wrapper select:focus {
   border-color: var(--accent);
 }
@@ -3472,8 +3573,118 @@ a.cta-direct-item:hover .cta-direct-value {
 }
 
 /* ================================================================
-   ALL PROJECTS MODAL & GRID IMPROVEMENTS
+   VISUAL ENHANCEMENTS & PREMIUM DEPTH
    ================================================================ */
+
+/* Hero Image Layer */
+.hero-image {
+  position: absolute;
+  inset: 0;
+  background: url('images/Hilton.jpg') center/cover no-repeat;
+  opacity: 0.04;
+  filter: grayscale(1) blur(2px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Section Background Text (Heritage) */
+.section-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(100px, 20vw, 300px);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  z-index: -1;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+
+/* Testimonial Background */
+.testimonial {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-bg-image {
+  position: absolute;
+  inset: 0;
+  background: url('images/tashkent-city.png') center/cover no-repeat;
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* CTA Background Image */
+.cta-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.cta-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('images/mirabad-avenue.jpg') center/cover no-repeat;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+  z-index: -1;
+}
+
+/* Logo Interactions */
+.nav-logo-mark {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.nav-logo:hover .nav-logo-mark {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 10px rgba(200, 66, 58, 0.3));
+}
+
+/* Footer Mega Watermark */
+.footer-mega {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(100px, 25vw, 400px);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+  z-index: -1;
+  letter-spacing: 0.1em;
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Interaction: Link Underlines */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.4s var(--ease);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
 
 .all-projects-modal {
   position: fixed;
@@ -3516,6 +3727,9 @@ a.cta-direct-item:hover .cta-direct-value {
   opacity: 0;
 }
 
+/* Modal Fix */
+.all-projects-modal.active { opacity: 1; pointer-events: auto; visibility: visible; z-index: 10000; }
+.all-projects-modal.active .apm-panel { transform: scale(1) translateY(0); opacity: 1; }
 .all-projects-modal.open .apm-panel {
   transform: scale(1) translateY(0);
   opacity: 1;
