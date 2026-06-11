@@ -976,18 +976,18 @@
       <p class="floating-panel-sub" data-i18n="fl.sub">Оставьте ваши контакты, и мы перезвоним вам в течение 15 минут.
       </p>
 
-      <form class="floating-panel-form" id="floating-panel-form" onsubmit="event.preventDefault();">
+      <form class="floating-panel-form" id="floating-panel-form" onsubmit="handleFormSubmit(event)">
         <div class="form-field">
           <label for="float-name" data-i18n="fl.l_name">Имя</label>
-          <input type="text" id="float-name" placeholder="Ваше имя" data-i18n-ph="fl.ph_name" required>
+          <input type="text" name="name" id="float-name" placeholder="Ваше имя" data-i18n-ph="fl.ph_name" required>
         </div>
         <div class="form-field">
           <label for="float-phone" data-i18n="fl.l_tel">Телефон</label>
-          <input type="tel" id="float-phone" placeholder="+998 __ ___ __ __" data-i18n-ph="fl.ph_tel" required>
+          <input type="tel" name="phone" id="float-phone" placeholder="+998 __ ___ __ __" data-i18n-ph="fl.ph_tel" required>
         </div>
         <div class="form-field-select-wrapper">
           <label for="float-topic" data-i18n="fl.l_topic">Интересует</label>
-          <select id="float-topic">
+          <select id="float-topic" name="topic">
             <option value="lift" data-i18n="fl.o_lift">Лифты Schindler</option>
             <option value="escalator" data-i18n="fl.o_esc">Эскалаторы</option>
             <option value="service" data-i18n="fl.o_svc">Техническое обслуживание</option>
