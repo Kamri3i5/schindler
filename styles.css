@@ -2666,8 +2666,12 @@ a.cta-direct-item:hover .cta-direct-value {
 
   .section-title {
     font-size: 28px !important;
+    width: 100%;
+    word-wrap: break-word;
     word-break: break-word;
+    overflow-wrap: break-word;
     hyphens: auto;
+    white-space: normal;
     max-width: 90vw;
   }
 
@@ -2695,12 +2699,20 @@ a.cta-direct-item:hover .cta-direct-value {
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .product-specs {
     align-self: stretch;
+    word-break: break-word;
   }
-
+  
+  .product-specs li {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+  
   .product.reverse {
     grid-template-columns: 1fr;
   }
