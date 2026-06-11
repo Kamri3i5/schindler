@@ -453,7 +453,35 @@
         nav.classList.remove('scrolled');
         if (fCtaContainer) fCtaContainer.classList.remove('visible');
     }
+    
+    // Animate stats counters
+    document.querySelectorAll('.stat').forEach(stat => {
+        const rect = stat.getBoundingClientRect();
+        if (rect.top < window.innerHeight && !stat.classList.contains('animated')) {
+            stat.classList.add('animated');
+            const numEl = stat.querySelector('.stat-num span');
+            const target = parseInt(stat.getAttribute('data-counter'));
+            animateNumber(numEl, target);
+        }
+    });
   });
+
+  // Counter Animation
+  function animateNumber(element, target) {
+    let current = 0;
+    const duration = 2000;
+    const step = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            element.textContent = target.toLocaleString();
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current).toLocaleString();
+        }
+    }, 16);
+  }
 
   // Floating CTA Toggle
   const fCta = document.getElementById('floating-cta');
