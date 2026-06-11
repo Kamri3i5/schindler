@@ -472,13 +472,23 @@
     const duration = 2000;
     const step = target / (duration / 16);
     
+    // Set full value as tooltip
+    element.parentElement.parentElement.parentElement.setAttribute('title', target.toLocaleString());
+
+    const formatNumber = (num) => {
+        if (num >= 1000000000) return (num / 1000000000).toFixed(1) + 'B';
+        if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+        if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+        return num.toLocaleString();
+    };
+
     const timer = setInterval(() => {
         current += step;
         if (current >= target) {
-            element.textContent = target.toLocaleString();
+            element.textContent = formatNumber(target);
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(current).toLocaleString();
+            element.textContent = formatNumber(Math.floor(current));
         }
     }, 16);
   }
