@@ -39,6 +39,7 @@
       'p33.s2l': 'Скорость', 'p33.s2v': '1.0–1.6 м/с',
       'p33.s3l': 'Этажей', 'p33.s3v': 'до 25',
       'p33.link': 'Подробнее о модели',
+      'pdf.open': 'Открыть в новой вкладке', 'pdf.download': 'Скачать PDF',
       'p33.h1l': 'Тип', 'p33.h1v': 'Пассажирский',
       'p33.h2l': 'Привод', 'p33.h2v': 'Безредукторный',
       'p33.h3l': 'Энергокласс', 'p33.h3v': 'A',
@@ -86,12 +87,13 @@
       'pr.tc.tag': 'Деловой центр', 'pr.tc.desc': 'Премиальные лифты для бизнес-района.',
       'pr.dc.tag': 'ЖК премиум', 'pr.dc.desc': 'Долгосрочное сотрудничество с Dream City.',
       'pr.mb.tag': 'Девелопмент', 'pr.mb.desc': 'Оснащение жилых комплексов Murad Buildings.',
-      'pr.ma.tag': 'Жилой комплекс', 'pr.ma.desc': 'Три лифта Schindler для Mirabad Avenue.',
+      'pr.pt.tag': 'Жилой комплекс', 'pr.pt.desc': 'Современные надежные лифты для высотного жилого комплекса.',
       'proj.cta': 'Все проекты',
+      'proj.prev': 'Предыдущий проект', 'proj.next': 'Следующий проект',
       'svc.num': '04 — Услуги',
       'svc.title': 'Полный жизненный цикл <em>обслуживания.</em>',
       's1.t': 'Проектирование', 's1.d': 'Расчёт конфигурации, BIM-интеграция.',
-      's2.t': 'Производство', 's2.d': 'Локализованное производство по швейцарским стандартам.',
+      's2.t': 'Запасные части и склад', 's2.d': 'Safety Elevator имеет склад запасных частей для лифтов, которые дают возможность оперативно заменить запчасти при условии поломки.',
       's3.t': 'Монтаж', 's3.d': 'Профессиональная установка сертифицированными инженерами.',
       's4.t': 'Техническое обслуживание', 's4.d': 'Регулярное ТО, аварийный выезд 24/7.',
       's5.t': 'Модернизация', 's5.d': 'Обновление кабин, систем управления и двигателей.',
@@ -161,6 +163,7 @@
       'p33.s2l': 'Tezlik', 'p33.s2v': '1.0–1.6 m/s',
       'p33.s3l': 'Qavatlar', 'p33.s3v': '25 tagacha',
       'p33.link': 'Model haqida batafsil',
+      'pdf.open': 'Yangi oynada ochish', 'pdf.download': 'PDF yuklab olish',
       'p55.tag': 'Premium segment',
       'p55.desc': 'Tijorat va premium binolar uchun moslashuvchan yechim. Cheksiz kastomizatsiya.',
       'p55.s1l': 'Yuk ko\'tarish', 'p55.s1v': '2 500 kg gacha',
@@ -178,9 +181,22 @@
       'calc.sub': 'Kabina o\'lchamlarini kiriting — kalkulyator yuk ko\'tarish qobiliyatini hisoblaydi.',
       'proj.num': '03 — Amalga oshirilgan loyihalar',
       'proj.title': 'Bizning muhandisligimiz <em>ishlayotgan binolar.</em>',
+      'pr.ht.tag': 'Mehmonxona · 5★', 'pr.ht.desc': 'Hilton uchun Schindler 7000 yuqori tezlikdagi liftlarini o\'rnatish.',
+      'pr.ht.s1': 'lift', 'pr.ht.s2': 'qavat',
+      'pr.tc.tag': 'Biznes markazi', 'pr.tc.desc': 'Biznes hududi uchun premium liftlar.',
+      'pr.dc.tag': 'Premium turar-joy', 'pr.dc.desc': 'Dream City bilan uzoq muddatli hamkorlik.',
+      'pr.mb.tag': 'Development', 'pr.mb.desc': 'Murad Buildings turar-joy majmualarini jihozlash.',
+      'pr.pt.tag': 'Turar-joy majmuasi', 'pr.pt.desc': 'Ko\'p qavatli turar-joy majmuasi uchun zamonaviy va ishonchli liftlar.',
       'proj.cta': 'Barcha loyihalar',
+      'proj.prev': 'Oldingi loyiha', 'proj.next': 'Keyingi loyiha',
       'svc.num': '04 — Xizmatlar',
       'svc.title': 'To\'liq xizmat ko\'rsatish <em>tsikli.</em>',
+      's1.t': 'Loyihalash', 's1.d': 'Konfiguratsiyani hisoblash, BIM-integratsiya.',
+      's2.t': 'Ehtiyot qismlar va ombor', 's2.d': 'Safety Elevator liftlar uchun ehtiyot qismlar omboriga ega, bu esa nosozlik yuz berganda ehtiyot qismlarni tezda almashtirish imkonini beradi.',
+      's3.t': 'Montaj', 's3.d': 'Sertifikatlangan muhandislar tomonidan professional o\'rnatish.',
+      's4.t': 'Texnik xizmat ko\'rsatish', 's4.d': 'Muntazam texnik xizmat ko\'rsatish, 24/7 avariya holatlarida chiqish.',
+      's5.t': 'Modernizatsiya', 's5.d': 'Kabinalar, boshqaruv tizimlari va dvigatellarni yangilash.',
+      's6.t': 'Konsultatsiya', 's6.d': 'Barcha bosqichlarda ekspert yordami.',
       'tech.num': '05 — Texnologiyalar',
       'tech.title': 'Oldindan o\'ylaydigan <em>liftlar.</em>',
       'cta.num': '06 — Kontaktlar',
@@ -221,6 +237,7 @@
       'p33.s2l': 'Speed', 'p33.s2v': '1.0–1.6 m/s',
       'p33.s3l': 'Floors', 'p33.s3v': 'up to 25',
       'p33.link': 'Model details',
+      'pdf.open': 'Open in new tab', 'pdf.download': 'Download PDF',
       'p55.tag': 'Premium Segment',
       'p55.desc': 'Flexible modular solution for commercial and premium buildings. Limitless interior customization.',
       'p55.s1l': 'Capacity', 'p55.s1v': 'up to 2,500 kg',
@@ -238,9 +255,22 @@
       'calc.sub': 'Enter cabin dimensions — the calculator will determine the load capacity.',
       'proj.num': '03 — Completed Projects',
       'proj.title': 'Buildings powered by <em>our engineering.</em>',
+      'pr.ht.tag': 'Hotel · 5★', 'pr.ht.desc': 'Installation of Schindler 7000 high-speed elevators for Hilton.',
+      'pr.ht.s1': 'elevators', 'pr.ht.s2': 'floors',
+      'pr.tc.tag': 'Business Center', 'pr.tc.desc': 'Premium elevators for the new business district.',
+      'pr.dc.tag': 'Premium Residential', 'pr.dc.desc': 'Long-term cooperation with Dream City.',
+      'pr.mb.tag': 'Development', 'pr.mb.desc': 'Equipping Murad Buildings residential complexes.',
+      'pr.pt.tag': 'Residential Complex', 'pr.pt.desc': 'Modern reliable elevators for high-rise residential complex.',
       'proj.cta': 'All projects',
+      'proj.prev': 'Previous project', 'proj.next': 'Next project',
       'svc.num': '04 — Services',
       'svc.title': 'Full life cycle <em>maintenance.</em>',
+      's1.t': 'Design', 's1.d': 'Configuration calculation, BIM-integration.',
+      's2.t': 'Spare Parts & Warehouse', 's2.d': 'Safety Elevator has a warehouse of spare parts for elevators, which allows for the rapid replacement of parts in the event of a breakdown.',
+      's3.t': 'Installation', 's3.d': 'Professional installation by certified engineers.',
+      's4.t': 'Maintenance', 's4.d': 'Regular maintenance, 24/7 emergency response.',
+      's5.t': 'Modernization', 's5.d': 'Updating cabins, control systems, and motors.',
+      's6.t': 'Consultation', 's6.d': 'Expert support at all stages.',
       'tech.num': '05 — Technology',
       'tech.title': 'Elevators that think <em>ahead.</em>',
       'cta.num': '06 — Contacts',
@@ -326,6 +356,182 @@
   setupModal('history-modal', 'open-history-btn', 'history-close', 'history-backdrop');
   setupModal('partners-modal', 'open-partners-btn', 'partners-close', 'partners-backdrop');
   setupModal('licenses-modal', 'open-licenses-btn', 'licenses-close', 'licenses-backdrop');
+
+  /* =================================================================
+     PDF VIEWER MODAL
+     ================================================================= */
+  (function setupPdfModal() {
+    const modal = document.getElementById('pdf-modal');
+    if (!modal) return;
+    const frame = document.getElementById('pdf-frame');
+    const backdrop = document.getElementById('pdf-backdrop');
+    const closeBtn = document.getElementById('pdf-close');
+    const titleEl = document.getElementById('pdf-title');
+    const tagEl = document.getElementById('pdf-tag');
+    const openLink = document.getElementById('pdf-open');
+    const dlLink = document.getElementById('pdf-download');
+    let lastTrigger = null;
+
+    const open = (src, title, tag) => {
+      titleEl.textContent = title || 'Schindler';
+      tagEl.textContent = tag || 'Документация';
+      openLink.href = src;
+      dlLink.href = src;
+      // native viewer: fit width, show toolbar
+      frame.src = src + '#view=FitH&toolbar=1';
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => closeBtn.focus(), 100);
+    };
+
+    const close = () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      // stop loading / free memory after the fade-out
+      setTimeout(() => { if (!modal.classList.contains('active')) frame.src = 'about:blank'; }, 400);
+      if (lastTrigger) lastTrigger.focus();
+    };
+
+    document.querySelectorAll('[data-pdf]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        lastTrigger = link;
+        open(link.getAttribute('data-pdf'), link.getAttribute('data-pdf-title'), link.getAttribute('data-pdf-tag'));
+      });
+    });
+
+    closeBtn.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) close();
+    });
+  })();
+
+  /* =================================================================
+     PROJECTS CAROUSEL — auto-flow + arrows
+     ================================================================= */
+  (function setupProjectsCarousel() {
+    const carousel = document.getElementById('projects-carousel');
+    const track = document.getElementById('pc-track');
+    if (!carousel || !track) return;
+
+    const prevBtn = document.getElementById('pc-prev');
+    const nextBtn = document.getElementById('pc-next');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // duplicate cards once for a seamless loop
+    const originals = Array.from(track.children);
+    originals.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      clone.classList.add('pc-clone');
+      track.appendChild(clone);
+    });
+
+    const gap = parseFloat(getComputedStyle(track).gap) || 24;
+    const cardWidth = () => originals[0].getBoundingClientRect().width + gap;
+    let setWidth = () => track.scrollWidth / 2;
+
+    let offset = 0;          // current translateX
+    let manual = 0;          // pending eased shift from arrows
+    let paused = false;
+    const speed = 0.45;      // px per frame (~27px/s @60fps)
+
+    const apply = () => { track.style.transform = `translate3d(${offset}px,0,0)`; };
+
+    const frame = () => {
+      const w = setWidth();
+      if (!paused && !manual) offset -= speed;
+      if (manual) {
+        const step = manual * 0.14;
+        offset += step;
+        manual -= step;
+        if (Math.abs(manual) < 0.5) { offset += manual; manual = 0; }
+      }
+      if (offset <= -w) offset += w;
+      if (offset > 0) offset -= w;
+      apply();
+      requestAnimationFrame(frame);
+    };
+
+    const nudge = (dir) => { manual += dir * cardWidth(); };
+    prevBtn && prevBtn.addEventListener('click', () => nudge(1));
+    nextBtn && nextBtn.addEventListener('click', () => nudge(-1));
+
+    // pause auto-flow on hover / touch
+    carousel.addEventListener('mouseenter', () => { paused = true; });
+    carousel.addEventListener('mouseleave', () => { paused = false; });
+    carousel.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+    carousel.addEventListener('touchend', () => { paused = false; });
+
+    if (!reduced) {
+      requestAnimationFrame(frame);
+    } else {
+      // reduced motion: arrows only, no auto-flow
+      paused = true;
+    }
+  })();
+
+  /* =================================================================
+     LIGHTBOX
+     ================================================================= */
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxDesc = document.getElementById('lightbox-desc');
+  const lightboxCloseBtn = document.getElementById('lightbox-close');
+  const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+
+  if (lightboxModal) {
+    const closeLightbox = () => {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightboxModal.classList.contains('active')) closeLightbox();
+    });
+
+    // Attach to project cards inside APM
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img').src;
+        const h3 = card.querySelector('h3').textContent;
+        const p = card.querySelector('p').textContent;
+        
+        lightboxImage.src = img;
+        lightboxTitle.textContent = h3;
+        lightboxDesc.textContent = p;
+        
+        lightboxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Attach to projects in main grid
+    document.querySelectorAll('.projects-grid .project').forEach(card => {
+      card.addEventListener('click', () => {
+        const imgEl = card.querySelector('.project-image');
+        let imgSrc = '';
+        if (imgEl && imgEl.style.background) {
+           const match = imgEl.style.background.match(/url\(['"]?(.*?)['"]?\)/);
+           if (match) imgSrc = match[1];
+        }
+        
+        const h3 = card.querySelector('.project-name').textContent;
+        const p = card.querySelector('.project-desc').textContent;
+        
+        lightboxImage.src = imgSrc;
+        lightboxTitle.textContent = h3;
+        lightboxDesc.textContent = p;
+        
+        lightboxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  }
 
 
   /* =================================================================
@@ -424,10 +630,33 @@
      ================================================================= */
   window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
+
+    // Elevator doors intro sequence
+    const doors = document.getElementById('hero-doors');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const runDoors = () => {
+      if (!doors || reduced) { if (doors) doors.classList.add('gone'); return; }
+      const numEl = document.getElementById('hero-arrival-num');
+      let floor = 8;
+      if (numEl) numEl.textContent = floor;
+      const tick = setInterval(() => {
+        floor -= 1;
+        if (floor <= 1) {
+          clearInterval(tick);
+          if (numEl) numEl.textContent = '1';
+          doors.classList.add('open');           // doors slide apart
+          setTimeout(() => doors.classList.add('gone'), 1400);
+        } else if (numEl) {
+          numEl.textContent = floor;
+        }
+      }, 130);
+    };
+
     setTimeout(() => {
       loader.classList.add('hidden');
       document.body.classList.add('loaded');
-    }, 1000);
+      setTimeout(runDoors, 350);                 // reveal closed doors, then open
+    }, 600);
 
     // Update year
     const yearEl = document.getElementById('year');

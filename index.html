@@ -7,17 +7,17 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <title>Schindler Uzbekistan — Премиальные лифты и эскалаторы швейцарского качества</title>
   <meta name="description"
-    content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Производство, продажа и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
+    content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Продажа, склад запасных частей и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Schindler Uzbekistan — Премиальные лифты и эскалаторы швейцарского качества" />
-  <meta property="og:description" content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Производство, продажа и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
+  <meta property="og:description" content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Продажа, склад запасных частей и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://see.uz/" />
   <meta property="og:image" content="https://see.uz/images/og-schindler.jpg" />
   <meta property="og:locale" content="ru_RU" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Schindler Uzbekistan — Премиальные лифты и эскалаторы швейцарского качества" />
-  <meta name="twitter:description" content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Производство, продажа и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
+  <meta name="twitter:description" content="Эксклюзивный дистрибьютор Schindler в Узбекистане. Продажа, склад запасных частей и техническое обслуживание лифтов и эскалаторов мирового класса с 1874 года." />
   <meta name="twitter:image" content="https://see.uz/images/og-schindler.jpg" />
 
 
@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="styles.css?v=20260610">
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="theme-color" content="#0c0c0d" />
+  <meta name="theme-color" content="#ffffff" />
 </head>
 
 <body>
@@ -41,10 +41,7 @@
   <div class="loader" id="loader">
     <div class="loader-inner">
       <div class="loader-mark">
-        <svg viewBox="0 0 60 60" fill="none">
-          <rect x="2" y="2" width="56" height="56" stroke="currentColor" stroke-width="1" />
-          <path d="M18 22 L18 38 L30 30 Z M42 22 L42 38 L30 30 Z" fill="currentColor" />
-        </svg>
+        <img src="images/Schindler-Emblem-.png" alt="Schindler" style="width: 100%; height: 100%; object-fit: contain;">
       </div>
       <div class="loader-text">
         <span data-text="S">S</span>
@@ -63,18 +60,28 @@
     </div>
   </div>
 
+  <!-- Elevator doors intro -->
+  <div class="hero-doors" id="hero-doors" aria-hidden="true">
+    <div class="hero-doors-panel hd-left"></div>
+    <div class="hero-doors-panel hd-right"></div>
+    <div class="hero-doors-seam"></div>
+    <div class="hero-arrival">
+      <span class="hero-arrival-dir">▼</span>
+      <span class="hero-arrival-num" id="hero-arrival-num">8</span>
+      <span class="hero-arrival-label">FLOOR</span>
+    </div>
+  </div>
+
 
 
 
   <!-- Navigation -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#nav" class="nav-logo" aria-label="Schindler Uzbekistan">
-        <img src="images/Schindler-Emblem-removebg-preview (1).png" alt="Schindler" class="nav-logo-mark">
-
-        <div class="nav-logo-text">
-          <span class="nav-logo-primary">SCHINDLER</span>
-          <span class="nav-logo-sub">UZBEKISTAN · с 1874</span>
+      <a href="#nav" class="nav-logo" aria-label="Safety Elevator & Engineering">
+        <div class="nav-logo-images">
+          <img src="images/schindlerdistributor.png" alt="Schindler Distributor" class="nav-logo-dist">
+          <img src="images/safetyElevators.png" alt="Safety Elevators" class="nav-logo-sea">
         </div>
       </a>
 
@@ -114,12 +121,8 @@
 
   <!-- =============== HERO =============== -->
   <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-noise"></div>
-      <div class="hero-glow"></div>
-      <div class="hero-image"></div>
-    </div>
+    <div class="hero-image-bg"></div>
+    <div class="hero-grid-lines" aria-hidden="true"></div>
 
     <!-- vertical text rail -->
     <div class="hero-rail">
@@ -222,7 +225,6 @@
       <span>Tashkent City</span><span class="dot-sep">●</span>
       <span>Dream City</span><span class="dot-sep">●</span>
       <span>Murad Buildings</span><span class="dot-sep">●</span>
-      <span>Mirabad Avenue</span><span class="dot-sep">●</span>
       <span>NEST ONE</span><span class="dot-sep">●</span>
       <span>Boulevard</span><span class="dot-sep">●</span>
       <span>Bunyodkor Plaza</span><span class="dot-sep">●</span>
@@ -231,7 +233,6 @@
       <span>Tashkent City</span><span class="dot-sep">●</span>
       <span>Dream City</span><span class="dot-sep">●</span>
       <span>Murad Buildings</span><span class="dot-sep">●</span>
-      <span>Mirabad Avenue</span><span class="dot-sep">●</span>
       <span>NEST ONE</span><span class="dot-sep">●</span>
       <span>Boulevard</span><span class="dot-sep">●</span>
       <span>Bunyodkor Plaza</span><span class="dot-sep">●</span>
@@ -305,7 +306,7 @@
 
       <div class="product-list">
         <!-- Product 1 -->
-        <article class="product" data-product="3300">
+        <article class="product visual-left" data-product="3300">
           <div class="product-num">/01</div>
           <div class="product-info">
             <div class="product-tag" data-i18n="p33.tag">Жилой сегмент</div>
@@ -317,7 +318,8 @@
               <li><span data-i18n="p33.s2l">Скорость</span><b data-i18n="p33.s2v">1.0–1.6 м/с</b></li>
               <li><span data-i18n="p33.s3l">Этажей</span><b data-i18n="p33.s3v">до 25</b></li>
             </ul>
-            <a href="#contact" class="link-arrow">
+            <a href="docs/schindler-3000.pdf" target="_blank" rel="noopener" class="link-arrow"
+              data-pdf="docs/schindler-3000.pdf" data-pdf-title="Schindler 3000" data-pdf-tag="Жилой сегмент · EPD">
               <span data-i18n="p33.link">Подробнее о модели</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M5 12h14M13 5l7 7-7 7" />
@@ -359,7 +361,8 @@
               <li><span data-i18n="p55.s2l">Скорость</span><b data-i18n="p55.s2v">1.0–4.0 м/с</b></li>
               <li><span data-i18n="p55.s3l">Этажей</span><b data-i18n="p55.s3v">до 60</b></li>
             </ul>
-            <a href="#contact" class="link-arrow">
+            <a href="docs/schindler-5000.pdf" target="_blank" rel="noopener" class="link-arrow"
+              data-pdf="docs/schindler-5000.pdf" data-pdf-title="Schindler 5000" data-pdf-tag="Премиальный сегмент · EPD">
               <span data-i18n="p55.link">Подробнее о модели</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M5 12h14M13 5l7 7-7 7" />
@@ -402,7 +405,8 @@
               <li><span data-i18n="p93.s2l">Скорость</span><b data-i18n="p93.s2v">0.5–0.65 м/с</b></li>
               <li><span data-i18n="p93.s3l">Перепад</span><b data-i18n="p93.s3v">до 12 м</b></li>
             </ul>
-            <a href="#contact" class="link-arrow">
+            <a href="docs/schindler-9300-escalator.pdf" target="_blank" rel="noopener" class="link-arrow"
+              data-pdf="docs/schindler-9300-escalator.pdf" data-pdf-title="Schindler 9300" data-pdf-tag="Эскалаторы · Брошюра">
               <span data-i18n="p93.link">Подробнее о модели</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M5 12h14M13 5l7 7-7 7" />
@@ -410,15 +414,59 @@
             </a>
           </div>
           <div class="product-visual">
-            <div class="escalator">
-              <div class="escalator-step"></div>
-              <div class="escalator-step"></div>
-              <div class="escalator-step"></div>
-              <div class="escalator-step"></div>
-              <div class="escalator-step"></div>
-              <div class="escalator-step"></div>
-              <div class="escalator-rail"></div>
-            </div>
+            <svg class="escalator-svg" viewBox="0 0 460 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <clipPath id="escBand">
+                  <path d="M60,370 L409.9,150.3 L372.7,91 L22.8,310.7 Z" />
+                </clipPath>
+                <path id="estep" d="M60,370 L92.19,349.78 L54.99,290.48 L22.8,310.7 Z" />
+                <linearGradient id="escTreadA" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#34343a" />
+                  <stop offset="1" stop-color="#202024" />
+                </linearGradient>
+                <linearGradient id="escTreadB" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#2a2a30" />
+                  <stop offset="1" stop-color="#191a1d" />
+                </linearGradient>
+              </defs>
+
+              <!-- truss / balustrade skirt -->
+              <path class="esc-skirt"
+                d="M60,370 L409.9,150.3 L372.7,91 L22.8,310.7 Z" />
+
+              <!-- moving steps -->
+              <g clip-path="url(#escBand)">
+                <g class="esc-steps">
+                  <use href="#estep" class="esc-step a" x="-64.38" y="40.44" />
+                  <use href="#estep" class="esc-step b" x="-32.19" y="20.22" />
+                  <use href="#estep" class="esc-step a" x="0" y="0" />
+                  <use href="#estep" class="esc-step b" x="32.19" y="-20.22" />
+                  <use href="#estep" class="esc-step a" x="64.38" y="-40.44" />
+                  <use href="#estep" class="esc-step b" x="96.57" y="-60.66" />
+                  <use href="#estep" class="esc-step a" x="128.76" y="-80.88" />
+                  <use href="#estep" class="esc-step b" x="160.95" y="-101.1" />
+                  <use href="#estep" class="esc-step a" x="193.14" y="-121.32" />
+                  <use href="#estep" class="esc-step b" x="225.33" y="-141.54" />
+                  <use href="#estep" class="esc-step a" x="257.52" y="-161.76" />
+                  <use href="#estep" class="esc-step b" x="289.71" y="-181.98" />
+                  <use href="#estep" class="esc-step a" x="321.9" y="-202.2" />
+                  <use href="#estep" class="esc-step b" x="354.09" y="-222.42" />
+                  <use href="#estep" class="esc-step a" x="386.28" y="-242.64" />
+                </g>
+              </g>
+
+              <!-- comb plates at both landings -->
+              <rect class="esc-comb" x="14" y="364" width="60" height="12" rx="2" transform="rotate(-32 44 370)" />
+              <rect class="esc-comb" x="356" y="84" width="60" height="12" rx="2" transform="rotate(-32 386 90)" />
+
+              <!-- end posts -->
+              <line class="esc-post" x1="33" y1="320" x2="20" y2="299" />
+              <line class="esc-post" x1="385" y1="100" x2="372" y2="79" />
+
+              <!-- handrail -->
+              <line class="esc-rail" x1="20" y1="299" x2="372" y2="79" />
+              <line class="esc-rail-flow" x1="20" y1="299" x2="372" y2="79" />
+            </svg>
             <div class="product-tag-floating">9000</div>
             <div class="product-hover-info">
               <div class="hover-info-row"><span data-i18n="p93.h1l">Тип</span><b data-i18n="p93.h1v">Эскалатор</b></div>
@@ -517,82 +565,273 @@
         </h2>
       </div>
 
-      <div class="projects-grid">
-        <article class="project project-large">
-          <div class="project-image"
-            style="background: url('images/Hilton.jpg') center/cover no-repeat, linear-gradient(135deg, #1a1a1a 0%, #2d2118 50%, #c8423a 150%);">
-            <div class="project-overlay"></div>
-            <div class="project-pattern"></div>
-          </div>
-          <div class="project-meta">
-            <span class="project-year">2019</span>
-            <span class="project-tag" data-i18n="pr.ht.tag">Гостиница · 5★</span>
-          </div>
-          <h3 class="project-name">Hilton Tashkent City</h3>
-          <p class="project-desc" data-i18n="pr.ht.desc">Установка комплекса высокоскоростных лифтов Schindler 7000 для
-            флагманской гостиницы Hilton в Узбекистане.</p>
-          <div class="project-stats">
-            <span><b>12</b> <span data-i18n="pr.ht.s1">лифтов</span></span>
-            <span><b>23</b> <span data-i18n="pr.ht.s2">этажа</span></span>
-            <span><b>4.0</b> м/с</span>
-          </div>
-        </article>
+      <div class="projects-carousel" id="projects-carousel">
+        <button class="pc-arrow pc-prev" id="pc-prev" aria-label="Предыдущий проект" data-i18n-aria="proj.prev">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M19 12H5M11 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button class="pc-arrow pc-next" id="pc-next" aria-label="Следующий проект" data-i18n-aria="proj.next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </button>
 
-        <article class="project">
-          <div class="project-image" style="background: url('images/tashkent-city.png') center/cover no-repeat, linear-gradient(160deg, #0f0f0f 0%, #2a2520 100%);">
-            <div class="project-overlay"></div>
-            <div class="project-pattern"></div>
-          </div>
-          <div class="project-meta">
-            <span class="project-year">2020</span>
-            <span class="project-tag" data-i18n="pr.tc.tag">Деловой центр</span>
-          </div>
-          <h3 class="project-name">Tashkent City</h3>
-          <p class="project-desc" data-i18n="pr.tc.desc">Просторные премиальные лифты для бизнес-района нового
-            поколения.</p>
-        </article>
+        <div class="pc-viewport">
+          <div class="pc-track" id="pc-track">
 
-        <article class="project">
-          <div class="project-image" style="background: url('images/boulevard(dreamcity).png') center/cover no-repeat, linear-gradient(140deg, #181410 0%, #3a2a1a 100%);">
-            <div class="project-overlay"></div>
-            <div class="project-pattern"></div>
-          </div>
-          <div class="project-meta">
-            <span class="project-year">2019</span>
-            <span class="project-tag" data-i18n="pr.dc.tag">ЖК премиум</span>
-          </div>
-          <h3 class="project-name">Dream City</h3>
-          <p class="project-desc" data-i18n="pr.dc.desc">Долгосрочное сотрудничество с одним из крупнейших застройщиков
-            страны.</p>
-        </article>
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/Hilton.jpg') center/cover no-repeat, linear-gradient(135deg, #1a1a1a 0%, #2d2118 50%, #c8423a 150%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-year">2019</span>
+                <span class="project-tag">Гостиница · 5★</span>
+              </div>
+              <h3 class="project-name">Hilton Tashkent City</h3>
+              <p class="project-desc">Комплекс высокоскоростных лифтов Schindler 7000 для флагманской гостиницы Hilton.</p>
+              <div class="project-stats">
+                <span><b>12</b> лифтов</span>
+                <span><b>23</b> этажа</span>
+                <span><b>4.0</b> м/с</span>
+              </div>
+            </article>
 
-        <article class="project">
-          <div class="project-image" style="background: url('images/murad-buildings.webp') center/cover no-repeat, linear-gradient(120deg, #1a1612 0%, #44342a 100%);">
-            <div class="project-overlay"></div>
-            <div class="project-pattern"></div>
-          </div>
-          <div class="project-meta">
-            <span class="project-year">2018</span>
-            <span class="project-tag" data-i18n="pr.mb.tag">Девелопмент</span>
-          </div>
-          <h3 class="project-name">Murad Buildings</h3>
-          <p class="project-desc" data-i18n="pr.mb.desc">Стратегический контракт на оснащение жилых комплексов
-            застройщика.</p>
-        </article>
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/tashkent-city.png') center/cover no-repeat, linear-gradient(160deg, #0f0f0f 0%, #2a2520 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-year">2020</span>
+                <span class="project-tag">Резиденция</span>
+              </div>
+              <h3 class="project-name">Gardens Residence</h3>
+              <p class="project-desc">Премиальные лифты для жилой резиденции в Tashkent City.</p>
+            </article>
 
-        <article class="project">
-          <div class="project-image" style="background: url('images/mirabad-avenue.jpg') center/cover no-repeat, linear-gradient(180deg, #0d0d0d 0%, #2e2218 100%);">
-            <div class="project-overlay"></div>
-            <div class="project-pattern"></div>
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/boulevard(dreamcity).png') center/cover no-repeat, linear-gradient(140deg, #181410 0%, #3a2a1a 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-year">2019</span>
+                <span class="project-tag">ЖК премиум</span>
+              </div>
+              <h3 class="project-name">Dream City</h3>
+              <p class="project-desc">Долгосрочное сотрудничество с одним из крупнейших застройщиков страны.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/murad-buildings.webp') center/cover no-repeat, linear-gradient(120deg, #1a1612 0%, #44342a 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-year">2018</span>
+                <span class="project-tag">Девелопмент</span>
+              </div>
+              <h3 class="project-name">Murad Buildings</h3>
+              <p class="project-desc">Стратегический контракт на оснащение жилых комплексов застройщика.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/Piramittower.png') center/cover no-repeat, linear-gradient(150deg, #181410 0%, #302018 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-year">2021</span>
+                <span class="project-tag">Жилой комплекс</span>
+              </div>
+              <h3 class="project-name">Piramit Tower</h3>
+              <p class="project-desc">Современные надёжные лифты для высотного жилого комплекса.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/Cabinet of Ministers of the Republic of Uzbekistan.png') center/cover no-repeat, linear-gradient(150deg, #141414 0%, #2a2a2a 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Госсектор</span>
+              </div>
+              <h3 class="project-name">Кабинет Министров РУз</h3>
+              <p class="project-desc">Оснащение государственного административного здания лифтами Schindler.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/Central Plaza.png') center/cover no-repeat, linear-gradient(150deg, #11140f 0%, #2a3020 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Бизнес-центр</span>
+              </div>
+              <h3 class="project-name">LOT-2</h3>
+              <p class="project-desc">Лифты Schindler для бизнес-объекта LOT-2 в Tashkent City.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/central-bank.jpg') center/cover no-repeat, linear-gradient(150deg, #14110e 0%, #302418 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Финансовый объект</span>
+              </div>
+              <h3 class="project-name">Central Bank Ganga</h3>
+              <p class="project-desc">Комплексное оснащение здания лифтами швейцарского качества.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/financial-center.jpg') center/cover no-repeat, linear-gradient(150deg, #0f1014 0%, #20242e 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Финансовый центр</span>
+              </div>
+              <h3 class="project-name">Financial Center</h3>
+              <p class="project-desc">Поставка и монтаж лифтового оборудования Schindler.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/Greenwich .png') center/cover no-repeat, linear-gradient(150deg, #101410 0%, #203020 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">ЖК премиум</span>
+              </div>
+              <h3 class="project-name">Greenwich</h3>
+              <p class="project-desc">Оснащение жилого комплекса premium-класса лифтами Schindler.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/Hampton-hotel.jpg') center/cover no-repeat, linear-gradient(150deg, #14100e 0%, #302018 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Гостиница</span>
+              </div>
+              <h3 class="project-name">Hampton by Hilton</h3>
+              <p class="project-desc">Гостиничные лифты Schindler для отеля Hampton by Hilton.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/Infinity-business-center.jpg') center/cover no-repeat, linear-gradient(150deg, #0f1014 0%, #20242e 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Бизнес-центр</span>
+              </div>
+              <h3 class="project-name">Infinity</h3>
+              <p class="project-desc">Высокоскоростные лифты Schindler для делового центра Infinity.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/mirabad-avenue.jpg') center/cover no-repeat, linear-gradient(150deg, #14110e 0%, #2e2418 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">ЖК</span>
+              </div>
+              <h3 class="project-name">Mirabad Avenue</h3>
+              <p class="project-desc">Лифтовое оснащение жилого комплекса Mirabad Avenue.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/Uzbekfilm.webp') center/cover no-repeat, linear-gradient(150deg, #14110e 0%, #2e2418 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Культурный объект</span>
+              </div>
+              <h3 class="project-name">Uzbekfilm</h3>
+              <p class="project-desc">Лифтовое оснащение киностудии «Узбекфильм» оборудованием Schindler.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/DAHO.webp') center/cover no-repeat, linear-gradient(150deg, #11120f 0%, #2a2c22 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Коммерческий объект</span>
+              </div>
+              <h3 class="project-name">DAHO</h3>
+              <p class="project-desc">Установка лифтового оборудования Schindler на объекте DAHO.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/piramitmall.jpg') center/cover no-repeat, linear-gradient(150deg, #14110e 0%, #302018 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Торговый центр</span>
+              </div>
+              <h3 class="project-name">Piramit Mall</h3>
+              <p class="project-desc">Эскалаторы и лифты Schindler для торгового центра Piramit Mall.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/BWC.webp') center/cover no-repeat, linear-gradient(150deg, #0f1014 0%, #20242e 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Бизнес-центр</span>
+              </div>
+              <h3 class="project-name">BWC</h3>
+              <p class="project-desc">Лифтовое оснащение делового центра BWC оборудованием Schindler.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/beshqozon.webp') center/cover no-repeat, linear-gradient(150deg, #14100e 0%, #30201a 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Ресторан</span>
+              </div>
+              <h3 class="project-name">Beshqozon Restaurant</h3>
+              <p class="project-desc">Лифтовое оснащение ресторанного комплекса «Бешқозон».</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/primeminister.jfif') center/cover no-repeat, linear-gradient(150deg, #141414 0%, #2a2a2a 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Госсектор</span>
+              </div>
+              <h3 class="project-name">Prime Minister's Office</h3>
+              <p class="project-desc">Оснащение государственного административного здания лифтами Schindler.</p>
+            </article>
+
+            <article class="pc-card project">
+              <div class="project-image" style="background: url('images/sun2hyman.jpg') center/cover no-repeat, linear-gradient(150deg, #14110e 0%, #2e2418 100%);">
+                <div class="project-overlay"></div>
+                <div class="project-pattern"></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag">Жилой комплекс</span>
+              </div>
+              <h3 class="project-name">Sun 2 Hyman</h3>
+              <p class="project-desc">Лифтовое оснащение жилого комплекса Sun 2 Hyman оборудованием Schindler.</p>
+            </article>
+
           </div>
-          <div class="project-meta">
-            <span class="project-year">2018</span>
-            <span class="project-tag" data-i18n="pr.ma.tag">Жилой комплекс</span>
-          </div>
-          <h3 class="project-name">Mirabad Avenue</h3>
-          <p class="project-desc" data-i18n="pr.ma.desc">Установка трёх лифтов Schindler в премиальный жилой комплекс
-            центра Ташкента.</p>
-        </article>
+        </div>
       </div>
 
       <div class="projects-cta">
@@ -642,9 +881,8 @@
             </svg>
           </div>
           <div class="service-num">02</div>
-          <h3 class="service-title" data-i18n="s2.t">Производство</h3>
-          <p class="service-desc" data-i18n="s2.d">Локализованное производство компонентов и&nbsp;кабин
-            в&nbsp;Узбекистане по&nbsp;швейцарским стандартам качества.</p>
+          <h3 class="service-title" data-i18n="s2.t">Запасные части и склад</h3>
+          <p class="service-desc" data-i18n="s2.d">Safety Elevator имеет склад запасных частей для лифтов, которые дают возможность оперативно заменить запчасти при условии поломки.</p>
         </div>
 
         <div class="service-card">
@@ -806,34 +1044,10 @@
     </div>
   </section>
 
-  <!-- =============== TESTIMONIAL =============== -->
-  <section class="testimonial">
-    <div class="testimonial-bg-image"></div>
-    <div class="container">
-      <div class="quote-mark">
-        <svg viewBox="0 0 100 100" fill="currentColor">
-          <path d="M30 30 L30 70 L10 70 L10 50 C10 38 18 30 30 30 Z M70 30 L70 70 L50 70 L50 50 C50 38 58 30 70 30 Z" />
-        </svg>
-      </div>
-      <blockquote class="quote" data-i18n="test.quote">
-        Schindler — это&nbsp;по-настоящему просторные лифты. Точность работы, плавность хода и&nbsp;дизайн полностью
-        соответствуют статусу Tashkent City.
-      </blockquote>
-      <div class="quote-author">
-        <div class="quote-avatar"></div>
-        <div>
-          <div class="quote-name">Tashkent City</div>
-          <div class="quote-role" data-i18n="test.role">Заказчик · 2019</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- =============== CTA =============== -->
   <section class="cta" id="contact">
-    <div class="cta-bg">
-      <div class="cta-grid"></div>
-    </div>
+    <div class="cta-image-bg"></div>
     <div class="container">
       <div class="cta-inner">
         <div class="section-num" data-i18n="cta.num">06 — Контакты</div>
@@ -909,9 +1123,12 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="images/Schindler-Emblem-removebg-preview (1).png" alt="Schindler" class="footer-logo-img" />
+            <div class="footer-logo-images">
+              <img src="images/schindlerdistributor.png" alt="Schindler Distributor" class="footer-logo-dist" />
+              <img src="images/safetyElevators.png" alt="Safety Elevators" class="footer-logo-sea" />
+            </div>
           </div>
-          <div class="footer-tag">SCHINDLER UZBEKISTAN<br><span data-i18n="ft.tag">Эксклюзивный дистрибьютор</span>
+          <div class="footer-tag">SAFETY ELEVATORS AND ESCALATORS<br><span data-i18n="ft.tag">Эксклюзивный дистрибьютор</span>
           </div>
         </div>
         <div class="footer-marquee">
@@ -1036,6 +1253,26 @@
     </button>
   </div>
 
+  <!-- =============== LIGHTBOX MODAL =============== -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Просмотр">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="lightbox-image-container">
+        <img id="lightbox-image" src="" alt="Project">
+        <div class="lightbox-info">
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- =============== ALL PROJECTS MODAL =============== -->
   <div class="all-projects-modal" id="all-projects-modal" role="dialog" aria-modal="true" aria-label="Все проекты">
     <div class="apm-backdrop" id="apm-backdrop"></div>
@@ -1088,15 +1325,6 @@
           <div class="project-overlay">
             <h3>Murad Buildings</h3>
             <p>Стратегический контракт на оснащение жилых комплексов застройщика. 2018 · Девелопмент.</p>
-          </div>
-        </div>
-
-        <!-- 5. Mirabad Avenue -->
-        <div class="project-card">
-          <img src="images/mirabad-avenue.jpg" alt="Mirabad Avenue">
-          <div class="project-overlay">
-            <h3>Mirabad Avenue</h3>
-            <p>Установка трёх лифтов Schindler в премиальный жилой комплекс центра Ташкента. 2018.</p>
           </div>
         </div>
 
@@ -1266,6 +1494,33 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============== PDF VIEWER MODAL =============== -->
+  <div class="pdf-modal" id="pdf-modal" role="dialog" aria-modal="true" aria-label="Документация модели">
+    <div class="pdf-backdrop" id="pdf-backdrop"></div>
+    <div class="pdf-panel">
+      <div class="pdf-header">
+        <div class="pdf-header-left">
+          <div class="pdf-eyebrow" id="pdf-tag">Документация</div>
+          <h2 class="pdf-title" id="pdf-title">Schindler</h2>
+        </div>
+        <div class="pdf-actions">
+          <a class="pdf-btn" id="pdf-open" href="#" target="_blank" rel="noopener" data-i18n="pdf.open">Открыть в новой вкладке</a>
+          <a class="pdf-btn pdf-btn-accent" id="pdf-download" href="#" download data-i18n="pdf.download">Скачать PDF</a>
+          <button class="pdf-close" id="pdf-close" aria-label="Закрыть">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="pdf-body">
+        <div class="pdf-loader" id="pdf-loader"><span></span><span></span><span></span></div>
+        <iframe class="pdf-frame" id="pdf-frame" title="PDF" loading="lazy"></iframe>
       </div>
     </div>
   </div>
