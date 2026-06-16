@@ -208,6 +208,31 @@
       'fl.title': 'Konsultatsiya', 'fl.ok_h': 'Ariza yuborildi'
     },
     en: {
+      'about.p2': 'In Uzbekistan, our company "Safety Elevators and Escalators" is the exclusive distributor of Schindler with the right to manufacture, sell, install and service the equipment. We have equipped landmark buildings across the country with elevators and escalators — from Hilton Tashkent City to Tashkent City and Dream City.',
+      'calc.area': 'Cabin area', 'calc.ch': 'ppl', 'calc.kg': 'Load capacity', 'calc.kg_u': 'kg',
+      'calc.length': 'Length', 'calc.ll_in': 'CABIN DIMENSIONS · INPUT', 'calc.lr_out': 'SPECIFICATIONS · RESULT',
+      'calc.mm': 'mm', 'calc.model': 'Recommended model', 'calc.pers': 'Capacity', 'calc.swap': 'Swap', 'calc.width': 'Width',
+      'cta.ad_lbl': 'Address', 'cta.address': 'Tashkent · Uzbekistan', 'cta.em_lbl': 'Email',
+      'cta.l_co': 'Company', 'cta.l_mail': 'Email', 'cta.l_name': 'Name', 'cta.l_proj': 'About the project', 'cta.l_tel': 'Phone',
+      'cta.note': 'By clicking the button, you agree to the processing of your data',
+      'cta.ph_co': 'Company name', 'cta.ph_lbl': 'Direct call', 'cta.ph_mail': 'email@company.uz',
+      'cta.ph_name': 'Your name', 'cta.ph_proj': 'Building, number of floors...', 'cta.ph_tel': '+998 __ ___ __ __',
+      'cta.sub': 'Tell us about your building — we will prepare a proposal within 48 hours.', 'cta.submit': 'Send request',
+      'fl.btn_aria': 'Consultation', 'fl.btn_txt': 'Consultation', 'fl.l_name': 'Name', 'fl.l_tel': 'Phone', 'fl.l_topic': 'Interested in',
+      'fl.o_esc': 'Escalators', 'fl.o_lift': 'Schindler elevators', 'fl.o_mod': 'Modernization', 'fl.o_svc': 'Maintenance',
+      'fl.ok_p': 'We will contact you within 15 minutes.', 'fl.ph_name': 'Your name', 'fl.ph_tel': '+998 __ ___ __ __',
+      'fl.sub': 'We will call you back within 15 minutes.', 'fl.submit': 'Send request',
+      'ft.c1': 'Products', 'ft.c1l4': 'All models', 'ft.c2': 'Services', 'ft.c2l1': 'Engineering', 'ft.c2l2': 'Installation',
+      'ft.c2l3': 'Maintenance', 'ft.c2l4': 'Modernization', 'ft.c3': 'Company', 'ft.c3l1': 'About us', 'ft.c3l2': 'Projects',
+      'ft.c3l3': 'Partners', 'ft.c3l4': 'Licenses', 'ft.c4': 'Contacts', 'ft.c4addr': 'Tashkent, Uzbekistan',
+      'ft.privacy': 'Privacy Policy', 'ft.terms': 'Terms of Use',
+      'p33.h1l': 'Type', 'p33.h1v': 'Passenger', 'p33.h2l': 'Drive', 'p33.h2v': 'Gearless', 'p33.h3l': 'Energy class', 'p33.h3v': 'A', 'p33.h4l': 'System', 'p33.h4v': 'PORT Technology',
+      'p55.h1l': 'Type', 'p55.h1v': 'Passenger / Freight', 'p55.h2l': 'Drive', 'p55.h2v': 'Gearless', 'p55.h3l': 'Energy class', 'p55.h3v': 'A+', 'p55.h4l': 'Customization', 'p55.h4v': 'Unlimited',
+      'p93.h1l': 'Type', 'p93.h1v': 'Escalator', 'p93.h2l': 'Drive', 'p93.h2v': 'Energy-saving', 'p93.h3l': 'Safety', 'p93.h3v': 'Intelligent', 'p93.h4l': 'Mode', 'p93.h4v': 'Continuous',
+      'tech.lead': 'Schindler Ahead is the world\'s first digital platform for elevators.',
+      'tf1.t': 'Predictive analytics', 'tf1.d': 'Algorithms predict maintenance needs.',
+      'tf2.t': 'PORT Technology', 'tf2.d': 'Personalized access and traffic optimization.',
+      'tf3.t': 'Energy efficiency A++', 'tf3.d': 'Regenerative drives recover up to 30% of energy.',
       'nav.products': 'Products',
       'nav.projects': 'Projects',
       'nav.services': 'Services',
@@ -286,38 +311,133 @@
 
   let currentLang = 'ru';
 
+  // Project carousel cards — translations keyed by image filename
+  const projectCardI18n = {
+    'Hilton.jpg': {
+      ru: { tag: 'Гостиница · 5★', desc: 'Комплекс высокоскоростных лифтов Schindler 7000 для флагманской гостиницы Hilton.', stats: ['<b>12</b> лифтов', '<b>23</b> этажа', '<b>4.0</b> м/с'] },
+      en: { tag: 'Hotel · 5★', desc: 'A complex of high-speed Schindler 7000 elevators for the flagship Hilton hotel.', stats: ['<b>12</b> elevators', '<b>23</b> floors', '<b>4.0</b> m/s'] } },
+    'tashkent-city.png': {
+      ru: { tag: 'Резиденция', desc: 'Премиальные лифты для жилой резиденции в Tashkent City.' },
+      en: { tag: 'Residence', desc: 'Premium elevators for a residential complex in Tashkent City.' } },
+    'boulevard(dreamcity).png': {
+      ru: { tag: 'ЖК премиум', desc: 'Долгосрочное сотрудничество с одним из крупнейших застройщиков страны.' },
+      en: { tag: 'Premium Residential', desc: 'Long-term cooperation with one of the country\'s largest developers.' } },
+    'murad-buildings.webp': {
+      ru: { tag: 'Девелопмент', desc: 'Стратегический контракт на оснащение жилых комплексов застройщика.' },
+      en: { tag: 'Development', desc: 'Strategic contract to equip the developer\'s residential complexes.' } },
+    'Piramittower.png': {
+      ru: { tag: 'Жилой комплекс', desc: 'Современные надёжные лифты для высотного жилого комплекса.' },
+      en: { tag: 'Residential Complex', desc: 'Modern, reliable elevators for a high-rise residential complex.' } },
+    'Cabinet of Ministers of the Republic of Uzbekistan.png': {
+      ru: { name: 'Кабинет Министров РУз', tag: 'Госсектор', desc: 'Оснащение государственного административного здания лифтами Schindler.' },
+      en: { name: 'Cabinet of Ministers', tag: 'Government', desc: 'Equipping a state administrative building with Schindler elevators.' } },
+    'Central Plaza.png': {
+      ru: { tag: 'Бизнес-центр', desc: 'Лифты Schindler для бизнес-объекта LOT-2 в Tashkent City.' },
+      en: { tag: 'Business Center', desc: 'Schindler elevators for the LOT-2 business facility in Tashkent City.' } },
+    'central-bank.jpg': {
+      ru: { tag: 'Финансовый объект', desc: 'Комплексное оснащение здания лифтами швейцарского качества.' },
+      en: { tag: 'Financial Facility', desc: 'Full equipping of the building with Swiss-quality elevators.' } },
+    'financial-center.jpg': {
+      ru: { tag: 'Финансовый центр', desc: 'Поставка и монтаж лифтового оборудования Schindler.' },
+      en: { tag: 'Financial Center', desc: 'Supply and installation of Schindler elevator equipment.' } },
+    'Greenwich .png': {
+      ru: { tag: 'ЖК премиум', desc: 'Оснащение жилого комплекса premium-класса лифтами Schindler.' },
+      en: { tag: 'Premium Residential', desc: 'Equipping a premium-class residential complex with Schindler elevators.' } },
+    'Hampton-hotel.jpg': {
+      ru: { tag: 'Гостиница', desc: 'Гостиничные лифты Schindler для отеля Hampton by Hilton.' },
+      en: { tag: 'Hotel', desc: 'Schindler hotel elevators for the Hampton by Hilton hotel.' } },
+    'Infinity-business-center.jpg': {
+      ru: { tag: 'Бизнес-центр', desc: 'Высокоскоростные лифты Schindler для делового центра Infinity.' },
+      en: { tag: 'Business Center', desc: 'High-speed Schindler elevators for the Infinity business center.' } },
+    'mirabad-avenue.jpg': {
+      ru: { tag: 'ЖК', desc: 'Лифтовое оснащение жилого комплекса Mirabad Avenue.' },
+      en: { tag: 'Residential', desc: 'Elevator equipment for the Mirabad Avenue residential complex.' } },
+    'Uzbekfilm.webp': {
+      ru: { tag: 'Культурный объект', desc: 'Лифтовое оснащение киностудии «Узбекфильм» оборудованием Schindler.' },
+      en: { tag: 'Cultural Facility', desc: 'Elevator equipment for the Uzbekfilm film studio with Schindler.' } },
+    'DAHO.webp': {
+      ru: { tag: 'Коммерческий объект', desc: 'Установка лифтового оборудования Schindler на объекте DAHO.' },
+      en: { tag: 'Commercial Facility', desc: 'Installation of Schindler elevator equipment at the DAHO facility.' } },
+    'piramitmall.jpg': {
+      ru: { tag: 'Торговый центр', desc: 'Эскалаторы и лифты Schindler для торгового центра Piramit Mall.' },
+      en: { tag: 'Shopping Center', desc: 'Schindler escalators and elevators for the Piramit Mall shopping center.' } },
+    'BWC.webp': {
+      ru: { tag: 'Бизнес-центр', desc: 'Лифтовое оснащение делового центра BWC оборудованием Schindler.' },
+      en: { tag: 'Business Center', desc: 'Elevator equipment for the BWC business center with Schindler.' } },
+    'beshqozon.webp': {
+      ru: { tag: 'Ресторан', desc: 'Лифтовое оснащение ресторанного комплекса «Бешқозон».' },
+      en: { tag: 'Restaurant', desc: 'Elevator equipment for the Beshqozon restaurant complex.' } },
+    'primeminister.jfif': {
+      ru: { tag: 'Госсектор', desc: 'Оснащение государственного административного здания лифтами Schindler.' },
+      en: { tag: 'Government', desc: 'Equipping a state administrative building with Schindler elevators.' } },
+    'sun2hyman.jpg': {
+      ru: { tag: 'Жилой комплекс', desc: 'Лифтовое оснащение жилого комплекса Sun 2 Hyman оборудованием Schindler.' },
+      en: { tag: 'Residential Complex', desc: 'Elevator equipment for the Sun 2 Hyman residential complex with Schindler.' } }
+  };
+
+  const translateProjectCards = () => {
+    document.querySelectorAll('.pc-card').forEach(card => {
+      const img = card.querySelector('.project-image');
+      if (!img) return;
+      const m = (img.getAttribute('style') || '').match(/images\/(.+?)'\)/);
+      if (!m) return;
+      const entry = projectCardI18n[m[1]];
+      if (!entry) return;
+      const d = entry[currentLang] || entry.en || entry.ru;
+      const nameEl = card.querySelector('.project-name');
+      const tagEl = card.querySelector('.project-tag');
+      const descEl = card.querySelector('.project-desc');
+      if (nameEl && d.name) nameEl.textContent = d.name;
+      if (tagEl && d.tag) tagEl.textContent = d.tag;
+      if (descEl && d.desc) descEl.textContent = d.desc;
+      if (d.stats) {
+        const ss = card.querySelectorAll('.project-stats span');
+        d.stats.forEach((html, i) => { if (ss[i]) ss[i].innerHTML = html; });
+      }
+    });
+  };
+
+  // lookup with fallback: current language → English → Russian
+  const t = (key) => T[currentLang][key] || T.en[key] || T.ru[key];
+
   const updateTexts = () => {
     document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (T[currentLang][key]) el.textContent = T[currentLang][key];
+      const v = t(el.getAttribute('data-i18n'));
+      if (v) el.textContent = v;
     });
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
-      const key = el.getAttribute('data-i18n-html');
-      if (T[currentLang][key]) el.innerHTML = T[currentLang][key];
+      const v = t(el.getAttribute('data-i18n-html'));
+      if (v) el.innerHTML = v;
     });
     document.querySelectorAll('[data-i18n-ph]').forEach(el => {
-      const key = el.getAttribute('data-i18n-ph');
-      if (T[currentLang][key]) el.placeholder = T[currentLang][key];
+      const v = t(el.getAttribute('data-i18n-ph'));
+      if (v) el.placeholder = v;
     });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => {
-      const key = el.getAttribute('data-i18n-aria');
-      if (T[currentLang][key]) el.setAttribute('aria-label', T[currentLang][key]);
+      const v = t(el.getAttribute('data-i18n-aria'));
+      if (v) el.setAttribute('aria-label', v);
     });
+    translateProjectCards();
     document.documentElement.lang = currentLang;
   };
 
-  // Lang Switcher
+  // Lang Switcher — click a language to switch directly to it
   const langBtn = document.querySelector('.nav-lang');
   if (langBtn) {
-    langBtn.addEventListener('click', () => {
-      const langs = ['ru', 'uz', 'en'];
-      let idx = langs.indexOf(currentLang);
-      currentLang = langs[(idx + 1) % langs.length];
-      
+    const setLang = (lang) => {
+      if (!T[lang]) return;
+      currentLang = lang;
       langBtn.querySelectorAll('span').forEach(s => {
-        s.classList.toggle('active', s.textContent.toLowerCase() === currentLang);
+        s.classList.toggle('active', s.textContent.trim().toLowerCase() === currentLang);
       });
       updateTexts();
+    };
+    langBtn.querySelectorAll('span').forEach(s => {
+      s.style.cursor = 'pointer';
+      s.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setLang(s.textContent.trim().toLowerCase());
+      });
     });
   }
 

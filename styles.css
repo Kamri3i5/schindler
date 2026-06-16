@@ -4399,7 +4399,6 @@ section {
 .partners-track {
   display: flex;
   align-items: center;
-  gap: 80px;
   width: max-content;
   animation: partnersScroll 38s linear infinite;
 }
@@ -4411,6 +4410,7 @@ section {
 .partner-logo {
   flex: 0 0 auto;
   height: 56px;
+  margin: 0 40px;
   display: flex;
   align-items: center;
 }
@@ -4437,8 +4437,7 @@ section {
 
 @media (max-width: 720px) {
   .partners { padding: 60px 0 70px; }
-  .partners-track { gap: 48px; }
-  .partner-logo { height: 42px; }
+  .partner-logo { height: 42px; margin: 0 24px; }
   .partner-logo img { max-height: 42px; max-width: 130px; }
 }
 
