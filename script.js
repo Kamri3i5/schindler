@@ -90,6 +90,7 @@
       'pr.pt.tag': 'Жилой комплекс', 'pr.pt.desc': 'Современные надежные лифты для высотного жилого комплекса.',
       'proj.cta': 'Все проекты',
       'proj.prev': 'Предыдущий проект', 'proj.next': 'Следующий проект',
+      'partners.eyebrow': 'Партнёры', 'partners.title': 'С кем мы строим вертикальную мобильность',
       'svc.num': '04 — Услуги',
       'svc.title': 'Полный жизненный цикл <em>обслуживания.</em>',
       's1.t': 'Проектирование', 's1.d': 'Расчёт конфигурации, BIM-интеграция.',
@@ -189,6 +190,7 @@
       'pr.pt.tag': 'Turar-joy majmuasi', 'pr.pt.desc': 'Ko\'p qavatli turar-joy majmuasi uchun zamonaviy va ishonchli liftlar.',
       'proj.cta': 'Barcha loyihalar',
       'proj.prev': 'Oldingi loyiha', 'proj.next': 'Keyingi loyiha',
+      'partners.eyebrow': 'Hamkorlar', 'partners.title': 'Vertikal harakatchanlikni biz bilan quruvchilar',
       'svc.num': '04 — Xizmatlar',
       'svc.title': 'To\'liq xizmat ko\'rsatish <em>tsikli.</em>',
       's1.t': 'Loyihalash', 's1.d': 'Konfiguratsiyani hisoblash, BIM-integratsiya.',
@@ -263,6 +265,7 @@
       'pr.pt.tag': 'Residential Complex', 'pr.pt.desc': 'Modern reliable elevators for high-rise residential complex.',
       'proj.cta': 'All projects',
       'proj.prev': 'Previous project', 'proj.next': 'Next project',
+      'partners.eyebrow': 'Partners', 'partners.title': 'Building vertical mobility together',
       'svc.num': '04 — Services',
       'svc.title': 'Full life cycle <em>maintenance.</em>',
       's1.t': 'Design', 's1.d': 'Configuration calculation, BIM-integration.',
@@ -470,6 +473,51 @@
       // reduced motion: arrows only, no auto-flow
       paused = true;
     }
+  })();
+
+  /* =================================================================
+     SCHINDLER AHEAD — live dashboard
+     ================================================================= */
+  (function setupLiveDashboard() {
+    const upEl = document.getElementById('dash-uptime');
+    const upBar = document.getElementById('dash-uptime-bar');
+    const effEl = document.getElementById('dash-eff');
+    const effBar = document.getElementById('dash-eff-bar');
+    const ridesEl = document.getElementById('dash-rides');
+    const lineEl = document.getElementById('dash-graph-line');
+    const fillEl = document.getElementById('dash-graph-fill');
+    if (!upEl || !effEl || !ridesEl) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    [upBar, effBar].forEach(b => { if (b) b.style.transition = 'width 1.2s cubic-bezier(0.16,1,0.3,1)'; });
+
+    let rides = 12847;
+    const rnd = (min, max) => Math.random() * (max - min) + min;
+
+    const newGraph = () => {
+      const pts = [];
+      for (let x = 0; x <= 300; x += 20) pts.push([x, Math.round(rnd(12, 72))]);
+      const line = pts.map((p, i) => (i ? 'L' : 'M') + p[0] + ',' + p[1]).join(' ');
+      if (lineEl) lineEl.setAttribute('d', line);
+      if (fillEl) fillEl.setAttribute('d', line + ' L300,100 L0,100 Z');
+    };
+
+    const tick = () => {
+      const up = rnd(99.90, 99.99);
+      upEl.textContent = up.toFixed(2);
+      if (upBar) upBar.style.width = up + '%';
+
+      const eff = rnd(92.5, 96.4);
+      effEl.textContent = eff.toFixed(1);
+      if (effBar) effBar.style.width = eff + '%';
+
+      rides += Math.round(rnd(2, 14));
+      ridesEl.textContent = rides.toLocaleString('en-US');
+
+      newGraph();
+    };
+
+    setInterval(tick, 2600);
   })();
 
   /* =================================================================

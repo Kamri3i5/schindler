@@ -262,12 +262,6 @@
             Мы&nbsp;оборудовали лифтами и&nbsp;эскалаторами знаковые объекты страны — от&nbsp;Hilton Tashkent City
             до&nbsp;Tashkent City и&nbsp;Dream City.
           </p>
-          <a href="#about" class="link-arrow">
-            <span data-i18n="about.link">Полная история компании</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </a>
         </div>
 
         <div class="stats">
@@ -1004,17 +998,17 @@
             <div class="dash-body">
               <div class="dash-metric">
                 <div class="dash-label">UPTIME</div>
-                <div class="dash-value">99.97<i>%</i></div>
-                <div class="dash-bar"><span style="width: 99.97%"></span></div>
+                <div class="dash-value"><span id="dash-uptime">99.97</span><i>%</i></div>
+                <div class="dash-bar"><span id="dash-uptime-bar" style="width: 99.97%"></span></div>
               </div>
               <div class="dash-metric">
                 <div class="dash-label">EFFICIENCY</div>
-                <div class="dash-value">94.2<i>%</i></div>
-                <div class="dash-bar"><span style="width: 94.2%"></span></div>
+                <div class="dash-value"><span id="dash-eff">94.2</span><i>%</i></div>
+                <div class="dash-bar"><span id="dash-eff-bar" style="width: 94.2%"></span></div>
               </div>
               <div class="dash-metric">
                 <div class="dash-label">RIDES TODAY</div>
-                <div class="dash-value">12,847</div>
+                <div class="dash-value" id="dash-rides">12,847</div>
               </div>
               <div class="dash-graph">
                 <svg viewBox="0 0 300 100" preserveAspectRatio="none">
@@ -1024,10 +1018,10 @@
                       <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
                     </linearGradient>
                   </defs>
-                  <path
+                  <path id="dash-graph-fill"
                     d="M0,70 L20,65 L40,55 L60,60 L80,45 L100,50 L120,30 L140,38 L160,25 L180,32 L200,18 L220,28 L240,15 L260,22 L280,10 L300,18 L300,100 L0,100 Z"
                     fill="url(#dashG)" />
-                  <path
+                  <path id="dash-graph-line"
                     d="M0,70 L20,65 L40,55 L60,60 L80,45 L100,50 L120,30 L140,38 L160,25 L180,32 L200,18 L220,28 L240,15 L260,22 L280,10 L300,18"
                     stroke="var(--accent)" stroke-width="1.5" fill="none" />
                 </svg>
@@ -1113,6 +1107,37 @@
             <span class="cta-direct-value" data-i18n="cta.address">Ташкент · Узбекистан</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== PARTNERS =============== -->
+  <section class="partners" id="partners-strip">
+    <div class="container">
+      <div class="partners-head">
+        <span class="partners-eyebrow" data-i18n="partners.eyebrow">Партнёры</span>
+        <h2 class="partners-title" data-i18n="partners.title">С кем мы строим вертикальную мобильность</h2>
+      </div>
+    </div>
+    <div class="partners-marquee">
+      <div class="partners-track">
+        <div class="partner-logo"><img src="images/partners/murad.png" alt="Murad Buildings" loading="lazy"></div>
+        <div class="partner-logo"><img src="images/partners/golden.png" alt="Golden House" loading="lazy"></div>
+        <div class="partner-logo"><img src="images/partners/the-tower.png" alt="The Tower Group" loading="lazy"></div>
+        <div class="partner-logo"><img src="images/partners/real-house.jpg" alt="Real House" loading="lazy"></div>
+        <div class="partner-logo"><img src="images/partners/calik.jpg" alt="Calik Enerji" loading="lazy"></div>
+        <div class="partner-logo"><img src="images/partners/yuman.png" alt="Yuman Group" loading="lazy"></div>
+        <div class="partner-logo"><img src="images/partners/shox.png" alt="Shox Med" loading="lazy"></div>
+        <div class="partner-logo"><img src="images/partners/ottevanger.png" alt="Ottevanger" loading="lazy"></div>
+        <!-- duplicate for seamless loop -->
+        <div class="partner-logo" aria-hidden="true"><img src="images/partners/murad.png" alt="" loading="lazy"></div>
+        <div class="partner-logo" aria-hidden="true"><img src="images/partners/golden.png" alt="" loading="lazy"></div>
+        <div class="partner-logo" aria-hidden="true"><img src="images/partners/the-tower.png" alt="" loading="lazy"></div>
+        <div class="partner-logo" aria-hidden="true"><img src="images/partners/real-house.jpg" alt="" loading="lazy"></div>
+        <div class="partner-logo" aria-hidden="true"><img src="images/partners/calik.jpg" alt="" loading="lazy"></div>
+        <div class="partner-logo" aria-hidden="true"><img src="images/partners/yuman.png" alt="" loading="lazy"></div>
+        <div class="partner-logo" aria-hidden="true"><img src="images/partners/shox.png" alt="" loading="lazy"></div>
+        <div class="partner-logo" aria-hidden="true"><img src="images/partners/ottevanger.png" alt="" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -1471,29 +1496,13 @@
           </svg>
         </button>
       </div>
-      <div class="apm-grid" style="display: block; padding: 60px; color: var(--ink-2); line-height: 1.8;">
-        <div style="max-width: 900px; margin: 0 auto;">
-          <h3 style="color: var(--ink); font-family: var(--font-display); font-size: 32px; margin-bottom: 24px;">Сертификация и лицензии</h3>
-          <p style="margin-bottom: 20px;">Вся деятельность компании сертифицирована согласно законодательству Республики Узбекистан и международным стандартам Schindler Group.</p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-            <div style="padding: 24px; background: var(--bg-2); border: 1px solid var(--line);">
-              <h4 style="color: var(--accent); margin-bottom: 10px;">ISO 9001:2015</h4>
-              <p>Система менеджмента качества в области проектирования и монтажа.</p>
-            </div>
-            <div style="padding: 24px; background: var(--bg-2); border: 1px solid var(--line);">
-              <h4 style="color: var(--accent); margin-bottom: 10px;">ISO 14001</h4>
-              <p>Соответствие международным экологическим стандартам.</p>
-            </div>
-            <div style="padding: 24px; background: var(--bg-2); border: 1px solid var(--line);">
-              <h4 style="color: var(--accent); margin-bottom: 10px;">Госгортехнадзор РУз</h4>
-              <p>Лицензия на монтаж и техническое обслуживание лифтового оборудования.</p>
-            </div>
-            <div style="padding: 24px; background: var(--bg-2); border: 1px solid var(--line);">
-              <h4 style="color: var(--accent); margin-bottom: 10px;">Schindler Certificate</h4>
-              <p>Авторизация на эксклюзивное представительство бренда в Узбекистане.</p>
-            </div>
-          </div>
-        </div>
+      <div class="apm-grid licenses-grid">
+        <a class="license-photo" href="images/Serial-certificate-1.jpg" target="_blank" rel="noopener">
+          <img src="images/Serial-certificate-1.jpg" alt="Сертификат Schindler — 1" loading="lazy">
+        </a>
+        <a class="license-photo" href="images/Serial-certificate-2.jpg" target="_blank" rel="noopener">
+          <img src="images/Serial-certificate-2.jpg" alt="Сертификат Schindler — 2" loading="lazy">
+        </a>
       </div>
     </div>
   </div>
