@@ -2740,7 +2740,7 @@ section {
   .footer-marquee {
     display: none;
   }
-}
+
 
 @media (max-width: 720px) {
   .section-head {

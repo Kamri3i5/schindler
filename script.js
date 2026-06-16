@@ -243,7 +243,7 @@
       'hero.coords': 'Coordinates',
       'hero.city': 'Tashkent',
       'hero.eyebrow': 'Exclusive Schindler Distributor in Uzbekistan',
-      'hero.w1': 'We', 'hero.w2': 'move', 'hero.w3': '2 billion', 'hero.w4': 'people', 'hero.w5': 'every', 'hero.w6': 'day.',
+      'hero.w1': 'We', 'hero.w2': 'Elevate', 'hero.w3': '2 billion', 'hero.w4': 'people', 'hero.w5': 'every', 'hero.w6': 'day.',
       'hero.desc': 'Swiss engineering, flawless safety and technological leadership in vertical mobility — now in every landmark building of Uzbekistan.',
       'hero.btn_explore': 'Explore models',
       'hero.btn_quote': 'Request a quote',
