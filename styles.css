@@ -244,7 +244,7 @@ select {
   width: 60px;
   height: 60px;
   color: var(--accent);
-  animation: loaderRotate 4s linear infinite;
+  animation: loaderRotate 2s linear infinite;
 }
 
 @keyframes loaderRotate {
@@ -272,7 +272,7 @@ select {
 .loader-text span {
   display: inline-block;
   opacity: 0;
-  animation: loaderLetter 2s var(--ease) forwards;
+  animation: loaderLetter 1s var(--ease) forwards;
 }
 
 .loader-text span:nth-child(1) {
