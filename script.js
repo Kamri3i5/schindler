@@ -914,14 +914,12 @@ function showToast(message) {
 }
 
 // ─────────────────────────────────────────────────────────────
-//  ПОЛУЧАТЕЛЬ ПИСЕМ С ФОРМ (Web3Forms)
-//  Письма приходят на e-mail, к которому привязан этот access_key.
-//  TODO: когда появится доступ к info@shindler.uz — зарегистрировать
-//  ключ на web3forms.com с этим адресом, получить новый access_key
-//  из письма в этом ящике и заменить значение ниже. Больше ничего
-//  менять не нужно.
+//  ПОЛУЧАТЕЛЬ ПИСЕМ С ФОРМ (Formspree → info@see.uz)
+//  Письма с обеих форм приходят на info@see.uz.
+//  Чтобы сменить адрес — поменяй получателя в настройках формы
+//  на formspree.io или замени эндпоинт ниже.
 // ─────────────────────────────────────────────────────────────
-const WEB3FORMS_ACCESS_KEY = '74384e7a-25a5-448e-93b7-1217844b3a11';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdvjjpb';
 
 // Form Handler (Global for simplicity with HTML onsubmit)
 window.handleFormSubmit = async (e) => {
@@ -931,34 +929,34 @@ window.handleFormSubmit = async (e) => {
   const originalText = btn.innerHTML;
 
   const formData = new FormData(form);
-  formData.append('access_key', WEB3FORMS_ACCESS_KEY);
 
-  // улучшаем письмо: тема, имя отправителя, reply-to
+  // тема письма + reply-to (Formspree спецполя)
   const isConsult = form.id === 'floating-panel-form';
-  formData.append('subject', isConsult
+  formData.append('_subject', isConsult
     ? 'Schindler — заявка на консультацию (сайт)'
     : 'Schindler — запрос с сайта');
-  formData.append('from_name', 'Schindler Uzbekistan — сайт');
   const replyTo = form.querySelector('[name="email"]')?.value
     || form.querySelector('[name="phone"]')?.value;
-  if (replyTo) formData.append('replyto', replyTo);
+  if (replyTo) formData.append('_replyto', replyTo);
 
   btn.disabled = true;
   btn.innerHTML = '<span class="btn-label">Отправка...</span>';
-  
+
   try {
-    const response = await fetch('https://api.web3forms.com/submit', {
+    const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
-        body: formData
+        body: formData,
+        headers: { 'Accept': 'application/json' }
     });
 
     const result = await response.json();
-    
-    if (result.success) {
+
+    if (response.ok || result.ok) {
         showToast('Спасибо! Ваш запрос успешно отправлен.');
         form.reset();
     } else {
-        showToast('Ошибка при отправке: ' + result.message);
+        const msg = (result.errors && result.errors.map(x => x.message).join(', ')) || 'попробуйте позже.';
+        showToast('Ошибка при отправке: ' + msg);
     }
   } catch (error) {
       showToast('Произошла ошибка, попробуйте позже.');
