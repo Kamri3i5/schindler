@@ -581,11 +581,36 @@
     prevBtn && prevBtn.addEventListener('click', () => nudge(1));
     nextBtn && nextBtn.addEventListener('click', () => nudge(-1));
 
-    // pause auto-flow on hover / touch
+    // pause auto-flow on hover
     carousel.addEventListener('mouseenter', () => { paused = true; });
-    carousel.addEventListener('mouseleave', () => { paused = false; });
-    carousel.addEventListener('touchstart', () => { paused = true; }, { passive: true });
-    carousel.addEventListener('touchend', () => { paused = false; });
+    carousel.addEventListener('mouseleave', () => { if (!dragging) paused = false; });
+
+    // touch swipe — drag the track in the direction you swipe
+    let dragging = false, startX = 0, startY = 0, startOffset = 0, resumeTimer = null;
+    const viewport = carousel.querySelector('.pc-viewport') || carousel;
+    viewport.addEventListener('touchstart', (e) => {
+      dragging = true; paused = true;
+      clearTimeout(resumeTimer);
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      startOffset = offset;
+    }, { passive: true });
+    viewport.addEventListener('touchmove', (e) => {
+      if (!dragging) return;
+      const dx = e.touches[0].clientX - startX;
+      const dy = e.touches[0].clientY - startY;
+      if (Math.abs(dx) > Math.abs(dy)) {
+        e.preventDefault();                 // horizontal swipe → don't scroll page
+        offset = startOffset + dx;
+      }
+    }, { passive: false });
+    const endDrag = () => {
+      if (!dragging) return;
+      dragging = false;
+      resumeTimer = setTimeout(() => { paused = false; }, 1600);  // resume auto-flow after a pause
+    };
+    viewport.addEventListener('touchend', endDrag);
+    viewport.addEventListener('touchcancel', endDrag);
 
     if (!reduced) {
       requestAnimationFrame(frame);
@@ -799,11 +824,16 @@
   window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
 
+    // lock page scroll during the intro (loader + doors)
+    document.body.classList.add('intro-active');
+    const unlockScroll = () => document.body.classList.remove('intro-active');
+    setTimeout(unlockScroll, 4500);              // safety unlock
+
     // Elevator doors intro sequence
     const doors = document.getElementById('hero-doors');
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const runDoors = () => {
-      if (!doors || reduced) { if (doors) doors.classList.add('gone'); return; }
+      if (!doors || reduced) { if (doors) doors.classList.add('gone'); unlockScroll(); return; }
       const numEl = document.getElementById('hero-arrival-num');
       let floor = 8;
       if (numEl) numEl.textContent = floor;
@@ -813,7 +843,7 @@
           clearInterval(tick);
           if (numEl) numEl.textContent = '1';
           doors.classList.add('open');           // doors slide apart
-          setTimeout(() => doors.classList.add('gone'), 1400);
+          setTimeout(() => { doors.classList.add('gone'); unlockScroll(); }, 1400);
         } else if (numEl) {
           numEl.textContent = floor;
         }
