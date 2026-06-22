@@ -913,16 +913,36 @@ function showToast(message) {
   }, 3000);
 }
 
+// ─────────────────────────────────────────────────────────────
+//  ПОЛУЧАТЕЛЬ ПИСЕМ С ФОРМ (Web3Forms)
+//  Письма приходят на e-mail, к которому привязан этот access_key.
+//  TODO: когда появится доступ к info@shindler.uz — зарегистрировать
+//  ключ на web3forms.com с этим адресом, получить новый access_key
+//  из письма в этом ящике и заменить значение ниже. Больше ничего
+//  менять не нужно.
+// ─────────────────────────────────────────────────────────────
+const WEB3FORMS_ACCESS_KEY = '74384e7a-25a5-448e-93b7-1217844b3a11';
+
 // Form Handler (Global for simplicity with HTML onsubmit)
 window.handleFormSubmit = async (e) => {
   e.preventDefault();
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
   const originalText = btn.innerHTML;
-  
+
   const formData = new FormData(form);
-  formData.append('access_key', '74384e7a-25a5-448e-93b7-1217844b3a11');
-  
+  formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+
+  // улучшаем письмо: тема, имя отправителя, reply-to
+  const isConsult = form.id === 'floating-panel-form';
+  formData.append('subject', isConsult
+    ? 'Schindler — заявка на консультацию (сайт)'
+    : 'Schindler — запрос с сайта');
+  formData.append('from_name', 'Schindler Uzbekistan — сайт');
+  const replyTo = form.querySelector('[name="email"]')?.value
+    || form.querySelector('[name="phone"]')?.value;
+  if (replyTo) formData.append('replyto', replyTo);
+
   btn.disabled = true;
   btn.innerHTML = '<span class="btn-label">Отправка...</span>';
   
