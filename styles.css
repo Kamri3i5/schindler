@@ -2732,8 +2732,6 @@ section {
   .hero-rail {
     display: none;
   }
-}
-
 
   .intro-grid {
     grid-template-columns: 1fr;
@@ -2786,7 +2784,7 @@ section {
   .footer-marquee {
     display: none;
   }
-
+}
 
 @media (max-width: 720px) {
   /* ---- HERO (mobile) ---- */
