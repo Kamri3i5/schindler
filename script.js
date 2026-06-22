@@ -926,11 +926,20 @@ window.handleFormSubmit = async (e) => {
   e.preventDefault();
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
-  const originalText = btn.innerHTML;
+  if (!btn) return;
+  const originalHTML = btn.innerHTML;
+
+  // localized button/toast strings by current language
+  const L = {
+    ru: { sending: 'Отправка…', sent: 'Отправлено ✓', ok: 'Спасибо! Ваш запрос успешно отправлен.', err: 'Ошибка при отправке: ', fail: 'Произошла ошибка, попробуйте позже.' },
+    uz: { sending: 'Yuborilmoqda…', sent: 'Yuborildi ✓', ok: 'Rahmat! So‘rovingiz yuborildi.', err: 'Yuborishda xatolik: ', fail: 'Xatolik yuz berdi, keyinroq urinib ko‘ring.' },
+    en: { sending: 'Sending…', sent: 'Sent ✓', ok: 'Thank you! Your request has been sent.', err: 'Submission error: ', fail: 'Something went wrong, please try again later.' }
+  };
+  const tx = L[document.documentElement.lang] || L.ru;
+  const setState = (text) => { btn.innerHTML = '<span class="btn-state">' + text + '</span>'; };
+  const restore = () => { btn.innerHTML = originalHTML; btn.disabled = false; };
 
   const formData = new FormData(form);
-
-  // тема письма + reply-to (Formspree спецполя)
   const isConsult = form.id === 'floating-panel-form';
   formData.append('_subject', isConsult
     ? 'Schindler — заявка на консультацию (сайт)'
@@ -940,7 +949,7 @@ window.handleFormSubmit = async (e) => {
   if (replyTo) formData.append('_replyto', replyTo);
 
   btn.disabled = true;
-  btn.innerHTML = '<span class="btn-label">Отправка...</span>';
+  setState(tx.sending);
 
   try {
     const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -948,20 +957,20 @@ window.handleFormSubmit = async (e) => {
         body: formData,
         headers: { 'Accept': 'application/json' }
     });
-
-    const result = await response.json();
+    const result = await response.json().catch(() => ({}));
 
     if (response.ok || result.ok) {
-        showToast('Спасибо! Ваш запрос успешно отправлен.');
+        setState(tx.sent);               // button shows "Отправлено ✓"
         form.reset();
+        showToast(tx.ok);
+        setTimeout(restore, 2400);       // then back to original state
     } else {
-        const msg = (result.errors && result.errors.map(x => x.message).join(', ')) || 'попробуйте позже.';
-        showToast('Ошибка при отправке: ' + msg);
+        const msg = (result.errors && result.errors.map(x => x.message).join(', ')) || tx.fail;
+        showToast(tx.err + msg);
+        restore();
     }
   } catch (error) {
-      showToast('Произошла ошибка, попробуйте позже.');
-  } finally {
-    btn.disabled = false;
-    btn.innerHTML = originalText;
+      showToast(tx.fail);
+      restore();
   }
 };

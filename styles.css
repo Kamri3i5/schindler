@@ -608,6 +608,12 @@ select {
   transition: transform 0.5s var(--ease);
 }
 
+.btn-state {
+  display: inline-block;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
 .btn:hover .btn-text:nth-child(1) {
   transform: translateY(-100%);
 }
