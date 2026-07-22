@@ -86,7 +86,7 @@
       'pr.ht.s1': 'лифтов', 'pr.ht.s2': 'этажа',
       'pr.tc.tag': 'Деловой центр', 'pr.tc.desc': 'Премиальные лифты для бизнес-района.',
       'pr.dc.tag': 'ЖК премиум', 'pr.dc.desc': 'Долгосрочное сотрудничество с Dream City.',
-      'pr.mb.tag': 'Девелопмент', 'pr.mb.desc': 'Оснащение жилых комплексов Cambridge residence.',
+      'pr.mb.tag': 'Девелопмент', 'pr.mb.desc': 'Оснащение жилых комплексов Murad Buildings.',
       'pr.pt.tag': 'Жилой комплекс', 'pr.pt.desc': 'Современные надежные лифты для высотного жилого комплекса.',
       'proj.cta': 'Все проекты',
       'proj.prev': 'Предыдущий проект', 'proj.next': 'Следующий проект',
@@ -186,7 +186,7 @@
       'pr.ht.s1': 'lift', 'pr.ht.s2': 'qavat',
       'pr.tc.tag': 'Biznes markazi', 'pr.tc.desc': 'Biznes hududi uchun premium liftlar.',
       'pr.dc.tag': 'Premium turar-joy', 'pr.dc.desc': 'Dream City bilan uzoq muddatli hamkorlik.',
-      'pr.mb.tag': 'Development', 'pr.mb.desc': 'Cambridge residence turar-joy majmualarini jihozlash.',
+      'pr.mb.tag': 'Development', 'pr.mb.desc': 'Murad Buildings turar-joy majmualarini jihozlash.',
       'pr.pt.tag': 'Turar-joy majmuasi', 'pr.pt.desc': 'Ko\'p qavatli turar-joy majmuasi uchun zamonaviy va ishonchli liftlar.',
       'proj.cta': 'Barcha loyihalar',
       'proj.prev': 'Oldingi loyiha', 'proj.next': 'Keyingi loyiha',
@@ -286,7 +286,7 @@
       'pr.ht.s1': 'elevators', 'pr.ht.s2': 'floors',
       'pr.tc.tag': 'Business Center', 'pr.tc.desc': 'Premium elevators for the new business district.',
       'pr.dc.tag': 'Premium Residential', 'pr.dc.desc': 'Long-term cooperation with Dream City.',
-      'pr.mb.tag': 'Development', 'pr.mb.desc': 'Equipping Cambridge residence.',
+      'pr.mb.tag': 'Development', 'pr.mb.desc': 'Equipping Murad Buildings residential complexes.',
       'pr.pt.tag': 'Residential Complex', 'pr.pt.desc': 'Modern reliable elevators for high-rise residential complex.',
       'proj.cta': 'All projects',
       'proj.prev': 'Previous project', 'proj.next': 'Next project',
@@ -322,9 +322,12 @@
     'boulevard(dreamcity).png': {
       ru: { tag: 'ЖК премиум', desc: 'Долгосрочное сотрудничество с одним из крупнейших застройщиков страны.' },
       en: { tag: 'Premium Residential', desc: 'Long-term cooperation with one of the country\'s largest developers.' } },
-    'murad-buildings.webp': {
-      ru: { tag: 'Девелопмент', desc: 'Стратегический контракт на оснащение жилых комплексов застройщика.' },
-      en: { tag: 'Development', desc: 'Strategic contract to equip the developer\'s residential complexes.' } },
+    'ozbekfilm-hitech.webp': {
+      ru: { tag: 'Жилой комплекс', desc: 'Оснащение лифтовым оборудованием современного жилого комплекса.' },
+      en: { tag: 'Residential Complex', desc: 'Equipping a modern residential complex with elevators.' } },
+    'jomiy-mall.webp': {
+      ru: { tag: 'Торговый центр', desc: 'Лифты и эскалаторы Schindler для торгового центра.' },
+      en: { tag: 'Shopping Center', desc: 'Schindler elevators and escalators for the shopping center.' } },
     'Piramittower.png': {
       ru: { tag: 'Жилой комплекс', desc: 'Современные надёжные лифты для высотного жилого комплекса.' },
       en: { tag: 'Residential Complex', desc: 'Modern, reliable elevators for a high-rise residential complex.' } },
