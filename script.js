@@ -372,7 +372,28 @@
       en: { tag: 'Government', desc: 'Equipping a state administrative building with Schindler elevators.' } },
     'sun2hyman.jpg': {
       ru: { tag: 'Жилой комплекс', desc: 'Лифтовое оснащение жилого комплекса Sun 2 Hyman оборудованием Schindler.' },
-      en: { tag: 'Residential Complex', desc: 'Elevator equipment for the Sun 2 Hyman residential complex with Schindler.' } }
+      en: { tag: 'Residential Complex', desc: 'Elevator equipment for the Sun 2 Hyman residential complex with Schindler.' } },
+    'Dostlar-building.jpg': {
+      ru: { tag: 'Жилой комплекс', desc: 'Поставка лифтового оборудования для жилого комплекса Dostlar.' },
+      en: { tag: 'Residential Complex', desc: 'Elevator equipment for the Dostlar residential complex.' } },
+    'Koksaroy.avif': {
+      ru: { tag: 'Жилой комплекс', desc: 'Поставка лифтового оборудования для жилого комплекса Koksaroy.' },
+      en: { tag: 'Residential Complex', desc: 'Elevator equipment for the Koksaroy residential complex.' } },
+    'ganga-central-bank.gif': {
+      ru: { tag: 'Финансовый объект', desc: 'Комплексное оснащение здания лифтами швейцарского качества.' },
+      en: { tag: 'Financial Facility', desc: 'Comprehensive equipping of the building with Swiss quality elevators.' } },
+    'mirabad-elite.jfif': {
+      ru: { tag: 'ЖК премиум', desc: 'Поставка лифтового оборудования для жилого комплекса Mirabad Elite.' },
+      en: { tag: 'Premium Residential', desc: 'Elevator equipment for the Mirabad Elite residential complex.' } },
+    'showmed.webp': {
+      ru: { tag: 'Медицинский центр', desc: 'Лифты Schindler для медицинского центра Shohmed.' },
+      en: { tag: 'Medical Center', desc: 'Schindler elevators for the Shohmed medical center.' } },
+    'german-embassy.jfif': {
+      ru: { tag: 'Посольство', desc: 'Лифтовое оснащение здания Посольства Германии оборудованием Schindler.' },
+      en: { tag: 'Embassy', desc: 'Elevator equipment for the German Embassy building with Schindler.' } },
+    'samarkand-city.jpg': {
+      ru: { tag: 'Многофункциональный комплекс', desc: 'Поставка лифтового оборудования для комплекса Samarkand City.' },
+      en: { tag: 'Mixed-Use Complex', desc: 'Elevator equipment for the Samarkand City complex.' } }
   };
 
   const translateProjectCards = () => {
